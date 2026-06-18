@@ -153,6 +153,11 @@ export default function HomePage() {
         </section>
       ))}
 
+      {/* Ad — full-width strip before footer */}
+      <div className="border-t border-border/30 py-4 flex justify-center px-4">
+        <AdBanner format="leaderboard" />
+      </div>
+
       <Footer />
     </div>
   );

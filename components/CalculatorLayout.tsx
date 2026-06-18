@@ -48,6 +48,12 @@ export default function CalculatorLayout({ title, description, category, categor
           </div>
         </div>
       </main>
+
+      {/* Ad — full-width strip before footer */}
+      <div className="border-t border-border/30 py-4 flex justify-center px-4">
+        <AdBanner format="leaderboard" />
+      </div>
+
       <Footer />
     </div>
   );
