@@ -110,6 +110,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-8 px-4">
+        <div className="mx-auto max-w-7xl grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="rounded-xl border bg-card p-6 shadow-sm">
+            <h2 className="text-xl font-semibold">How to use FinCalc</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Pick the calculator that fits your goal, enter your numbers, and review the result instantly.
+            </p>
+            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+              <li>• Compare loan payments, interest costs, and payoff timelines.</li>
+              <li>• Estimate retirement, investment, and tax outcomes with confidence.</li>
+              <li>• Use the search bar to jump straight to the calculator you need.</li>
+            </ul>
+          </div>
+          <div className="rounded-xl border bg-card p-6 shadow-sm">
+            <h2 className="text-xl font-semibold">Common questions</h2>
+            <div className="mt-4 space-y-3 text-sm text-muted-foreground">
+              <div>
+                <p className="font-medium text-foreground">Which calculators are most popular?</p>
+                <p>Mortgage, auto loan, compound interest, and retirement planning tools are the most used.</p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground">Do I need an account?</p>
+                <p>No. Every calculator is free and available without sign-up.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Ad — between popular section and category list */}
       <div className="flex justify-center py-4 px-4">
         <AdBanner format="leaderboard" />

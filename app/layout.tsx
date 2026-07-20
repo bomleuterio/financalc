@@ -21,7 +21,43 @@ export const metadata: Metadata = {
   },
   description:
     'Free, accurate financial calculators for loans, investments, savings, taxes, retirement, and budgeting.',
-  keywords: ['financial calculator', 'mortgage calculator', 'loan calculator', 'compound interest', 'retirement calculator'],
+  keywords: [
+    'financial calculator',
+    'mortgage calculator',
+    'loan calculator',
+    'compound interest',
+    'retirement calculator',
+    'auto loan calculator',
+    'credit card payoff calculator',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'FinCalc — Free Financial Calculators',
+    description:
+      'Free, accurate financial calculators for loans, investments, savings, taxes, retirement, and budgeting.',
+    type: 'website',
+    siteName: 'FinCalc',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FinCalc — Free Financial Calculators',
+    description:
+      'Free, accurate financial calculators for loans, investments, savings, taxes, retirement, and budgeting.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

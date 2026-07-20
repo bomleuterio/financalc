@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Nav from './Nav';
 import Footer from './Footer';
 import AdBanner from './AdBanner';
@@ -13,8 +17,70 @@ interface Props {
 }
 
 export default function CalculatorLayout({ title, description, category, categoryHref = '/', children }: Props) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const titleText = `${title} | FinCalc`;
+    document.title = titleText;
+
+    const setMeta = (name: string, value: string) => {
+      let tag = document.querySelector(`meta[name="${name}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('name', name);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', value);
+    };
+
+    const setProperty = (property: string, value: string) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', value);
+    };
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', `https://fincalc.com${pathname}`);
+
+    setMeta('description', description);
+    setMeta('keywords', `${title.toLowerCase()}, financial calculator, ${category.toLowerCase()} calculator`);
+    setProperty('og:title', titleText);
+    setProperty('og:description', description);
+    setProperty('og:type', 'website');
+    setProperty('og:url', `https://fincalc.com${pathname}`);
+    setProperty('twitter:title', titleText);
+    setProperty('twitter:description', description);
+    setProperty('twitter:card', 'summary_large_image');
+  }, [category, description, pathname, title]);
+
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: title,
+            description,
+            url: `https://fincalc.com${pathname}`,
+            inLanguage: 'en',
+            publisher: {
+              '@type': 'Organization',
+              name: 'FinCalc',
+            },
+          }),
+        }}
+      />
       <Nav />
       <main className="flex-1">
         <div className="border-b border-border/50 bg-muted/20">
