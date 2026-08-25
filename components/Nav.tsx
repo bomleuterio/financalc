@@ -3,19 +3,22 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Menu, X, Calculator } from 'lucide-react';
-import { CATEGORIES, CALCULATORS } from '@/lib/constants';
+import { CALCULATORS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import logo from '@/lib/logo.jpg';
 
-const NAV_LINKS = CATEGORIES.map((cat) => ({
-  label: cat.title,
-  href: `/#${cat.id}`,
-  icon: cat.icon,
-}));
+const NAV_LINKS = [
+  { label: 'Learn', href: '/' },
+  { label: 'Invest', href: '/invest' },
+  { label: 'Save', href: '/save' },
+  { label: 'Grow', href: '/grow' },
+];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
@@ -28,15 +31,23 @@ export default function Nav() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = link.href === '/' ? pathname === '/' : pathname?.startsWith(link.href);
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={cn(
+                    'px-3 py-2 text-sm rounded-md transition-colors',
+                    isActive
+                      ? 'text-foreground bg-muted font-medium'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Mobile toggle */}

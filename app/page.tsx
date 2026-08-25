@@ -9,7 +9,6 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { CATEGORIES, CALCULATORS } from '@/lib/constants';
 import { Search, ArrowRight, TrendingUp, Star } from 'lucide-react';
-import AdBanner from '@/components/AdBanner';
 
 export default function HomePage() {
   const [query, setQuery] = useState('');
@@ -139,11 +138,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Ad — between popular section and category list */}
-      <div className="flex justify-center py-4 px-4">
-        <AdBanner format="leaderboard" />
-      </div>
-
       {/* All calculators by category */}
       {CATEGORIES.map((cat) => (
         <section key={cat.id} id={cat.id} className="py-10 px-4 border-t border-border/30">
@@ -181,11 +175,6 @@ export default function HomePage() {
           </div>
         </section>
       ))}
-
-      {/* Ad — full-width strip before footer */}
-      <div className="border-t border-border/30 py-4 flex justify-center px-4">
-        <AdBanner format="leaderboard" />
-      </div>
 
       <Footer />
     </div>
