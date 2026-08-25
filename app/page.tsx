@@ -113,7 +113,7 @@ export default function HomePage() {
       <section className="py-8 px-4">
         <div className="mx-auto max-w-7xl grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-xl border bg-card p-6 shadow-sm">
-            <h2 className="text-xl font-semibold">How to use FinCalc</h2>
+            <h2 className="text-xl font-semibold">How to use MoneyCalcs.AI</h2>
             <p className="mt-2 text-sm text-muted-foreground">
               Pick the calculator that fits your goal, enter your numbers, and review the result instantly.
             </p>

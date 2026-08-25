@@ -20,7 +20,7 @@ export default function CalculatorLayout({ title, description, category, categor
   const pathname = usePathname();
 
   useEffect(() => {
-    const titleText = `${title} | FinCalc`;
+    const titleText = `${title} | MoneyCalcs.AI`;
     document.title = titleText;
 
     const setMeta = (name: string, value: string) => {
@@ -49,14 +49,14 @@ export default function CalculatorLayout({ title, description, category, categor
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', `https://fincalc.com${pathname}`);
+    canonical.setAttribute('href', `https://moneycalcs.ai${pathname}`);
 
     setMeta('description', description);
     setMeta('keywords', `${title.toLowerCase()}, financial calculator, ${category.toLowerCase()} calculator`);
     setProperty('og:title', titleText);
     setProperty('og:description', description);
     setProperty('og:type', 'website');
-    setProperty('og:url', `https://fincalc.com${pathname}`);
+    setProperty('og:url', `https://moneycalcs.ai${pathname}`);
     setProperty('twitter:title', titleText);
     setProperty('twitter:description', description);
     setProperty('twitter:card', 'summary_large_image');
@@ -72,11 +72,11 @@ export default function CalculatorLayout({ title, description, category, categor
             '@type': 'WebPage',
             name: title,
             description,
-            url: `https://fincalc.com${pathname}`,
+            url: `https://moneycalcs.ai${pathname}`,
             inLanguage: 'en',
             publisher: {
               '@type': 'Organization',
-              name: 'FinCalc',
+              name: 'MoneyCalcs.AI',
             },
           }),
         }}

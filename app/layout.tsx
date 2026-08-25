@@ -35,16 +35,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'FinCalc — Free Financial Calculators',
+    title: 'MoneyCalcs.AI — Free Financial Calculators',
     description:
       'Free, accurate financial calculators for loans, investments, savings, taxes, retirement, and budgeting.',
     type: 'website',
-    siteName: 'FinCalc',
+    siteName: 'MoneyCalcs.AI',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FinCalc — Free Financial Calculators',
+    title: 'MoneyCalcs.AI — Free Financial Calculators',
     description:
       'Free, accurate financial calculators for loans, investments, savings, taxes, retirement, and budgeting.',
   },
