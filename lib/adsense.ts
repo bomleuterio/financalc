@@ -1,5 +1,5 @@
 // Replace with your real AdSense publisher ID (ca-pub-XXXXXXXXXXXXXXXX)
-export const ADSENSE_CLIENT = 'ca-pub-XXXXXXXXXXXXXXXX';
+export const ADSENSE_CLIENT = 'ca-pub-8208313418308067';
 
 // Replace each value with the ad slot ID from your AdSense dashboard
 export const AD_SLOTS = {
