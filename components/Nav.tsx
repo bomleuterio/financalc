@@ -1,10 +1,12 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, X, Calculator, TrendingUp } from 'lucide-react';
+import { Menu, X, Calculator } from 'lucide-react';
 import { CATEGORIES, CALCULATORS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
+import logo from '@/lib/logo.jpg';
 
 const NAV_LINKS = CATEGORIES.map((cat) => ({
   label: cat.title,
@@ -20,11 +22,8 @@ export default function Nav() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <TrendingUp className="h-5 w-5" />
-            </div>
-            <span>FinCalc</span>
+          <Link href="/" className="flex items-center">
+            <Image src={logo} alt="MoneyCalcs.AI" className="h-8 w-auto" priority />
           </Link>
 
           {/* Desktop nav */}

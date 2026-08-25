@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'FinCalc — Free Financial Calculators',
-    template: '%s | FinCalc',
+    default: 'MoneyCalcs.AI — Free Financial Calculators',
+    template: '%s | MoneyCalcs.AI',
   },
   description:
     'Free, accurate financial calculators for loans, investments, savings, taxes, retirement, and budgeting.',

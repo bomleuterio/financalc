@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { TrendingUp } from 'lucide-react';
+import Image from 'next/image';
 import { CATEGORIES, CALCULATORS } from '@/lib/constants';
+import logo from '@/lib/logo.jpg';
 
 export default function Footer() {
   return (
@@ -9,11 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 font-bold text-lg mb-3">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <TrendingUp className="h-4 w-4" />
-              </div>
-              FinCalc
+            <Link href="/" className="flex items-center mb-3">
+              <Image src={logo} alt="MoneyCalcs.AI" className="h-7 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Free, accurate financial calculators for every decision — from loans to retirement.
@@ -44,7 +42,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} FinCalc. All calculations are for educational purposes only.
+            © {new Date().getFullYear()} MoneyCalcs.AI. All calculations are for educational purposes only.
           </p>
           <p className="text-sm text-muted-foreground">
             Results may not reflect exact lender terms. Always consult a financial advisor.
