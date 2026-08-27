@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import { ADSENSE_CLIENT } from '@/lib/adsense';
+import { GA_MEASUREMENT_ID } from '@/lib/analytics';
 
 const geistSans = Geist({
   variable: '--font-sans',
@@ -74,6 +75,19 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <SpeedInsights />
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         {!ADSENSE_CLIENT.includes('XXXXX') && (
           <Script
             async
