@@ -20,6 +20,12 @@ export interface Goal {
   targetDate: string;
 }
 
+export interface ExpenseCategory {
+  id: string;
+  label: string;
+  amount: number;
+}
+
 export const AS_OF = 'August 2026';
 
 export const NET_WORTH_SUMMARY = {
@@ -58,6 +64,19 @@ export const NET_WORTH_TREND: NetWorthPoint[] = [
   { month: 'Jul', netWorth: 806_700 },
   { month: 'Aug', netWorth: 814_222 },
 ];
+
+export const CASH_FLOW = {
+  income: 8_240,
+  expenses: 6_180,
+  categories: [
+    { id: 'housing', label: 'Housing', amount: 2_400 },
+    { id: 'shopping', label: 'Shopping', amount: 610 },
+    { id: 'food', label: 'Food & Dining', amount: 680 },
+    { id: 'transportation', label: 'Transportation', amount: 420 },
+    { id: 'subscriptions', label: 'Subscriptions', amount: 140 },
+    { id: 'other', label: 'Other', amount: 1_930 },
+  ] as ExpenseCategory[],
+};
 
 export const GOALS: Goal[] = [
   { id: 'emergency', label: 'Emergency fund', current: 42_610, target: 60_000, targetDate: 'Dec 2026' },

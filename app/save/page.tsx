@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { formatCurrency, formatPercent } from '@/lib/calculators';
-import { NET_WORTH_SUMMARY, ACCOUNTS, NET_WORTH_TREND, GOALS, AS_OF } from '@/lib/mock-accounts';
+import { NET_WORTH_SUMMARY, ACCOUNTS, NET_WORTH_TREND, GOALS, CASH_FLOW, AS_OF } from '@/lib/mock-accounts';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Wallet, PiggyBank, TrendingUp, Home, Landmark, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -147,6 +147,62 @@ export default function SavePage() {
               })}
             </div>
           </section>
+
+          {/* Cash flow */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Cash flow</CardTitle>
+              <CardDescription>This month</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">Income</p>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <ArrowUpRight className="h-4 w-4 text-primary" />
+                    <span className="text-xl font-bold">{formatCurrency(CASH_FLOW.income)}</span>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">Expenses</p>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <ArrowDownRight className="h-4 w-4 text-destructive" />
+                    <span className="text-xl font-bold">{formatCurrency(CASH_FLOW.expenses)}</span>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wide">Net</p>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <span className="text-xl font-bold text-primary">
+                      {formatCurrency(CASH_FLOW.income - CASH_FLOW.expenses)}
+                    </span>
+                    <Badge variant="secondary" className="text-primary bg-primary/15">
+                      Saved
+                    </Badge>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                {[...CASH_FLOW.categories]
+                  .sort((a, b) => b.amount - a.amount)
+                  .map((cat) => {
+                    const pct = Math.round((cat.amount / CASH_FLOW.expenses) * 100);
+                    return (
+                      <div key={cat.id} className="space-y-1">
+                        <div className="flex items-center justify-between text-sm">
+                          <span>{cat.label}</span>
+                          <span className="text-muted-foreground">{formatCurrency(cat.amount)}</span>
+                        </div>
+                        <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                          <div className="h-full rounded-full bg-primary/70" style={{ width: `${pct}%` }} />
+                        </div>
+                      </div>
+                    );
+                  })}
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Net worth trend chart */}
           <Card>
