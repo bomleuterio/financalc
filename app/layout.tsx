@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Script from 'next/script';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import { ADSENSE_CLIENT } from '@/lib/adsense';
 import { GA_MEASUREMENT_ID } from '@/lib/analytics';
@@ -75,6 +76,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <SpeedInsights />
+        <Analytics />
         <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
