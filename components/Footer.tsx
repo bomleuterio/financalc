@@ -44,10 +44,16 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} MoneyCalcs.AI. All calculations are for educational purposes only.
           </p>
-          <p className="text-sm text-muted-foreground">
-            Results may not reflect exact lender terms. Always consult a financial advisor.
-          </p>
+          <nav className="flex items-center gap-4 text-sm text-muted-foreground">
+            <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+            <Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link>
+            <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+          </nav>
         </div>
+        <p className="mt-4 text-xs text-muted-foreground text-center sm:text-left">
+          Results may not reflect exact lender terms. Always consult a financial advisor.
+        </p>
       </div>
     </footer>
   );
