@@ -257,6 +257,80 @@ export default function MortgagePage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Mortgage Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">
+                The calculator uses the standard amortization formula to determine your monthly payment:
+              </p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">
+                M = P × [r(1+r)^n] / [(1+r)^n - 1]
+              </p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                Where M = monthly payment, P = loan principal, r = monthly interest rate, n = number of payments
+              </p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">
+                Suppose you buy a $400,000 home with a 20% down payment ($80,000) at 7% interest over 30 years:
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Loan amount: $320,000</li>
+                <li>Monthly interest rate: 7% ÷ 12 = 0.583%</li>
+                <li>Monthly payment (P&I): $2,133</li>
+                <li>Property tax (at 1.2% annually): $400/month</li>
+                <li><strong>Total monthly payment: $2,533</strong></li>
+                <li>Total amount paid over 30 years: $912,000</li>
+                <li>Total interest paid: $592,000</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What is PMI?</p>
+                  <p className="text-muted-foreground text-sm">Mortgage Insurance (PMI) is required when your down payment is less than 20%. It protects the lender if you default. This calculator estimates PMI at 0.5% annually on the loan amount.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">How does property tax work?</p>
+                  <p className="text-muted-foreground text-sm">Property tax rates vary by location (typically 0.5%–2.5% annually). Check your local tax assessor's website for your area's rate. This amount is included in your total monthly payment if paid through escrow.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What&apos;s the difference between fixed and adjustable rates?</p>
+                  <p className="text-muted-foreground text-sm">This calculator assumes a fixed rate (stays the same for 30 years). Adjustable-rate mortgages (ARMs) start low but can increase after 5–7 years, raising your payment.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I pay off my mortgage early?</p>
+                  <p className="text-muted-foreground text-sm">Yes. The amortization schedule shows how much of each payment goes to principal vs. interest. Extra principal payments shorten the loan term and save interest.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>A larger down payment (20%+) eliminates PMI and lowers your monthly payment.</li>
+                <li>Even a 0.5% difference in interest rate significantly changes your total interest paid — shop around with multiple lenders.</li>
+                <li>Property taxes and HOA fees add 20–30% to your base principal-and-interest payment.</li>
+                <li>Use the amortization schedule to see how slowly principal decreases in early years (most of each payment is interest).</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

@@ -224,6 +224,78 @@ export default function AutoLoanPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Auto Loan Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">
+                The calculator uses the standard amortization formula to determine your monthly payment:
+              </p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">
+                M = P × [r(1+r)^n] / [(1+r)^n - 1]
+              </p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                Where M = monthly payment, P = loan principal, r = monthly interest rate, n = number of payments
+              </p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">
+                You purchase a $30,000 car with a 10% down payment ($3,000) at 6.5% interest over 60 months (5 years):
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Loan amount: $27,000</li>
+                <li>Monthly interest rate: 6.5% ÷ 12 = 0.542%</li>
+                <li><strong>Monthly payment: $517</strong></li>
+                <li>Total paid over 5 years: $31,020</li>
+                <li>Total interest paid: $4,020</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">How does my credit score affect my rate?</p>
+                  <p className="text-muted-foreground text-sm">Borrowers with excellent credit (750+) typically qualify for rates 2–4% lower than those with fair credit (650–699). Even a 1% difference saves thousands over the loan term.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What&apos;s a good down payment?</p>
+                  <p className="text-muted-foreground text-sm">A 20% down payment reduces your loan amount and shows lenders you&apos;re serious. However, 10% is common, and some loans require as little as 0% (though rates are higher).</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I choose 36, 60, or 72 months?</p>
+                  <p className="text-muted-foreground text-sm">Shorter terms (36–48 months) have higher payments but less total interest. Longer terms (60–72 months) have lower payments but you pay more interest overall. Consider your budget and how long you plan to keep the car.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I pay off my auto loan early?</p>
+                  <p className="text-muted-foreground text-sm">Yes, most auto loans allow prepayment without penalty. Paying extra principal each month saves significant interest and can shorten your loan by years.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>APR, not just interest rate, reflects the true cost — always compare APRs, not just rates.</li>
+                <li>A 0.5% lower rate on a $25,000 loan saves ~$650 over 5 years — it&apos;s worth negotiating.</li>
+                <li>Longer loan terms (60–84 months) are becoming common but extend your exposure to vehicle depreciation and interest.</li>
+                <li>Consider the total cost of ownership: insurance, maintenance, fuel, and depreciation, not just the monthly payment.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

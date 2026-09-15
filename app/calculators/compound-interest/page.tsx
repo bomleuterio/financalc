@@ -144,6 +144,80 @@ export default function CompoundInterestPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Compound Interest Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">
+                The calculator uses the compound interest formula to project your investment growth:
+              </p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">
+                A = P(1 + r/n)^(nt) + PMT × [((1 + r/n)^(nt) - 1) / (r/n)]
+              </p>
+              <p className="text-muted-foreground mt-2 text-xs">
+                Where A = final amount, P = principal, r = annual rate, n = compounding periods per year, t = years, PMT = regular contribution
+              </p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">
+                You invest $10,000 in a savings account earning 4% APY, compounded monthly, and add $200 each month for 10 years:
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Starting principal: $10,000</li>
+                <li>Monthly contribution: $200</li>
+                <li>Annual interest rate: 4%</li>
+                <li>Compounding frequency: Monthly (12 times/year)</li>
+                <li><strong>Final amount after 10 years: $38,614</strong></li>
+                <li>Total contributions: $34,000 ($10,000 initial + $24,000 in deposits)</li>
+                <li>Interest earned: $4,614</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s the power of compound interest?</p>
+                  <p className="text-muted-foreground text-sm">You earn interest on your interest. Early contributions have decades to grow, so starting as soon as possible dramatically increases your wealth. A $5,000 investment at age 25 can become $100,000+ by age 65.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">How does compounding frequency matter?</p>
+                  <p className="text-muted-foreground text-sm">Daily compounding earns slightly more than monthly, which earns more than yearly. The difference is small for lower rates (e.g., savings accounts) but significant for high-yield investments.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What if I increase my contributions over time?</p>
+                  <p className="text-muted-foreground text-sm">Most people increase savings as their income grows. This calculator assumes fixed contributions, but you can manually adjust to model annual increases and see the impact.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">How do taxes and inflation affect my growth?</p>
+                  <p className="text-muted-foreground text-sm">This calculator shows nominal returns (before taxes and inflation). In reality, taxes may reduce returns, and inflation erodes purchasing power. Tax-advantaged accounts (401k, IRA) help offset these effects.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Time is your greatest asset — starting early gives compounding decades to work, dramatically increasing your final wealth.</li>
+                <li>Even small contributions add up over time. $200/month for 30 years at 6% returns ~$245,000.</li>
+                <li>A 1–2% difference in returns seems small but compounds into tens of thousands of dollars over decades — shop for better rates.</li>
+                <li>Consistent investing (dollar-cost averaging) removes emotion and leverages compound growth in volatile markets.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }
