@@ -104,6 +104,63 @@ export default function SalesTaxPage() {
           </Card>
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Sales Tax Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Calculates sales tax based on the item price and applicable tax rate.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Sales Tax = Price × Tax Rate (%)</p>
+              <p className="text-muted-foreground mt-2 text-xs">Total = Price + Sales Tax</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">You buy a laptop for $1,000 in a state with 7% sales tax:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Item price: $1,000</li>
+                <li>Sales tax (7%): $70</li>
+                <li><strong>Total cost: $1,070</strong></li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">Do all items have sales tax?</p>
+                  <p className="text-muted-foreground text-sm">No. Most states exempt groceries, medications, and clothing. Some items (alcohol, cars) have additional taxes. Check your state&apos;s rules.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Why are sales tax rates different by state?</p>
+                  <p className="text-muted-foreground text-sm">States set their own rates (0–10%+). Some add local taxes too. Delaware has no sales tax; California reaches 8.625%+ with local additions.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What about online purchases?</p>
+                  <p className="text-muted-foreground text-sm">Since 2018, online retailers must collect sales tax if they have nexus (business presence) in your state. Rates vary by destination, not seller.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Sales tax varies widely by state—moving from California (8.6%+) to Nevada (6.85%) saves on purchases.</li>
+                <li>Budget for sales tax on major purchases; it adds up quickly on expensive items.</li>
+                <li>Some items (groceries, medicine) are exempt in most states—always ask at checkout.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

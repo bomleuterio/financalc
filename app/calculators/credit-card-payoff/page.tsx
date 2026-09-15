@@ -141,6 +141,64 @@ export default function CreditCardPayoffPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Credit Card Payoff Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Calculates payoff timeline based on balance, interest rate (APR), and monthly payment. Higher payments reduce interest paid.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Months to Payoff = -log(1 - (Balance × Monthly Rate / Payment)) / log(1 + Monthly Rate)</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">$5,000 balance at 18% APR, paying $150/month:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Balance: $5,000</li>
+                <li>APR: 18%</li>
+                <li>Monthly payment: $150</li>
+                <li><strong>Months to payoff: 38 months (~3.2 years)</strong></li>
+                <li>Total interest paid: $1,700</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">How much should I pay monthly?</p>
+                  <p className="text-muted-foreground text-sm">Minimum (2–3% of balance) keeps you in debt for years. $200 vs. $150 on a $5k balance saves 8 months and $500 in interest.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I pay off multiple cards?</p>
+                  <p className="text-muted-foreground text-sm">Avalanche (highest rate first) saves the most interest. Snowball (smallest balance first) provides psychological wins. Pick what motivates you.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I negotiate a lower rate?</p>
+                  <p className="text-muted-foreground text-sm">Call your issuer and ask. If you have good credit and payment history, you can often get 2–5% knocked off.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Credit card debt is expensive (15–25% APR)—prioritize paying it off over investing.</li>
+                <li>Paying $50 extra per month can cut years off your payoff timeline and save thousands in interest.</li>
+                <li>Once cleared, avoid rebuilding debt—use cards for rewards, pay in full monthly.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

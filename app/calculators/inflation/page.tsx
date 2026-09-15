@@ -116,6 +116,63 @@ export default function InflationPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Inflation Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Calculates how inflation erodes purchasing power over time using the Consumer Price Index (CPI).</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Future Cost = Present Cost × (1 + Inflation Rate)^Years</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">A sandwich costs $10 today. At 3% inflation over 15 years:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Today cost: $10</li>
+                <li>Inflation rate: 3%/year</li>
+                <li><strong>Cost in 15 years: $15.58</strong></li>
+                <li>Increase: 55.8%</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s average inflation?</p>
+                  <p className="text-muted-foreground text-sm">US long-term average is ~3%/year. 2021–2023 saw 8%+ (high inflation); expect to revert to 2–3%. Use 3% for conservative retirement planning.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">How does inflation affect retirement?</p>
+                  <p className="text-muted-foreground text-sm">$50k/year needed today becomes $95k/year in 25 years at 3% inflation. Plan for a higher retirement nest egg to account for this.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I outpace inflation?</p>
+                  <p className="text-muted-foreground text-sm">Yes. Stocks historically return 10% (vs. 3% inflation) = 7% real return. Bonds (~5%) barely beat inflation. Investments are how you build wealth.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Inflation erodes cash savings—$10k under a mattress loses 30% buying power in 20 years at 3% inflation.</li>
+                <li>Invest your long-term savings (3+ years); stocks historically beat inflation, cash doesn&apos;t.</li>
+                <li>In retirement planning, don&apos;t forget to account for inflation on your spending needs.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

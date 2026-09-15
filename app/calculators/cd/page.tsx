@@ -92,6 +92,65 @@ export default function CDPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This CD Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Calculates final CD balance using compound interest over the term.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r/n)^(nt)</p>
+              <p className="text-muted-foreground mt-2 text-xs">Where n = compounding periods per year, typically 12 for monthly.</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">You deposit $10,000 in a 1-year CD at 5.25% APY, compounded daily:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Principal: $10,000</li>
+                <li>Annual rate: 5.25%</li>
+                <li>Term: 1 year</li>
+                <li><strong>Final balance: $10,525</strong></li>
+                <li>Interest earned: $525</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s the difference between a CD and a savings account?</p>
+                  <p className="text-muted-foreground text-sm">CDs lock your money for a term (3 months–5 years) and pay higher interest. Savings accounts are liquid. Choose CDs for money you won&apos;t need soon; savings for emergency funds.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What if I withdraw early?</p>
+                  <p className="text-muted-foreground text-sm">You&apos;ll pay an early withdrawal penalty, typically 3–6 months of interest. Only open a CD if you&apos;re committed to the term.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I ladder my CDs?</p>
+                  <p className="text-muted-foreground text-sm">Yes. Buy multiple CDs with staggered terms (1, 2, 3, 5 years). As each matures, you can reinvest at current rates. This hedges interest rate risk.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>CDs are FDIC-insured up to $250k—one of the safest investments.</li>
+                <li>5.25% on $10k for 1 year is $525 risk-free—better than stock market for short-term savings.</li>
+                <li>Compare rates across banks; some online banks offer 5.5%+ while traditional banks offer 0.1%.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

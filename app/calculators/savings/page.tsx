@@ -79,6 +79,64 @@ export default function SavingsPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Savings Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Calculates how much your savings will grow with regular deposits and compound interest.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^t + PMT × [((1 + r)^t - 1) / r]</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">Starting with $5,000, save $300/month at 4% APY for 5 years:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Starting balance: $5,000</li>
+                <li>Monthly deposits: $300</li>
+                <li>Total contributions: $23,000 ($5k + $300 × 60 months)</li>
+                <li><strong>Final balance: $24,570</strong></li>
+                <li>Interest earned: $1,570</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">Where should I keep my savings?</p>
+                  <p className="text-muted-foreground text-sm">High-yield savings accounts (4–5% APY) or money market accounts. Avoid regular savings (0.01% APY)—the difference compounds to hundreds of dollars annually.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What if I can only save $100/month?</p>
+                  <p className="text-muted-foreground text-sm">$100/month for 5 years = $6,300 saved + interest. Every bit counts. Start small, then increase as income grows.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I set up automatic transfers?</p>
+                  <p className="text-muted-foreground text-sm">Yes. "Pay yourself first"—automate transfers to savings on payday. Out of sight = less temptation to spend.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Compound interest works in your favor—your money earns interest, then interest earns more interest.</li>
+                <li>Move savings to high-yield accounts; 4% vs. 0.01% adds hundreds to your final balance over years.</li>
+                <li>Automate and stay consistent—small regular deposits outperform sporadic large ones.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

@@ -141,6 +141,62 @@ export default function StudentLoanPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Student Loan Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Calculates monthly payment using the standard amortization formula, then compares 10-year standard and 25-year extended repayment plans.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">M = P × [r(1+r)^n] / [(1+r)^n - 1]</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">You graduate with $30,000 in federal loans at 5.5% APR:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Standard 10-year plan: $302/month, $6,240 total interest</li>
+                <li>Extended 25-year plan: $170/month, $21,000 total interest</li>
+                <li>Difference: $132/month lower but $14,760 more interest</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">Should I choose 10-year or 25-year repayment?</p>
+                  <p className="text-muted-foreground text-sm">10-year pays off faster with less total interest but higher monthly payments. 25-year is easier on cash flow but costs significantly more. Choose based on your budget and income growth expectations.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What about income-driven repayment plans?</p>
+                  <p className="text-muted-foreground text-sm">Plans like IBR and PAYE cap payments at 10–20% of discretionary income. This can lower your payment but extends the term to 20–25 years. They may also offer loan forgiveness, but tax implications apply.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Is it better to pay off student loans early?</p>
+                  <p className="text-muted-foreground text-sm">Yes, usually. Extra payments reduce interest and shorten the term. However, federal loans have protections (forbearance, deferment) that private loans don&apos;t—weigh that before aggressively paying off.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>10-year standard repayment saves thousands compared to 25-year extended—pay as much as you can afford in the first 10 years.</li>
+                <li>Income-driven plans can be valuable if you expect significant income growth or face temporary hardship.</li>
+                <li>Public Service Loan Forgiveness (PSLF) forgives remaining balance after 10 years if you work in qualifying public sector jobs—worth exploring if eligible.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

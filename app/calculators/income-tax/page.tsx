@@ -164,6 +164,64 @@ export default function IncomeTaxPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Income Tax Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Uses 2024 federal tax brackets to calculate tax owed based on filing status and income.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = (Taxable Income × Bracket Rate) - Deductions</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">Single filer with $75,000 income, standard deduction:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Gross income: $75,000</li>
+                <li>Standard deduction: $14,600</li>
+                <li>Taxable income: $60,400</li>
+                <li><strong>Federal tax owed: $7,347</strong></li>
+                <li>Effective rate: 9.8%</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s the difference between marginal and effective tax rate?</p>
+                  <p className="text-muted-foreground text-sm">Marginal rate is your tax bracket rate (24%, 22%, etc.). Effective rate is total tax ÷ income. Always think in terms of effective rate when planning.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I itemize or take the standard deduction?</p>
+                  <p className="text-muted-foreground text-sm">Standard deduction is $14,600 (single) in 2024. Itemize only if deductions (mortgage interest, charity) exceed this.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What about state and local taxes?</p>
+                  <p className="text-muted-foreground text-sm">This calculator shows federal only. State income tax ranges 0–13%; add that separately based on your state.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Your effective tax rate is lower than your marginal rate—the US uses progressive taxation.</li>
+                <li>Maximize pre-tax contributions (401k, HSA) to reduce taxable income and your tax bill.</li>
+                <li>This calculator provides an estimate; consult a tax professional for deductions and special situations.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

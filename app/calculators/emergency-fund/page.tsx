@@ -130,6 +130,63 @@ export default function EmergencyFundPage() {
           </Card>
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Emergency Fund Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Calculates the recommended emergency fund size based on your monthly expenses and desired safety margin.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Emergency Fund = Monthly Expenses × Number of Months (3–6)</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">Your monthly expenses are $4,000:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Conservative (3 months): $12,000</li>
+                <li>Moderate (4 months): $16,000</li>
+                <li>Recommended (6 months): $24,000</li>
+                <li>High earner (12 months): $48,000</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">How many months should I save?</p>
+                  <p className="text-muted-foreground text-sm">Minimum 3 months if you have stable income. Recommended 6 months for job security/health concerns. Self-employed or high-income earners: 9–12 months.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Where should I keep it?</p>
+                  <p className="text-muted-foreground text-sm">High-yield savings account (4–5% APY) or money market fund. NOT investments—you need quick access, not growth.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What counts as an emergency?</p>
+                  <p className="text-muted-foreground text-sm">Job loss, medical bills, major car/home repairs. NOT: vacation, Black Friday sales, or discretionary spending.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>An emergency fund prevents high-interest debt during hardship—it&apos;s not optional.</li>
+                <li>Start small (1 month), then build to 3–6 months. Don&apos;t max retirement accounts until you have this cushion.</li>
+                <li>Keep it liquid and accessible; high-yield savings accounts earn 4%+ with zero risk.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

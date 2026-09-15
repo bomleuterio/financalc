@@ -98,6 +98,64 @@ export default function RothIRAPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Roth IRA Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Projects Roth IRA growth using compound interest with annual contributions ($7,000 limit in 2024) and investment returns.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^n + Annual Contribution × [((1 + r)^n - 1) / r]</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">Age 30, contribute $7,000/year, 7% annual return until age 67:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Annual contribution: $7,000</li>
+                <li>Time horizon: 37 years</li>
+                <li>Total contributions: $259,000</li>
+                <li><strong>Projected balance at 67: $1.7 million</strong></li>
+                <li>Tax-free growth: $1.44 million</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s the difference between Roth and Traditional IRA?</p>
+                  <p className="text-muted-foreground text-sm">Roth: Pay taxes now, withdraw tax-free in retirement. Traditional: Deduct contributions now, pay taxes on withdrawals. Choose Roth if you expect higher taxes in retirement.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I contribute if I&apos;m over the income limit?</p>
+                  <p className="text-muted-foreground text-sm">No, but you can "backdoor" convert: contribute to Traditional IRA, then convert to Roth. Consult a tax pro.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I withdraw early?</p>
+                  <p className="text-muted-foreground text-sm">You can withdraw contributions anytime tax-free. Earnings have penalties before 59½ (exceptions: first-time home purchase, hardship).</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Roth IRAs offer tax-free growth for 30+ years—some of the best wealth-building vehicles available.</li>
+                <li>Max out your Roth ($7,000/year) before investing elsewhere if eligible; tax-free growth is invaluable.</li>
+                <li>No required minimum distributions (RMDs) in retirement; you control when to withdraw.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

@@ -140,6 +140,66 @@ export default function NetWorthPage() {
           </Card>
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Net Worth Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Net worth measures your financial health—the difference between what you own and what you owe.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Net Worth = Total Assets - Total Liabilities</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">Your financial snapshot:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Home: $400,000</li>
+                <li>Investments: $150,000</li>
+                <li>Cash: $25,000</li>
+                <li>Car: $20,000</li>
+                <li>Mortgage: -$300,000</li>
+                <li>Car loan: -$15,000</li>
+                <li><strong>Net worth: $280,000</strong></li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">Should I include my car in net worth?</p>
+                  <p className="text-muted-foreground text-sm">Yes, but recognize it&apos;s a depreciating asset (loses 20%/year). For planning, focus on appreciating assets (real estate, investments).</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What&apos;s a good net worth target?</p>
+                  <p className="text-muted-foreground text-sm">By age 30: $50k–$100k. Age 40: $200k–$500k. Age 55: $1M+. These are benchmarks; your path depends on income and priorities.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">How do I increase my net worth?</p>
+                  <p className="text-muted-foreground text-sm">Earn more, spend less, invest the difference. 50% income growth + 20% expense cut + 7% returns = $1M in 20 years.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Net worth = financial freedom metric; track it annually to see your progress.</li>
+                <li>Don&apos;t obsess over it—focus on controllables: earn, save, invest consistently.</li>
+                <li>Millionaires typically build wealth slowly through discipline, not overnight success.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

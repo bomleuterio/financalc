@@ -125,6 +125,63 @@ export default function InvestmentGrowthPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Investment Growth Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Projects portfolio growth with regular contributions and compounding returns.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^n + PMT × [((1 + r)^n - 1) / r]</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">$10,000 starting, $500/month contributions, 8% annual return over 20 years:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Starting balance: $10,000</li>
+                <li>Total contributions: $130,000</li>
+                <li><strong>Final value: $341,000</strong></li>
+                <li>Investment gains: $201,000</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What return should I assume?</p>
+                  <p className="text-muted-foreground text-sm">Stock portfolios historically return 10%. Bonds return 5%. Diversified (60/40) return ~8%. Use conservative 7% for planning; actual returns vary yearly.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Does regular investing help?</p>
+                  <p className="text-muted-foreground text-sm">Dramatically. $500/month for 20 years adds $130k but results in $341k. Dollar-cost averaging (regular investing) smooths market volatility.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I invest if the market might crash?</p>
+                  <p className="text-muted-foreground text-sm">Time in market beats timing the market. Even investors who bought before 2008 crash recovered and profited by 2020. Stay the course.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Consistency trumps timing—$500 monthly beats $6,000 lump sum once a year for the same $6k/year total.</li>
+                <li>A 2% difference in returns (8% vs. 10%) saves/costs $50k+ over 20 years—choose low-cost index funds.</li>
+                <li>Start early; the first 10 years of contributions matter more than the second 10 due to compounding.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

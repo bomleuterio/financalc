@@ -199,6 +199,62 @@ export default function DebtPayoffPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Debt Payoff Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Compares two payoff strategies: Avalanche (highest rate first) and Snowball (smallest balance first).</p>
+              <p className="text-muted-foreground mt-2">Both use: Months to Payoff = -log(1 - (Balance × Monthly Rate / Payment)) / log(1 + Monthly Rate)</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">Two debts: Credit card $3k @ 20% APR, Personal loan $7k @ 8% APR, $400/month payment:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Avalanche (20% first): 27 months, $2,100 total interest</li>
+                <li>Snowball (smallest first): 29 months, $2,400 total interest</li>
+                <li><strong>Avalanche wins: 2 months + $300 saved</strong></li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">Avalanche vs. Snowball—which is better?</p>
+                  <p className="text-muted-foreground text-sm">Avalanche saves the most money mathematically. Snowball provides quick wins and motivation. Choose Avalanche if disciplined; Snowball if you need emotional momentum.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What if I can pay more than the minimum?</p>
+                  <p className="text-muted-foreground text-sm">Extra payments accelerate payoff and save huge amounts in interest. Every $100 extra can shave months off your timeline.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I consolidate my debts?</p>
+                  <p className="text-muted-foreground text-sm">Consolidation can work if the new rate is lower. Otherwise, focus on paying down highest-rate debt first (avalanche).</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Avalanche (highest rate first) saves the most money and time—use it if you can stay motivated.</li>
+                <li>Snowball (smallest balance first) provides quick wins and momentum—use it if you need psychological boosts.</li>
+                <li>The most important thing: pick a strategy and stick to it. Consistency beats perfection.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

@@ -156,6 +156,63 @@ export default function RetirementPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Retirement Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Projects how much you need to save for retirement using a retirement income goal and life expectancy.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Needed = Annual Retirement Goal × Years in Retirement / Investment Returns</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">You want $80,000/year in retirement from age 65 to 95 (30 years) with 6% investment returns:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Annual need: $80,000</li>
+                <li>Years in retirement: 30</li>
+                <li>Investment return: 6%</li>
+                <li><strong>Needed at 65: ~$1.28 million</strong></li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s the 4% rule?</p>
+                  <p className="text-muted-foreground text-sm">Withdraw 4% of your portfolio in year 1, then adjust for inflation. $1M portfolio = $40k/year. This historically lasts 30+ years.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I factor in Social Security?</p>
+                  <p className="text-muted-foreground text-sm">Yes, but it's uncertain. Average benefit is ~$1,900/month. Use this calculator for the gap between your goal and Social Security.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What if I can&apos;t save $1M?</p>
+                  <p className="text-muted-foreground text-sm">Start with what you can save now; compound growth does the heavy lifting over 30+ years. Even $500k at 6% returns ~$23k/year indefinitely.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>The earlier you start, the less you need to save monthly due to compound growth.</li>
+                <li>Use the 4% rule as a rough guide for withdrawal rates in retirement.</li>
+                <li>Account for inflation; $80k needed today might be $150k in 30 years.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

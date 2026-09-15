@@ -121,6 +121,64 @@ export default function PersonalLoanPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Personal Loan Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Uses the standard amortization formula to calculate monthly payment based on principal, interest rate, and term.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">M = P × [r(1+r)^n] / [(1+r)^n - 1]</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">You borrow $15,000 at 11.5% APR for 36 months:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Loan amount: $15,000</li>
+                <li>Monthly interest rate: 11.5% ÷ 12 = 0.958%</li>
+                <li><strong>Monthly payment: $481</strong></li>
+                <li>Total paid: $17,316</li>
+                <li>Total interest: $2,316</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s the difference between a personal and auto loan?</p>
+                  <p className="text-muted-foreground text-sm">Personal loans are unsecured (no collateral), so they have higher rates. Auto loans use the car as collateral, allowing lower rates. Personal loans offer more flexibility on how you use the money.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Why do shorter terms save interest?</p>
+                  <p className="text-muted-foreground text-sm">A 24-month loan has fewer months to accrue interest than 60 months. Though payments are higher, total interest paid is significantly less.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I get a lower rate?</p>
+                  <p className="text-muted-foreground text-sm">Yes. Shop multiple lenders, improve your credit score, borrow less, or shorten the term. Even a 1% rate difference saves hundreds.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Shorter loan terms (24–36 months) save thousands in interest vs. longer terms (60+ months).</li>
+                <li>A personal loan at 11.5% should be a last resort—explore credit cards (if you can pay off quickly) or credit unions first.</li>
+                <li>Making extra payments cuts the term and interest significantly.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

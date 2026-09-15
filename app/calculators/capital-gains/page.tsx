@@ -124,6 +124,64 @@ export default function CapitalGainsPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Capital Gains Tax Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Calculates capital gains tax on investment profits using short-term (ordinary income rates) or long-term (preferential rates) rates.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = Capital Gain × Tax Rate (15% or 20% for long-term)</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">You sell $50,000 of stock held 2+ years for $75,000 profit, long-term rate 15%:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Sale price: $75,000</li>
+                <li>Cost basis: $50,000</li>
+                <li>Capital gain: $25,000</li>
+                <li><strong>Tax owed (15%): $3,750</strong></li>
+                <li>Net profit: $21,250</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s the difference between short and long-term gains?</p>
+                  <p className="text-muted-foreground text-sm">Short-term (held &lt;1 year): taxed as ordinary income (up to 37%). Long-term (held &gt;=1 year): 0%, 15%, or 20% depending on income. Hold longer to save big on taxes.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I offset gains with losses?</p>
+                  <p className="text-muted-foreground text-sm">Yes. Harvest losses to offset gains (tax-loss harvesting). You can carry unused losses forward to future years.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What about state taxes?</p>
+                  <p className="text-muted-foreground text-sm">This shows federal only. Most states tax capital gains as ordinary income (3–13.3%); 5 states have no capital gains tax.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Hold investments 1+ year for long-term rates (15% vs. 37% short-term)—massive tax savings.</li>
+                <li>Tax-loss harvesting (selling losers to offset winners) can save thousands annually.</li>
+                <li>In tax-advantaged accounts (401k, IRA), gains aren&apos;t taxed until withdrawal—keep long-term winners there.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

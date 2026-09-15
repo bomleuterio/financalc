@@ -130,6 +130,65 @@ export default function ROIPage() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This ROI Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">ROI measures the profit or loss from an investment as a percentage of the amount invested.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">ROI (%) = (Final Value - Initial Investment) / Initial Investment × 100</p>
+              <p className="text-muted-foreground mt-2 text-xs">Annualized ROI accounts for the holding period and expresses annual returns.</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">You invest $10,000 in a stock that grows to $14,000 over 3 years:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Initial investment: $10,000</li>
+                <li>Final value: $14,000</li>
+                <li>Net profit: $4,000</li>
+                <li>Total ROI: 40%</li>
+                <li>Annualized ROI: 11.9% per year</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What&apos;s a good ROI?</p>
+                  <p className="text-muted-foreground text-sm">S&P 500 historically averages ~10% annually. Returns above 10% beat the market; below 7% underperform inflation. Compare your ROI to a benchmark like the S&P 500, not just raw percentage.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">How do I account for fees and taxes?</p>
+                  <p className="text-muted-foreground text-sm">This calculator shows gross returns. Subtract fees, commissions, and taxes (capital gains) to get your true net ROI. For example, a 10% return minus 20% capital gains tax is really 8%.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Is annualized ROI the same as average annual return?</p>
+                  <p className="text-muted-foreground text-sm">No. Annualized ROI accounts for compounding. A 40% gain over 3 years is 11.9% annualized, not 13.3% (which would be simple division).</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Always annualize ROI to compare investments held for different periods.</li>
+                <li>Account for fees and taxes—they can reduce your net return by 2–5% annually.</li>
+                <li>Use ROI to evaluate stock picks, real estate, or any investment against market benchmarks.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

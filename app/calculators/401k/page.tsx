@@ -150,6 +150,63 @@ export default function Page401k() {
           )}
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This 401k Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Projects future 401k balance using compound interest, accounting for your contributions, employer match, and investment returns.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^n + (Annual Contribution + Employer Match) × [((1 + r)^n - 1) / r]</p>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">Age 30, contribute $500/month, employer matches 100% up to 3%, expect 7% annual return until age 65:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Your annual contribution: $6,000</li>
+                <li>Employer match: $1,800 (3% of $60k salary)</li>
+                <li>Combined annual: $7,800</li>
+                <li><strong>Projected balance at 65: $1.2 million</strong></li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">Should I max out my 401k?</p>
+                  <p className="text-muted-foreground text-sm">Minimum: contribute enough to get the full employer match (usually 3–6%). Ideal: max out ($23,500 in 2024). Reality: contribute what you can afford after emergency savings.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">What return rate should I use?</p>
+                  <p className="text-muted-foreground text-sm">S&P 500 historically returns 10% annually. Conservative investors use 6–7%; aggressive use 8–10%. Use 7% as a middle ground.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Can I withdraw before retirement?</p>
+                  <p className="text-muted-foreground text-sm">Withdrawals before 59½ incur a 10% penalty plus income tax (exceptions: hardship, SEPP). It&apos;s worth leaving 401k alone for retirement.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>Always capture the full employer match—it&apos;s free money and a guaranteed return.</li>
+                <li>Starting early (age 25 vs. 35) more than doubles your retirement savings due to compound growth.</li>
+                <li>A 1% increase in returns adds $100k+ to your final balance—fee shopping matters.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }

@@ -165,6 +165,66 @@ export default function BudgetPage() {
           </Card>
         </div>
       </div>
+
+      <div className="mt-12 space-y-6">
+        <Card>
+          <CardHeader><CardTitle>How This Budget Calculator Works</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <h3 className="font-semibold mb-2">Formula</h3>
+              <p className="text-muted-foreground">Uses the 50/30/20 budgeting rule to allocate income:</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>50% — Needs (housing, food, insurance, utilities)</li>
+                <li>30% — Wants (entertainment, dining, hobbies)</li>
+                <li>20% — Savings & debt payoff</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <p className="text-muted-foreground">Monthly income: $4,000</p>
+              <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
+                <li>Needs (50%): $2,000 (rent, groceries, insurance)</li>
+                <li>Wants (30%): $1,200 (streaming, dining, hobbies)</li>
+                <li>Savings (20%): $800 (emergency fund, retirement, debt payoff)</li>
+              </ul>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-sm">What if my needs exceed 50%?</p>
+                  <p className="text-muted-foreground text-sm">Common in high cost-of-living areas. Adjust: reduce wants to 20–25%, maintain 20%+ for savings. Alternatively, look to increase income or reduce housing cost.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Where does debt fit?</p>
+                  <p className="text-muted-foreground text-sm">Debt payments go in the 20% savings category. Prioritize high-interest debt first, then build other savings once cleared.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-sm">Should I budget every dollar?</p>
+                  <p className="text-muted-foreground text-sm">This rule is a starting point. If 50/30/20 doesn't fit your life, adjust to 60/20/20 or 40/40/20—consistency matters more than the exact ratio.</p>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li>A simple 50/30/20 budget is easier to follow than tracking every expense.</li>
+                <li>The goal: save 20%+ of income. Even 10% beats zero and compounds over time.</li>
+                <li>Review quarterly; adjust categories as needed (marriage, kids, job change affect budgets).</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </CalculatorLayout>
   );
 }
