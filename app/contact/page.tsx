@@ -12,7 +12,7 @@ export default function ContactPage() {
     <StaticPage title="Contact" subtitle="Questions, feedback, or found a bug? We'd like to hear about it.">
       <p>
         The fastest way to reach us is by email:{' '}
-        <a href="mailto:contact@moneycalcs.ai">contact@moneycalcs.ai</a>
+        <a href="mailto:vic@triangleblvd.com">contact@moneycalcs.ai</a>
       </p>
 
       <h2>What to include</h2>
