@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   },
   description:
     'Free, accurate financial calculators for loans, investments, savings, taxes, retirement, and budgeting.',
+  icons: {
+    icon: '/favicon.jpg',
+  },
   keywords: [
     'financial calculator',
     'mortgage calculator',
