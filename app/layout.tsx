@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     'credit card payoff calculator',
   ],
   alternates: {
-    canonical: '/',
+    canonical: 'https://moneycalcs.ai/',
   },
   openGraph: {
     title: 'MoneyCalcs.AI — Free Financial Calculators',
