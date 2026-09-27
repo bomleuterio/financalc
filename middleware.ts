@@ -1,6 +1,10 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+export const config = {
+  matcher: ['/((?!_next/static|_next/image|favicon|ads\\.txt|robots\\.txt|sitemap\\.xml|.well-known).*)'],
+};
+
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
