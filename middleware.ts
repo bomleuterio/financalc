@@ -2,28 +2,16 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon|ads\\.txt|robots\\.txt|sitemap\\.xml|.well-known).*)'],
+  matcher: ['/((?!_next/static|_next/image|favicon).*)'],
 };
 
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
-
-  // Skip middleware for static files that need to be accessible without redirects
-  if (pathname === '/ads.txt' || pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname.startsWith('/.well-known/')) {
-    return NextResponse.next();
-  }
-
-  let host = request.headers.get('host') || '';
   const protocol = request.headers.get('x-forwarded-proto') || 'https';
 
-  // Redirect HTTP to HTTPS
+  // Redirect HTTP to HTTPS only
   if (protocol === 'http') {
-    return NextResponse.redirect(`https://${host}${pathname}${request.nextUrl.search}`, 301);
-  }
-
-  // Redirect www to non-www
-  if (host.startsWith('www.')) {
-    host = host.slice(4);
+    const host = request.headers.get('host') || 'moneycalcs.ai';
+    const pathname = request.nextUrl.pathname;
     return NextResponse.redirect(`https://${host}${pathname}${request.nextUrl.search}`, 301);
   }
 
