@@ -295,6 +295,39 @@ export default function AutoLoanPage() {
             </div>
           </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader><CardTitle>When to Use This Calculator</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">
+              Use this calculator when: you're shopping for a vehicle and want to understand monthly payments, you want to compare different loan terms (36, 48, 60, or 72 months), you're pre-approved and want to see different interest rate scenarios, or you want to calculate total interest cost before signing loan paperwork.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Common Mistakes</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li><strong>Focusing only on the monthly payment:</strong> A 72-month loan has a lower payment but costs $3,000+ more in interest than a 48-month loan. Consider total cost, not just the payment.</li>
+              <li><strong>Not shopping around for rates:</strong> Your bank's rate is often 2-4% higher than credit union rates. Shop 3-5 lenders before buying.</li>
+              <li><strong>Being "upside down" on a trade-in:</strong> If you owe $15k on your current car but it's worth $12k, rolling that debt into a new loan extends your underwater situation.</li>
+              <li><strong>Underestimating total ownership cost:</strong> A cheap car with high insurance, maintenance, and fuel costs more than a reliable car with low insurance and maintenance.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Pro Tips</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li><strong>Get pre-approved before shopping:</strong> Pre-approval shows dealers you're serious and gives you leverage to negotiate.</li>
+              <li><strong>Consider used vs. new:</strong> A 2-3 year old car (used lease return) avoids 40% depreciation of a new car while still being reliable.</li>
+              <li><strong>Pay down to 50% LTV quickly:</strong> Loan-to-value above 80% means you're paying insurance and interest on a depreciating asset. Build equity fast.</li>
+              <li><strong>Make extra payments early:</strong> Paying an extra $50/month in year 1 saves $1,000+ in total interest and gets you out of the loan faster.</li>
+            </ul>
+          </CardContent>
+        </Card>
       </div>
     </CalculatorLayout>
   );

@@ -330,6 +330,42 @@ export default function MortgagePage() {
             </div>
           </CardContent>
         </Card>
+
+        <Card>
+          <CardHeader><CardTitle>When to Use This Calculator</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">
+              Use this calculator when: you're shopping for a home and want to understand your monthly costs before applying for a loan, you're refinancing and want to compare new rates, you're considering a larger down payment and want to see the impact, or you want to understand how different loan terms (15 vs 30 years) affect your payment.
+            </p>
+            <p className="text-muted-foreground">
+              This calculator is most accurate for fixed-rate mortgages. Adjustable-rate mortgages (ARMs) will have changing rates, which this tool doesn't model.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Common Mistakes to Avoid</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li><strong>Forgetting property tax and insurance:</strong> Your monthly payment isn't just principal and interest. Property tax, insurance, and HOA add 30-50% to your base payment. Budget for the total.</li>
+              <li><strong>Assuming 20% down is required:</strong> It's not. You can put down 3-10% and avoid PMI if you have good credit and income. The trade-off is paying PMI, which is annoying but not a dealbreaker.</li>
+              <li><strong>Ignoring the interest breakdown:</strong> In year 1, 87% of your payment goes to interest, not principal. Don't expect fast equity buildup early on.</li>
+              <li><strong>Overextending on price:</strong> Just because you're approved for $500k doesn't mean you should borrow it. Use this calculator to ensure your monthly payment is comfortable for 30 years, not just year 1.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Pro Tips</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li><strong>Shop rates across 3-5 lenders:</strong> A 0.5% difference in rates costs you $50,000+ in total interest over 30 years. It's worth spending a day comparing offers.</li>
+              <li><strong>Consider a 15-year mortgage if possible:</strong> Your payment is ~1.5x higher, but you pay 1/3 the interest and build equity twice as fast. It's a personal choice based on cash flow.</li>
+              <li><strong>Make extra principal payments early:</strong> If you can afford an extra $100/month in year 5, do it then, not year 25. Each dollar goes entirely to principal, compounding into massive savings.</li>
+              <li><strong>Refinance when rates drop 0.5%+:</strong> If rates fall 0.5% or more below your current rate, refinancing usually pays for itself in 3-5 years through interest savings.</li>
+            </ul>
+          </CardContent>
+        </Card>
       </div>
     </CalculatorLayout>
   );
