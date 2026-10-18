@@ -10,10 +10,10 @@ import { formatCurrency, formatPercent } from '@/lib/calculators';
 
 const US_STATE_RATES: Record<string, number> = {
   AL: 4.0, AK: 0, AZ: 5.6, AR: 6.5, CA: 7.25, CO: 2.9, CT: 6.35, DE: 0, FL: 6.0, GA: 4.0,
-  HI: 4.0, ID: 6.0, IL: 6.25, IN: 7.0, IA: 6.0, KS: 6.5, KY: 6.0, LA: 4.45, ME: 5.5, MD: 6.0,
+  HI: 4.0, ID: 6.0, IL: 6.25, IN: 7.0, IA: 6.0, KS: 6.5, KY: 6.0, LA: 5.0, ME: 5.5, MD: 6.0,
   MA: 6.25, MI: 6.0, MN: 6.875, MS: 7.0, MO: 4.225, MT: 0, NE: 5.5, NV: 6.85, NH: 0, NJ: 6.625,
   NM: 4.875, NY: 4.0, NC: 4.75, ND: 5.0, OH: 5.75, OK: 4.5, OR: 0, PA: 6.0, RI: 7.0, SC: 6.0,
-  SD: 4.5, TN: 7.0, TX: 6.25, UT: 4.85, VT: 6.0, VA: 4.3, WA: 6.5, WV: 6.0, WI: 5.0, WY: 4.0, DC: 6.0,
+  SD: 4.2, TN: 7.0, TX: 6.25, UT: 4.85, VT: 6.0, VA: 4.3, WA: 6.5, WV: 6.0, WI: 5.0, WY: 4.0, DC: 6.0,
 };
 
 export default function SalesTaxPage() {
@@ -135,7 +135,7 @@ export default function SalesTaxPage() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Do all items have sales tax?</p>
-                  <p className="text-muted-foreground text-sm">No. Most states exempt groceries, medications, and clothing. Some items (alcohol, cars) have additional taxes. Check your state&apos;s rules.</p>
+                  <p className="text-muted-foreground text-sm">No. Most states exempt groceries and prescription drugs; a few exempt clothing. Some items (alcohol, cars) have additional taxes. Check your state&apos;s rules.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">Why are sales tax rates different by state?</p>
@@ -143,7 +143,7 @@ export default function SalesTaxPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">What about online purchases?</p>
-                  <p className="text-muted-foreground text-sm">Since 2018, online retailers must collect sales tax if they have nexus (business presence) in your state. Rates vary by destination, not seller.</p>
+                  <p className="text-muted-foreground text-sm">Since 2018, online retailers must collect sales tax if they meet your state's economic-nexus sales threshold. Rates vary by destination, not seller.</p>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function SalesTaxPage() {
             <div>
               <h3 className="font-semibold mb-2">Key Takeaways</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li>Sales tax varies widely by state—moving from California (8.6%+) to Nevada (6.85%) saves on purchases.</li>
+                <li>Sales tax varies widely by state—combined state and local rates range from 0% in Oregon to over 9% in Louisiana and Tennessee.</li>
                 <li>Budget for sales tax on major purchases; it adds up quickly on expensive items.</li>
                 <li>Some items (groceries, medicine) are exempt in most states—always ask at checkout.</li>
               </ul>

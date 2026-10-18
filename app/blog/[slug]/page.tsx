@@ -26,8 +26,8 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
           Consider two investors: Alice starts at age 25 and invests $500/month for 10 years, then stops (total $60,000 invested). Bob waits until age 35, then invests $500/month for 30 years (total $180,000 invested). Assuming 7% annual returns:
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
-          <li>Alice's balance at 65: ~$876,000</li>
-          <li>Bob's balance at 65: ~$851,000</li>
+          <li>Alice's balance at 65: ~$702,000</li>
+          <li>Bob's balance at 65: ~$610,000</li>
         </ul>
         <p>
           Alice invested $120,000 less but ends up with MORE because she started 10 years earlier. Those early years of compounding are invaluable.
@@ -76,13 +76,13 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
           You're paying $1,750 (87.7%) to the bank just for borrowing money! In month 360 (the last payment):
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
-          <li>Interest: $10</li>
-          <li>Principal: $1,986</li>
+          <li>Interest: $12</li>
+          <li>Principal: $1,984</li>
         </ul>
 
         <h2 className="text-xl font-semibold mt-6">Why Early Extra Payments Matter</h2>
         <p>
-          If you pay an extra $100/month on your mortgage, it goes entirely to principal (reducing future interest). This can cut years off your loan and save $100,000+ in interest over 30 years.
+          If you pay an extra $100/month on your mortgage, it goes entirely to principal (reducing future interest). This can cut about 4 years off your loan and save ~$69,000 in interest over 30 years.
         </p>
         <p>
           Early payments on principal compound over time—they reduce the balance that future interest is calculated on, which reduces future interest charges, which lets more of future payments go to principal. It creates a snowball effect in reverse.
@@ -196,12 +196,12 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
 
         <h2 className="text-xl font-semibold mt-6">Account for Inflation</h2>
         <p>
-          $80,000/year today might be $150,000/year in 30 years due to 3% average inflation. Your retirement number should account for this. Our retirement calculator handles this automatically—just enter your current annual need and desired retirement age.
+          $80,000/year today might be $194,000/year in 30 years due to 3% average inflation. Your retirement number should account for this. Our retirement calculator handles this automatically—just enter your current annual need and desired retirement age.
         </p>
 
         <h2 className="text-xl font-semibold mt-6">Include Social Security</h2>
         <p>
-          Social Security covers part of retirement (average ~$1,900/month or $22,800/year). Subtract this from your annual needs, then calculate your required savings on the gap:
+          Social Security covers part of retirement (average ~$2,070/month or ~$24,800/year in 2026). Subtract this from your annual needs, then calculate your required savings on the gap:
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li>Annual need: $80,000</li>
@@ -228,7 +228,7 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
 
         <h2 className="text-xl font-semibold mt-6">The 401k (Employer-Sponsored)</h2>
         <p>
-          Offered by employers, a 401k lets you contribute pre-tax money (reduces your taxable income), and your employer often matches part of it (free money). Max contribution in 2024: $23,500/year.
+          Offered by employers, a 401k lets you contribute pre-tax money (reduces your taxable income), and your employer often matches part of it (free money). Max contribution in 2026: $24,500/year.
         </p>
         <p>
           Key: Get the full employer match. If your employer matches 3% and you don't contribute at least 3%, you're leaving free money on the table.
@@ -236,7 +236,7 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
 
         <h2 className="text-xl font-semibold mt-6">Traditional IRA</h2>
         <p>
-          You can open one independently. Contributions may be tax-deductible (depending on income and workplace plan). Max contribution: $7,000/year (2024).
+          You can open one independently. Contributions may be tax-deductible (depending on income and workplace plan). Max contribution: $7,500/year (2026).
         </p>
         <p>
           You pay taxes on withdrawals in retirement. Good if you expect to be in a lower tax bracket in retirement.
@@ -244,7 +244,7 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
 
         <h2 className="text-xl font-semibold mt-6">Roth IRA</h2>
         <p>
-          You contribute after-tax money (no immediate deduction), but withdrawals in retirement are completely tax-free. Max contribution: $7,000/year (2024).
+          You contribute after-tax money (no immediate deduction), but withdrawals in retirement are completely tax-free. Max contribution: $7,500/year (2026).
         </p>
         <p>
           Good if you expect higher taxes in retirement (likely for young people). Your money grows tax-free for 30+ years—that's incredibly powerful.
@@ -253,8 +253,8 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
         <h2 className="text-xl font-semibold mt-6">The Priority Order</h2>
         <ol className="list-decimal list-inside space-y-1 ml-2">
           <li>401k up to employer match (free 25-100% return)</li>
-          <li>Max Roth IRA ($7,000/year)</li>
-          <li>Max 401k if income remains ($16,500 more)</li>
+          <li>Max Roth IRA ($7,500/year)</li>
+          <li>Max 401k if income remains (up to $24,500 total)</li>
           <li>Taxable brokerage account (after maxing tax-advantaged)</li>
         </ol>
 
@@ -279,16 +279,16 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
           Credit card companies are happy if you pay only the minimum (usually 2-3% of balance). Why? Because you'll be paying for years, and they'll earn thousands in interest.
         </p>
         <p>
-          A $5,000 balance at 20% APR with a 2% minimum payment:
+          A $5,000 balance at 20% APR, paying a fixed $100/month (the 2% minimum on day one):
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
-          <li>Monthly payment: ~$100</li>
-          <li>Months to pay off: 73 months (6+ years)</li>
-          <li>Total interest paid: $2,300</li>
-          <li>Total amount paid: $7,300</li>
+          <li>Monthly payment: $100 (fixed)</li>
+          <li>Months to pay off: 109 months (9+ years)</li>
+          <li>Total interest paid: $5,840</li>
+          <li>Total amount paid: $10,840</li>
         </ul>
         <p>
-          You're paying 46% MORE than you borrowed, just in interest.
+          You're paying 117% MORE than you borrowed, just in interest.
         </p>
 
         <h2 className="text-xl font-semibold mt-6">Aggressive Payoff vs. Investment</h2>
@@ -304,7 +304,7 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
           Don't carry a balance. If you can't pay off the full balance monthly, you can't afford what you're buying. Period. Use a debit card or cash to force discipline.
         </p>
         <p>
-          If you already have credit card debt, aggressively pay it off. Even $100/month extra on the above example cuts the payoff time in half and saves $1,000+ in interest.
+          If you already have credit card debt, aggressively pay it off. Even $100/month extra on the above example cuts the payoff time to 33 months and saves $4,300+ in interest.
         </p>
 
         <h2 className="text-xl font-semibold mt-6">Practical Takeaway</h2>
@@ -328,10 +328,10 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
           Earn more than you spend. Invest the difference. Repeat for 30+ years. That's it. That's the whole secret.
         </p>
         <p>
-          If you earn $60k/year and spend $50k, you save $10k/year (16.7% savings rate). Invested at 7% returns for 35 years, that becomes ~$1.6 million.
+          If you earn $60k/year and spend $50k, you save $10k/year (16.7% savings rate). Invested at 7% returns for 35 years, that becomes ~$1.4–1.5 million.
         </p>
         <p>
-          If you increase your savings rate to 25% ($15k/year), that becomes ~$2.4 million. Better income or lower expenses both work.
+          If you increase your savings rate to 25% ($15k/year), that becomes ~$2.1–2.2 million. Better income or lower expenses both work.
         </p>
 
         <h2 className="text-xl font-semibold mt-6">It's Mostly About Savings Rate</h2>
@@ -339,7 +339,7 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
           Your savings rate matters far more than returns. Someone earning $50k who saves 30% will build more wealth than someone earning $100k who saves 5%, because compound interest rewards consistency, not luck.
         </p>
         <p>
-          The math: 30% of $50k = $15k/year. 5% of $100k = $5k/year. After 30 years at 7% returns, the first person has $1.8M, the second has $600k.
+          The math: 30% of $50k = $15k/year. 5% of $100k = $5k/year. After 30 years at 7% returns, the first person has $1.5M, the second has $500k.
         </p>
 
         <h2 className="text-xl font-semibold mt-6">The Boring Path</h2>

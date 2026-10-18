@@ -163,7 +163,7 @@ export default function ROIPage() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s a good ROI?</p>
-                  <p className="text-muted-foreground text-sm">S&P 500 historically averages ~10% annually. Returns above 10% beat the market; below 7% underperform inflation. Compare your ROI to a benchmark like the S&P 500, not just raw percentage.</p>
+                  <p className="text-muted-foreground text-sm">S&P 500 historically averages ~10% annually. Returns above 10% beat the market; below ~3% barely keep up with inflation. Compare your ROI to a benchmark like the S&P 500, not just raw percentage.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">How do I account for fees and taxes?</p>

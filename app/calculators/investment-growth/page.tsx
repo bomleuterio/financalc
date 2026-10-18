@@ -144,8 +144,8 @@ export default function InvestmentGrowthPage() {
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Starting balance: $10,000</li>
                 <li>Total contributions: $130,000</li>
-                <li><strong>Final value: $341,000</strong></li>
-                <li>Investment gains: $201,000</li>
+                <li><strong>Final value: $344,000</strong></li>
+                <li>Investment gains: $214,000</li>
               </ul>
             </div>
 
@@ -160,7 +160,7 @@ export default function InvestmentGrowthPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">Does regular investing help?</p>
-                  <p className="text-muted-foreground text-sm">Dramatically. $500/month for 20 years adds $130k but results in $341k. Dollar-cost averaging (regular investing) smooths market volatility.</p>
+                  <p className="text-muted-foreground text-sm">Dramatically. $500/month for 20 years plus $10k upfront adds $130k but results in ~$344k. Dollar-cost averaging (regular investing) smooths market volatility.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">Should I invest if the market might crash?</p>
@@ -174,7 +174,7 @@ export default function InvestmentGrowthPage() {
             <div>
               <h3 className="font-semibold mb-2">Key Takeaways</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li>Consistency trumps timing—$500 monthly beats $6,000 lump sum once a year for the same $6k/year total.</li>
+                <li>Consistency trumps timing—investing $500 every month automatically keeps you in the market instead of waiting for the "right" moment.</li>
                 <li>A 2% difference in returns (8% vs. 10%) saves/costs $50k+ over 20 years—choose low-cost index funds.</li>
                 <li>Start early; the first 10 years of contributions matter more than the second 10 due to compounding.</li>
               </ul>

@@ -36,13 +36,13 @@ export default function IncomeTaxPage() {
   return (
     <CalculatorLayout
       title="Income Tax Calculator"
-      description="Estimate your 2024 federal income tax, FICA, and take-home pay using current IRS brackets."
+      description="Estimate your 2026 federal income tax, FICA, and take-home pay using current IRS brackets."
       category="Tax"
     >
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
         <div className="lg:col-span-2">
           <Card>
-            <CardHeader><CardTitle className="text-base">Tax Information (2024)</CardTitle></CardHeader>
+            <CardHeader><CardTitle className="text-base">Tax Information (2026)</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div>
                 <Label>Gross Annual Income ($)</Label>
@@ -80,7 +80,7 @@ export default function IncomeTaxPage() {
           {results ? (
             <>
               <Card>
-                <CardHeader><CardTitle className="text-base">2024 Tax Summary</CardTitle></CardHeader>
+                <CardHeader><CardTitle className="text-base">2026 Tax Summary</CardTitle></CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -171,8 +171,8 @@ export default function IncomeTaxPage() {
           <CardContent className="space-y-4 text-sm">
             <div>
               <h3 className="font-semibold mb-2">Formula</h3>
-              <p className="text-muted-foreground">Uses 2024 federal tax brackets to calculate tax owed based on filing status and income.</p>
-              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = (Taxable Income × Bracket Rate) - Deductions</p>
+              <p className="text-muted-foreground">Uses 2026 federal tax brackets to calculate tax owed based on filing status and income.</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = Σ (Income in each bracket × that bracket's rate)</p>
             </div>
 
             <Separator />
@@ -182,10 +182,10 @@ export default function IncomeTaxPage() {
               <p className="text-muted-foreground">Single filer with $75,000 income, standard deduction:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Gross income: $75,000</li>
-                <li>Standard deduction: $14,600</li>
-                <li>Taxable income: $60,400</li>
-                <li><strong>Federal tax owed: $7,347</strong></li>
-                <li>Effective rate: 9.8%</li>
+                <li>Standard deduction: $16,100</li>
+                <li>Taxable income: $58,900</li>
+                <li><strong>Federal tax owed: $7,670</strong></li>
+                <li>Effective rate: 10.2%</li>
               </ul>
             </div>
 
@@ -200,7 +200,7 @@ export default function IncomeTaxPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">Should I itemize or take the standard deduction?</p>
-                  <p className="text-muted-foreground text-sm">Standard deduction is $14,600 (single) in 2024. Itemize only if deductions (mortgage interest, charity) exceed this.</p>
+                  <p className="text-muted-foreground text-sm">Standard deduction is $16,100 (single) in 2026. Itemize only if deductions (mortgage interest, charity) exceed this.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">What about state and local taxes?</p>

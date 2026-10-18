@@ -36,7 +36,7 @@ export default function CapitalGainsPage() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
         <div className="lg:col-span-2">
           <Card>
-            <CardHeader><CardTitle className="text-base">Sale Details (2024)</CardTitle></CardHeader>
+            <CardHeader><CardTitle className="text-base">Sale Details (2026)</CardTitle></CardHeader>
             <CardContent className="space-y-4">
               <div><Label>Purchase Price ($)</Label><Input type="number" value={purchasePrice} onChange={(e) => setPurchasePrice(e.target.value)} min="0" /></div>
               <div><Label>Sale Price ($)</Label><Input type="number" value={salePrice} onChange={(e) => setSalePrice(e.target.value)} min="0" /></div>
@@ -104,11 +104,11 @@ export default function CapitalGainsPage() {
                 <Separator className="my-4" />
 
                 <div className="text-sm space-y-2">
-                  <p className="font-medium">2024 Long-term Capital Gains Rates (Single):</p>
+                  <p className="font-medium">2026 Long-term Capital Gains Rates (Single):</p>
                   <div className="space-y-1 text-muted-foreground">
-                    <div className="flex justify-between"><span>0%</span><span>Income up to $47,025</span></div>
-                    <div className="flex justify-between"><span>15%</span><span>$47,025 – $518,900</span></div>
-                    <div className="flex justify-between"><span>20%</span><span>Over $518,900</span></div>
+                    <div className="flex justify-between"><span>0%</span><span>Income up to $49,450</span></div>
+                    <div className="flex justify-between"><span>15%</span><span>$49,450 – $545,500</span></div>
+                    <div className="flex justify-between"><span>20%</span><span>Over $545,500</span></div>
                   </div>
                 </div>
 
@@ -132,14 +132,14 @@ export default function CapitalGainsPage() {
             <div>
               <h3 className="font-semibold mb-2">Formula</h3>
               <p className="text-muted-foreground">Calculates capital gains tax on investment profits using short-term (ordinary income rates) or long-term (preferential rates) rates.</p>
-              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = Capital Gain × Tax Rate (15% or 20% for long-term)</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = Capital Gain × Tax Rate (0%, 15% or 20% for long-term)</p>
             </div>
 
             <Separator />
 
             <div>
               <h3 className="font-semibold mb-2">Worked Example</h3>
-              <p className="text-muted-foreground">You sell $50,000 of stock held 2+ years for $75,000 profit, long-term rate 15%:</p>
+              <p className="text-muted-foreground">You sell stock bought for $50,000 and held 2+ years for $75,000, long-term rate 15%:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Sale price: $75,000</li>
                 <li>Cost basis: $50,000</li>
@@ -156,7 +156,7 @@ export default function CapitalGainsPage() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the difference between short and long-term gains?</p>
-                  <p className="text-muted-foreground text-sm">Short-term (held &lt;1 year): taxed as ordinary income (up to 37%). Long-term (held &gt;=1 year): 0%, 15%, or 20% depending on income. Hold longer to save big on taxes.</p>
+                  <p className="text-muted-foreground text-sm">Short-term (held &lt;1 year): taxed as ordinary income (up to 37%). Long-term (held &gt;1 year): 0%, 15%, or 20% depending on income. Hold longer to save big on taxes.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">Can I offset gains with losses?</p>
@@ -164,7 +164,7 @@ export default function CapitalGainsPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">What about state taxes?</p>
-                  <p className="text-muted-foreground text-sm">This shows federal only. Most states tax capital gains as ordinary income (3–13.3%); 5 states have no capital gains tax.</p>
+                  <p className="text-muted-foreground text-sm">This shows federal only. Most states tax capital gains as ordinary income (3–13.3%); about 8 states have no capital gains tax.</p>
                 </div>
               </div>
             </div>

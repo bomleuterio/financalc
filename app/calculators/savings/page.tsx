@@ -35,7 +35,7 @@ export default function SavingsPage() {
               <div>
                 <Label>Annual Interest Rate (%)</Label>
                 <Input type="number" step="0.1" value={rate} onChange={(e) => setRate(e.target.value)} min="0" max="20" />
-                <p className="text-xs text-muted-foreground mt-1">HYSA rates: 4–5% (2024)</p>
+                <p className="text-xs text-muted-foreground mt-1">Compare current high-yield savings rates</p>
               </div>
               <div><Label>Time Period (years)</Label><Input type="number" value={years} onChange={(e) => setYears(e.target.value)} min="1" max="50" /></div>
             </CardContent>
@@ -99,8 +99,8 @@ export default function SavingsPage() {
                 <li>Starting balance: $5,000</li>
                 <li>Monthly deposits: $300</li>
                 <li>Total contributions: $23,000 ($5k + $300 × 60 months)</li>
-                <li><strong>Final balance: $24,570</strong></li>
-                <li>Interest earned: $1,570</li>
+                <li><strong>Final balance: $25,995</strong></li>
+                <li>Interest earned: $2,995</li>
               </ul>
             </div>
 
@@ -115,7 +115,7 @@ export default function SavingsPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">What if I can only save $100/month?</p>
-                  <p className="text-muted-foreground text-sm">$100/month for 5 years = $6,300 saved + interest. Every bit counts. Start small, then increase as income grows.</p>
+                  <p className="text-muted-foreground text-sm">$100/month for 5 years = $6,000 saved + interest. Every bit counts. Start small, then increase as income grows.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">Should I set up automatic transfers?</p>

@@ -49,8 +49,8 @@ export default function RothIRAPage() {
               <div><Label>Current Roth IRA Balance ($)</Label><Input type="number" value={currentBalance} onChange={(e) => setCurrentBalance(e.target.value)} min="0" /></div>
               <div>
                 <Label>Annual Contribution ($)</Label>
-                <Input type="number" value={annualContribution} onChange={(e) => setAnnualContribution(e.target.value)} min="0" max="7000" />
-                <p className="text-xs text-muted-foreground mt-1">2024 limit: $7,000 ($8,000 if age 50+)</p>
+                <Input type="number" value={annualContribution} onChange={(e) => setAnnualContribution(e.target.value)} min="0" max="8600" />
+                <p className="text-xs text-muted-foreground mt-1">2026 limit: $7,500 ($8,600 if age 50+)</p>
               </div>
               <div><Label>Expected Annual Return (%)</Label><Input type="number" step="0.5" value={returnRate} onChange={(e) => setReturnRate(e.target.value)} min="1" max="20" /></div>
             </CardContent>
@@ -105,7 +105,7 @@ export default function RothIRAPage() {
           <CardContent className="space-y-4 text-sm">
             <div>
               <h3 className="font-semibold mb-2">Formula</h3>
-              <p className="text-muted-foreground">Projects Roth IRA growth using compound interest with annual contributions ($7,000 limit in 2024) and investment returns.</p>
+              <p className="text-muted-foreground">Projects Roth IRA growth using compound interest with annual contributions ($7,500 limit in 2026) and investment returns.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^n + Annual Contribution × [((1 + r)^n - 1) / r]</p>
             </div>
 
@@ -118,8 +118,8 @@ export default function RothIRAPage() {
                 <li>Annual contribution: $7,000</li>
                 <li>Time horizon: 37 years</li>
                 <li>Total contributions: $259,000</li>
-                <li><strong>Projected balance at 67: $1.7 million</strong></li>
-                <li>Tax-free growth: $1.44 million</li>
+                <li><strong>Projected balance at 67: $1.2 million</strong></li>
+                <li>Tax-free growth: $940,000</li>
               </ul>
             </div>
 
@@ -138,7 +138,7 @@ export default function RothIRAPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">Can I withdraw early?</p>
-                  <p className="text-muted-foreground text-sm">You can withdraw contributions anytime tax-free. Earnings have penalties before 59½ (exceptions: first-time home purchase, hardship).</p>
+                  <p className="text-muted-foreground text-sm">You can withdraw contributions anytime tax-free. Earnings have penalties before 59½ (exceptions include a first-time home purchase up to $10k and disability).</p>
                 </div>
               </div>
             </div>
@@ -149,7 +149,7 @@ export default function RothIRAPage() {
               <h3 className="font-semibold mb-2">Key Takeaways</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Roth IRAs offer tax-free growth for 30+ years—some of the best wealth-building vehicles available.</li>
-                <li>Max out your Roth ($7,000/year) before investing elsewhere if eligible; tax-free growth is invaluable.</li>
+                <li>Max out your Roth ($7,500/year) before investing elsewhere if eligible; tax-free growth is invaluable.</li>
                 <li>No required minimum distributions (RMDs) in retirement; you control when to withdraw.</li>
               </ul>
             </div>

@@ -177,31 +177,46 @@ export function calculate401k(
 
 export type FilingStatus = 'single' | 'mfj' | 'mfs' | 'hoh';
 
-const TAX_BRACKETS_SINGLE = [
-  { min: 0, max: 11600, rate: 0.10 },
-  { min: 11600, max: 47150, rate: 0.12 },
-  { min: 47150, max: 100525, rate: 0.22 },
-  { min: 100525, max: 191950, rate: 0.24 },
-  { min: 191950, max: 243725, rate: 0.32 },
-  { min: 243725, max: 609350, rate: 0.35 },
-  { min: 609350, max: Infinity, rate: 0.37 },
-];
+// Tax year 2026 (IRS Rev. Proc. 2025-32). Each list holds the upper bound of every bracket but the last.
+const BRACKET_RATES = [0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37];
 
-const TAX_BRACKETS_MFJ = [
-  { min: 0, max: 23200, rate: 0.10 },
-  { min: 23200, max: 94300, rate: 0.12 },
-  { min: 94300, max: 201050, rate: 0.22 },
-  { min: 201050, max: 383900, rate: 0.24 },
-  { min: 383900, max: 487450, rate: 0.32 },
-  { min: 487450, max: 731200, rate: 0.35 },
-  { min: 731200, max: Infinity, rate: 0.37 },
-];
+function buildBrackets(bounds: number[]) {
+  return BRACKET_RATES.map((rate, i) => ({
+    min: i === 0 ? 0 : bounds[i - 1],
+    max: i < bounds.length ? bounds[i] : Infinity,
+    rate,
+  }));
+}
+
+const TAX_BRACKETS: Record<FilingStatus, { min: number; max: number; rate: number }[]> = {
+  single: buildBrackets([12400, 50400, 105700, 201775, 256225, 640600]),
+  mfj: buildBrackets([24800, 100800, 211400, 403550, 512450, 768700]),
+  mfs: buildBrackets([12400, 50400, 105700, 201775, 256225, 384350]),
+  hoh: buildBrackets([17700, 67450, 105700, 201750, 256200, 640600]),
+};
 
 const STANDARD_DEDUCTIONS: Record<FilingStatus, number> = {
-  single: 14600,
-  mfj: 29200,
-  mfs: 14600,
-  hoh: 21900,
+  single: 16100,
+  mfj: 32200,
+  mfs: 16100,
+  hoh: 24150,
+};
+
+// 2026 Social Security wage base; Medicare has no cap, plus 0.9% above these thresholds.
+const SOCIAL_SECURITY_WAGE_BASE = 184500;
+const ADDITIONAL_MEDICARE_THRESHOLD: Record<FilingStatus, number> = {
+  single: 200000,
+  mfj: 250000,
+  mfs: 125000,
+  hoh: 200000,
+};
+
+// 2026 long-term capital gains: top of the 0% and 15% tiers.
+const LTCG_THRESHOLDS: Record<FilingStatus, [number, number]> = {
+  single: [49450, 545500],
+  mfj: [98900, 613700],
+  mfs: [49450, 306850],
+  hoh: [66200, 579600],
 };
 
 export function calculateIncomeTax(
@@ -221,7 +236,7 @@ export function calculateIncomeTax(
   const standardDed = STANDARD_DEDUCTIONS[filingStatus];
   const deductions = Math.max(standardDed, itemizedDeductions) + preTaxDeductions;
   const taxableIncome = Math.max(0, grossIncome - deductions);
-  const brackets = filingStatus === 'mfj' ? TAX_BRACKETS_MFJ : TAX_BRACKETS_SINGLE;
+  const brackets = TAX_BRACKETS[filingStatus];
 
   let federalTax = 0;
   let marginalRate = 10;
@@ -236,7 +251,10 @@ export function calculateIncomeTax(
     bracketDetails.push({ rate: bracket.rate * 100, taxableAmount, tax });
   }
 
-  const fica = Math.min(grossIncome, 168600) * 0.0765;
+  const fica =
+    Math.min(grossIncome, SOCIAL_SECURITY_WAGE_BASE) * 0.062 +
+    grossIncome * 0.0145 +
+    Math.max(0, grossIncome - ADDITIONAL_MEDICARE_THRESHOLD[filingStatus]) * 0.009;
 
   return {
     grossIncome,
@@ -262,10 +280,8 @@ export function calculateCapitalGainsTax(
     return { tax, rate: gains > 0 ? (tax / gains) * 100 : 0 };
   }
 
-  const ltcgThresholds =
-    filingStatus === 'mfj'
-      ? [{ max: 94050, rate: 0 }, { max: 583750, rate: 0.15 }, { max: Infinity, rate: 0.20 }]
-      : [{ max: 47025, rate: 0 }, { max: 518900, rate: 0.15 }, { max: Infinity, rate: 0.20 }];
+  const [zeroMax, fifteenMax] = LTCG_THRESHOLDS[filingStatus];
+  const ltcgThresholds = [{ max: zeroMax, rate: 0 }, { max: fifteenMax, rate: 0.15 }, { max: Infinity, rate: 0.20 }];
 
   const totalIncome = ordinaryIncome + gains;
   let ltcgRate = 0.20;

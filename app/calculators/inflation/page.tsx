@@ -147,11 +147,11 @@ export default function InflationPage() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s average inflation?</p>
-                  <p className="text-muted-foreground text-sm">US long-term average is ~3%/year. 2021–2023 saw 8%+ (high inflation); expect to revert to 2–3%. Use 3% for conservative retirement planning.</p>
+                  <p className="text-muted-foreground text-sm">US long-term average is ~3%/year. 2022 saw 8%+ (peaking at 9.1%); expect to revert to 2–3%. Use 3% for conservative retirement planning.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">How does inflation affect retirement?</p>
-                  <p className="text-muted-foreground text-sm">$50k/year needed today becomes $95k/year in 25 years at 3% inflation. Plan for a higher retirement nest egg to account for this.</p>
+                  <p className="text-muted-foreground text-sm">$50k/year needed today becomes $105k/year in 25 years at 3% inflation. Plan for a higher retirement nest egg to account for this.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">Can I outpace inflation?</p>
@@ -165,7 +165,7 @@ export default function InflationPage() {
             <div>
               <h3 className="font-semibold mb-2">Key Takeaways</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                <li>Inflation erodes cash savings—$10k under a mattress loses 30% buying power in 20 years at 3% inflation.</li>
+                <li>Inflation erodes cash savings—$10k under a mattress loses 45% buying power in 20 years at 3% inflation.</li>
                 <li>Invest your long-term savings (3+ years); stocks historically beat inflation, cash doesn&apos;t.</li>
                 <li>In retirement planning, don&apos;t forget to account for inflation on your spending needs.</li>
               </ul>

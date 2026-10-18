@@ -174,9 +174,9 @@ export default function CompoundInterestPage() {
                 <li>Monthly contribution: $200</li>
                 <li>Annual interest rate: 4%</li>
                 <li>Compounding frequency: Monthly (12 times/year)</li>
-                <li><strong>Final amount after 10 years: $38,614</strong></li>
+                <li><strong>Final amount after 10 years: $44,358</strong></li>
                 <li>Total contributions: $34,000 ($10,000 initial + $24,000 in deposits)</li>
-                <li>Interest earned: $4,614</li>
+                <li>Interest earned: $10,358</li>
               </ul>
             </div>
 
@@ -187,7 +187,7 @@ export default function CompoundInterestPage() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the power of compound interest?</p>
-                  <p className="text-muted-foreground text-sm">You earn interest on your interest. Early contributions have decades to grow, so starting as soon as possible dramatically increases your wealth. A $5,000 investment at age 25 can become $100,000+ by age 65.</p>
+                  <p className="text-muted-foreground text-sm">You earn interest on your interest. Early contributions have decades to grow, so starting as soon as possible dramatically increases your wealth. At an 8% average return, a $5,000 investment at age 25 can become $100,000+ by age 65.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">How does compounding frequency matter?</p>
@@ -210,7 +210,7 @@ export default function CompoundInterestPage() {
               <h3 className="font-semibold mb-2">Key Takeaways</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Time is your greatest asset — starting early gives compounding decades to work, dramatically increasing your final wealth.</li>
-                <li>Even small contributions add up over time. $200/month for 30 years at 6% returns ~$245,000.</li>
+                <li>Even small contributions add up over time. $200/month for 30 years at 6% returns ~$201,000.</li>
                 <li>A 1–2% difference in returns seems small but compounds into tens of thousands of dollars over decades — shop for better rates.</li>
                 <li>Consistent investing (dollar-cost averaging) removes emotion and leverages compound growth in volatile markets.</li>
               </ul>

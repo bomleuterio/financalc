@@ -140,9 +140,9 @@ export default function PersonalLoanPage() {
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Loan amount: $15,000</li>
                 <li>Monthly interest rate: 11.5% ÷ 12 = 0.958%</li>
-                <li><strong>Monthly payment: $481</strong></li>
-                <li>Total paid: $17,316</li>
-                <li>Total interest: $2,316</li>
+                <li><strong>Monthly payment: $495</strong></li>
+                <li>Total paid: $17,807</li>
+                <li>Total interest: $2,807</li>
               </ul>
             </div>
 

@@ -161,8 +161,8 @@ export default function CreditCardPayoffPage() {
                 <li>Balance: $5,000</li>
                 <li>APR: 18%</li>
                 <li>Monthly payment: $150</li>
-                <li><strong>Months to payoff: 38 months (~3.2 years)</strong></li>
-                <li>Total interest paid: $1,700</li>
+                <li><strong>Months to payoff: 47 months (~3.9 years)</strong></li>
+                <li>Total interest paid: $1,984</li>
               </ul>
             </div>
 
@@ -173,7 +173,7 @@ export default function CreditCardPayoffPage() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">How much should I pay monthly?</p>
-                  <p className="text-muted-foreground text-sm">Minimum (2–3% of balance) keeps you in debt for years. $200 vs. $150 on a $5k balance saves 8 months and $500 in interest.</p>
+                  <p className="text-muted-foreground text-sm">Minimum (2–3% of balance) keeps you in debt for years. $200 vs. $150 on a $5k balance saves 15 months and $670 in interest.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">Should I pay off multiple cards?</p>

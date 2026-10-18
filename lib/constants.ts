@@ -44,7 +44,7 @@ export const CALCULATORS: Calculator[] = [
   { id: 'emergency-fund', title: 'Emergency Fund Calculator', description: 'Find out how much emergency fund you need.', category: 'savings', href: '/calculators/emergency-fund' },
 
   // Tax
-  { id: 'income-tax', title: 'Income Tax Calculator', description: 'Estimate your federal income tax using 2024 brackets.', category: 'tax', href: '/calculators/income-tax', popular: true },
+  { id: 'income-tax', title: 'Income Tax Calculator', description: 'Estimate your federal income tax using 2026 brackets.', category: 'tax', href: '/calculators/income-tax', popular: true },
   { id: 'capital-gains', title: 'Capital Gains Tax Calculator', description: 'Calculate capital gains tax on your investments.', category: 'tax', href: '/calculators/capital-gains' },
   { id: 'sales-tax', title: 'Sales Tax Calculator', description: 'Quickly calculate sales tax on any purchase.', category: 'tax', href: '/calculators/sales-tax' },
 

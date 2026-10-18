@@ -68,7 +68,7 @@ export default function Page401k() {
               <div>
                 <Label>Monthly Contribution ($)</Label>
                 <Input type="number" value={monthlyContribution} onChange={(e) => setMonthlyContribution(e.target.value)} min="0" />
-                <p className="text-xs text-muted-foreground mt-1">2024 limit: $23,000/year ($1,916/mo)</p>
+                <p className="text-xs text-muted-foreground mt-1">2026 limit: $24,500/year ($2,042/mo)</p>
               </div>
               <div>
                 <Label>Employer Match (%)</Label>
@@ -181,7 +181,7 @@ export default function Page401k() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Should I max out my 401k?</p>
-                  <p className="text-muted-foreground text-sm">Minimum: contribute enough to get the full employer match (usually 3–6%). Ideal: max out ($23,500 in 2024). Reality: contribute what you can afford after emergency savings.</p>
+                  <p className="text-muted-foreground text-sm">Minimum: contribute enough to get the full employer match (usually 3–6%). Ideal: max out ($24,500 in 2026). Reality: contribute what you can afford after emergency savings.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">What return rate should I use?</p>

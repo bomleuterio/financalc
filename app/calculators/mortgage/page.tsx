@@ -288,8 +288,8 @@ export default function MortgagePage() {
                 <li>Monthly payment (P&I): $2,133</li>
                 <li>Property tax (at 1.2% annually): $400/month</li>
                 <li><strong>Total monthly payment: $2,533</strong></li>
-                <li>Total amount paid over 30 years: $912,000</li>
-                <li>Total interest paid: $592,000</li>
+                <li>Total principal and interest paid over 30 years: $766,430</li>
+                <li>Total interest paid: $446,430</li>
               </ul>
             </div>
 
@@ -324,7 +324,7 @@ export default function MortgagePage() {
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>A larger down payment (20%+) eliminates PMI and lowers your monthly payment.</li>
                 <li>Even a 0.5% difference in interest rate significantly changes your total interest paid — shop around with multiple lenders.</li>
-                <li>Property taxes and HOA fees add 20–30% to your base principal-and-interest payment.</li>
+                <li>Property taxes, insurance, and HOA fees often add 20–30% to your base principal-and-interest payment.</li>
                 <li>Use the amortization schedule to see how slowly principal decreases in early years (most of each payment is interest).</li>
               </ul>
             </div>
@@ -347,8 +347,8 @@ export default function MortgagePage() {
           <CardHeader><CardTitle>Common Mistakes to Avoid</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li><strong>Forgetting property tax and insurance:</strong> Your monthly payment isn't just principal and interest. Property tax, insurance, and HOA add 30-50% to your base payment. Budget for the total.</li>
-              <li><strong>Assuming 20% down is required:</strong> It's not. You can put down 3-10% and avoid PMI if you have good credit and income. The trade-off is paying PMI, which is annoying but not a dealbreaker.</li>
+              <li><strong>Forgetting property tax and insurance:</strong> Your monthly payment isn't just principal and interest. Property tax, insurance, and HOA often add 20–30% to your base payment. Budget for the total.</li>
+              <li><strong>Assuming 20% down is required:</strong> It's not. You can put down 3-10% if you have good credit and income. The trade-off is paying PMI, which is annoying but not a dealbreaker.</li>
               <li><strong>Ignoring the interest breakdown:</strong> In year 1, 87% of your payment goes to interest, not principal. Don't expect fast equity buildup early on.</li>
               <li><strong>Overextending on price:</strong> Just because you're approved for $500k doesn't mean you should borrow it. Use this calculator to ensure your monthly payment is comfortable for 30 years, not just year 1.</li>
             </ul>
@@ -359,8 +359,8 @@ export default function MortgagePage() {
           <CardHeader><CardTitle>Pro Tips</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li><strong>Shop rates across 3-5 lenders:</strong> A 0.5% difference in rates costs you $50,000+ in total interest over 30 years. It's worth spending a day comparing offers.</li>
-              <li><strong>Consider a 15-year mortgage if possible:</strong> Your payment is ~1.5x higher, but you pay 1/3 the interest and build equity twice as fast. It's a personal choice based on cash flow.</li>
+              <li><strong>Shop rates across 3-5 lenders:</strong> A 0.5% difference in rates costs you ~$38,000 in total interest on a $320k loan over 30 years. It's worth spending a day comparing offers.</li>
+              <li><strong>Consider a 15-year mortgage if possible:</strong> Your payment is ~1.3x higher, but you pay less than half the interest and build equity twice as fast. It's a personal choice based on cash flow.</li>
               <li><strong>Make extra principal payments early:</strong> If you can afford an extra $100/month in year 5, do it then, not year 25. Each dollar goes entirely to principal, compounding into massive savings.</li>
               <li><strong>Refinance when rates drop 0.5%+:</strong> If rates fall 0.5% or more below your current rate, refinancing usually pays for itself in 3-5 years through interest savings.</li>
             </ul>

@@ -55,7 +55,7 @@ export default function StudentLoanPage() {
               <div>
                 <Label>Interest Rate (%)</Label>
                 <Input type="number" step="0.01" value={rate} onChange={(e) => setRate(e.target.value)} min="0" max="20" />
-                <p className="text-xs text-muted-foreground mt-1">2024 federal rates: 6.53% undergrad, 8.08% grad</p>
+                <p className="text-xs text-muted-foreground mt-1">Check studentaid.gov for current federal rates</p>
               </div>
               <div>
                 <Label>Repayment Term</Label>
@@ -158,9 +158,9 @@ export default function StudentLoanPage() {
               <h3 className="font-semibold mb-2">Worked Example</h3>
               <p className="text-muted-foreground">You graduate with $30,000 in federal loans at 5.5% APR:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
-                <li>Standard 10-year plan: $302/month, $6,240 total interest</li>
-                <li>Extended 25-year plan: $170/month, $21,000 total interest</li>
-                <li>Difference: $132/month lower but $14,760 more interest</li>
+                <li>Standard 10-year plan: $326/month, $9,069 total interest</li>
+                <li>Extended 25-year plan: $184/month, $25,268 total interest</li>
+                <li>Difference: $141/month lower but $16,199 more interest</li>
               </ul>
             </div>
 
@@ -175,7 +175,7 @@ export default function StudentLoanPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">What about income-driven repayment plans?</p>
-                  <p className="text-muted-foreground text-sm">Plans like IBR and PAYE cap payments at 10–20% of discretionary income. This can lower your payment but extends the term to 20–25 years. They may also offer loan forgiveness, but tax implications apply.</p>
+                  <p className="text-muted-foreground text-sm">Income-driven plans cap payments at a share of your income, and the plan options changed under 2025 legislation — check studentaid.gov for what is available to you. This can lower your payment but extends the term to 20–25 years. They may also offer loan forgiveness, but tax implications apply.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">Is it better to pay off student loans early?</p>

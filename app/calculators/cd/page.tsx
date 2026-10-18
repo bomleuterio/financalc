@@ -111,7 +111,7 @@ export default function CDPage() {
               <p className="text-muted-foreground">You deposit $10,000 in a 1-year CD at 5.25% APY, compounded daily:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Principal: $10,000</li>
-                <li>Annual rate: 5.25%</li>
+                <li>APY: 5.25%</li>
                 <li>Term: 1 year</li>
                 <li><strong>Final balance: $10,525</strong></li>
                 <li>Interest earned: $525</li>

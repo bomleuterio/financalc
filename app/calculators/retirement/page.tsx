@@ -164,7 +164,7 @@ export default function RetirementPage() {
             <div>
               <h3 className="font-semibold mb-2">Formula</h3>
               <p className="text-muted-foreground">Projects how much you need to save for retirement using a retirement income goal and life expectancy.</p>
-              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Needed = Annual Retirement Goal × Years in Retirement / Investment Returns</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Needed = Annual Goal × [1 − (1 + r)^−Years] / r</p>
             </div>
 
             <Separator />
@@ -176,7 +176,7 @@ export default function RetirementPage() {
                 <li>Annual need: $80,000</li>
                 <li>Years in retirement: 30</li>
                 <li>Investment return: 6%</li>
-                <li><strong>Needed at 65: ~$1.28 million</strong></li>
+                <li><strong>Needed at 65: ~$1.1 million</strong></li>
               </ul>
             </div>
 
@@ -191,11 +191,11 @@ export default function RetirementPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">Should I factor in Social Security?</p>
-                  <p className="text-muted-foreground text-sm">Yes, but it's uncertain. Average benefit is ~$1,900/month. Use this calculator for the gap between your goal and Social Security.</p>
+                  <p className="text-muted-foreground text-sm">Yes, but it's uncertain. The average retired-worker benefit is about $2,070/month (2026). Use this calculator for the gap between your goal and Social Security.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">What if I can&apos;t save $1M?</p>
-                  <p className="text-muted-foreground text-sm">Start with what you can save now; compound growth does the heavy lifting over 30+ years. Even $500k at 6% returns ~$23k/year indefinitely.</p>
+                  <p className="text-muted-foreground text-sm">Start with what you can save now; compound growth does the heavy lifting over 30+ years. Even $500k supports ~$20k/year under the 4% rule.</p>
                 </div>
               </div>
             </div>
@@ -207,7 +207,7 @@ export default function RetirementPage() {
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>The earlier you start, the less you need to save monthly due to compound growth.</li>
                 <li>Use the 4% rule as a rough guide for withdrawal rates in retirement.</li>
-                <li>Account for inflation; $80k needed today might be $150k in 30 years.</li>
+                <li>Account for inflation; $80k needed today might be $194k in 30 years at 3% inflation.</li>
               </ul>
             </div>
           </CardContent>

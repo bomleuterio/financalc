@@ -214,11 +214,11 @@ export default function DebtPayoffPage() {
 
             <div>
               <h3 className="font-semibold mb-2">Worked Example</h3>
-              <p className="text-muted-foreground">Two debts: Credit card $3k @ 20% APR, Personal loan $7k @ 8% APR, $400/month payment:</p>
+              <p className="text-muted-foreground">Two debts: Credit card $7k @ 20% APR (min $150), Personal loan $3k @ 8% APR (min $100), $400/month total:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
-                <li>Avalanche (20% first): 27 months, $2,100 total interest</li>
-                <li>Snowball (smallest first): 29 months, $2,400 total interest</li>
-                <li><strong>Avalanche wins: 2 months + $300 saved</strong></li>
+                <li>Avalanche (20% first): 31 months, $2,300 total interest</li>
+                <li>Snowball (smallest first): 32 months, $2,700 total interest</li>
+                <li><strong>Avalanche wins: 1 month + $400 saved</strong></li>
               </ul>
             </div>
 

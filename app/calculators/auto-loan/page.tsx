@@ -252,9 +252,9 @@ export default function AutoLoanPage() {
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Loan amount: $27,000</li>
                 <li>Monthly interest rate: 6.5% ÷ 12 = 0.542%</li>
-                <li><strong>Monthly payment: $517</strong></li>
-                <li>Total paid over 5 years: $31,020</li>
-                <li>Total interest paid: $4,020</li>
+                <li><strong>Monthly payment: $528</strong></li>
+                <li>Total paid over 5 years: $31,697</li>
+                <li>Total interest paid: $4,697</li>
               </ul>
             </div>
 
@@ -288,7 +288,7 @@ export default function AutoLoanPage() {
               <h3 className="font-semibold mb-2">Key Takeaways</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>APR, not just interest rate, reflects the true cost — always compare APRs, not just rates.</li>
-                <li>A 0.5% lower rate on a $25,000 loan saves ~$650 over 5 years — it&apos;s worth negotiating.</li>
+                <li>A 0.5% lower rate on a $25,000 loan saves ~$350 over 5 years — it&apos;s worth negotiating.</li>
                 <li>Longer loan terms (60–84 months) are becoming common but extend your exposure to vehicle depreciation and interest.</li>
                 <li>Consider the total cost of ownership: insurance, maintenance, fuel, and depreciation, not just the monthly payment.</li>
               </ul>
@@ -309,7 +309,7 @@ export default function AutoLoanPage() {
           <CardHeader><CardTitle>Common Mistakes</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
-              <li><strong>Focusing only on the monthly payment:</strong> A 72-month loan has a lower payment but costs $3,000+ more in interest than a 48-month loan. Consider total cost, not just the payment.</li>
+              <li><strong>Focusing only on the monthly payment:</strong> A 72-month loan has a lower payment but costs ~$2,000 more in interest than a 48-month loan. Consider total cost, not just the payment.</li>
               <li><strong>Not shopping around for rates:</strong> Your bank's rate is often 2-4% higher than credit union rates. Shop 3-5 lenders before buying.</li>
               <li><strong>Being "upside down" on a trade-in:</strong> If you owe $15k on your current car but it's worth $12k, rolling that debt into a new loan extends your underwater situation.</li>
               <li><strong>Underestimating total ownership cost:</strong> A cheap car with high insurance, maintenance, and fuel costs more than a reliable car with low insurance and maintenance.</li>
@@ -324,7 +324,7 @@ export default function AutoLoanPage() {
               <li><strong>Get pre-approved before shopping:</strong> Pre-approval shows dealers you're serious and gives you leverage to negotiate.</li>
               <li><strong>Consider used vs. new:</strong> A 2-3 year old car (used lease return) avoids 40% depreciation of a new car while still being reliable.</li>
               <li><strong>Pay down to 50% LTV quickly:</strong> Loan-to-value above 80% means you're paying insurance and interest on a depreciating asset. Build equity fast.</li>
-              <li><strong>Make extra payments early:</strong> Paying an extra $50/month in year 1 saves $1,000+ in total interest and gets you out of the loan faster.</li>
+              <li><strong>Make extra payments early:</strong> Paying an extra $50/month saves ~$500 in total interest and gets you out of the loan faster.</li>
             </ul>
           </CardContent>
         </Card>
