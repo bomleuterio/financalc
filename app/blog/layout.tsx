@@ -1,11 +1,6 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
-export const metadata = {
-  title: 'Blog | MoneyCalcs.AI',
-  description: 'Financial education articles, tips, and insights to help you make better money decisions.',
-};
-
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col">

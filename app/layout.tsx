@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://moneycalcs.ai'),
   title: {
     default: 'MoneyCalcs.ai :: Free Money Calculator / Financial Calculator - accurate, free tools for every financial decision',
     template: '%s | MoneyCalcs.AI',
@@ -36,9 +37,6 @@ export const metadata: Metadata = {
     'auto loan calculator',
     'credit card payoff calculator',
   ],
-  alternates: {
-    canonical: 'https://moneycalcs.ai/',
-  },
   openGraph: {
     title: 'MoneyCalcs.AI — Free Financial Calculators',
     description:

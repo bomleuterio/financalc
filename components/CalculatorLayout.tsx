@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Nav from './Nav';
 import Footer from './Footer';
@@ -17,49 +16,6 @@ interface Props {
 
 export default function CalculatorLayout({ title, description, category, categoryHref = '/', children }: Props) {
   const pathname = usePathname();
-
-  useEffect(() => {
-    const titleText = `${title} | MoneyCalcs.AI`;
-    document.title = titleText;
-
-    const setMeta = (name: string, value: string) => {
-      let tag = document.querySelector(`meta[name="${name}"]`);
-      if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute('name', name);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute('content', value);
-    };
-
-    const setProperty = (property: string, value: string) => {
-      let tag = document.querySelector(`meta[property="${property}"]`);
-      if (!tag) {
-        tag = document.createElement('meta');
-        tag.setAttribute('property', property);
-        document.head.appendChild(tag);
-      }
-      tag.setAttribute('content', value);
-    };
-
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', `https://moneycalcs.ai${pathname}`);
-
-    setMeta('description', description);
-    setMeta('keywords', `${title.toLowerCase()}, financial calculator, ${category.toLowerCase()} calculator`);
-    setProperty('og:title', titleText);
-    setProperty('og:description', description);
-    setProperty('og:type', 'website');
-    setProperty('og:url', `https://moneycalcs.ai${pathname}`);
-    setProperty('twitter:title', titleText);
-    setProperty('twitter:description', description);
-    setProperty('twitter:card', 'summary_large_image');
-  }, [category, description, pathname, title]);
 
   return (
     <div className="min-h-screen flex flex-col">

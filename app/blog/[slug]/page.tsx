@@ -1,4 +1,7 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { BLOG_POSTS } from '@/lib/blog';
 
 const posts: Record<string, { title: string; date: string; content: React.ReactNode }> = {
   'compound-interest-power': {
@@ -359,8 +362,27 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
   },
 };
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = posts[params.slug];
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return BLOG_POSTS.map((post) => ({ slug: post.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const meta = BLOG_POSTS.find((post) => post.slug === slug);
+  if (!meta) return {};
+  return {
+    title: meta.title,
+    description: meta.excerpt,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: { title: meta.title, description: meta.excerpt, type: 'article', url: `/blog/${slug}` },
+  };
+}
+
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = posts[slug];
 
   if (!post) {
     notFound();
@@ -376,9 +398,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <div className="pt-6 border-t border-border/50">
         <p className="text-sm text-muted-foreground">
           Want to calculate your own scenario? Check out our{' '}
-          <a href="/calculators" className="text-primary underline">
+          <Link href="/" className="text-primary underline">
             financial calculators
-          </a>
+          </Link>
           .
         </p>
       </div>
