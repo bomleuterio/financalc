@@ -34,6 +34,26 @@ export default function AboutPage() {
         can verify the math yourself or adapt it to your own spreadsheet.
       </p>
 
+      <h2>Sources and how figures are kept current</h2>
+      <p>
+        Tax and contribution figures come from official sources and are updated when they change each year.
+        As of the October 2026 review, the site uses:
+      </p>
+      <ul>
+        <li>
+          2026 federal income tax brackets, standard deductions, and long-term capital gains thresholds from IRS
+          Revenue Procedure 2025-32.
+        </li>
+        <li>401(k) and IRA contribution limits for 2026 from IRS Notice 2025-67.</li>
+        <li>The 2026 Social Security wage base ($184,500) from the Social Security Administration.</li>
+      </ul>
+      <p>
+        Every worked example on the calculator pages and in the blog is recomputed from its stated inputs, and
+        each example states its assumptions (rate, term, compounding) so you can reproduce it. If a number on
+        this site doesn&apos;t match what you get, please report it on the <a href="/contact">Contact page</a> —
+        corrections are made promptly.
+      </p>
+
       <h2>What this site is not</h2>
       <p>
         MoneyCalcs.AI is an educational tool, not financial, tax, or legal advice. The results are estimates
