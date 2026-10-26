@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { BLOG_POSTS } from '@/lib/blog';
+import { IN_DEPTH_POSTS } from './in-depth-articles';
 
-const posts: Record<string, { title: string; date: string; content: React.ReactNode }> = {
+const legacyPosts: Record<string, { title: string; date: string; content: React.ReactNode }> = {
   'compound-interest-power': {
     title: 'The Power of Compound Interest: Why Starting Early Matters',
     date: 'Oct 1, 2026',
@@ -361,6 +362,8 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
     ),
   },
 };
+
+const posts = { ...IN_DEPTH_POSTS, ...legacyPosts };
 
 export const dynamicParams = false;
 

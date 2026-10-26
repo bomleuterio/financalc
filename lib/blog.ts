@@ -7,6 +7,30 @@ export interface BlogPostMeta {
 
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'mortgage-15-vs-30-year',
+    title: '15-Year vs. 30-Year Mortgage: What the Numbers Actually Say',
+    excerpt: 'A full worked example comparing payments, interest, and the invest-the-difference strategy at three rates of return.',
+    date: 'Oct 26, 2026',
+  },
+  {
+    slug: 'how-tax-brackets-work-2026',
+    title: 'How Tax Brackets Really Work: 2026 Federal Income Tax, With Examples',
+    excerpt: 'The 2026 brackets for single, joint, and head-of-household filers, four worked examples, and why a raise never lowers your take-home pay.',
+    date: 'Oct 26, 2026',
+  },
+  {
+    slug: 'pay-off-debt-or-invest',
+    title: 'Pay Off Debt or Invest? A Decision Framework With Real Numbers',
+    excerpt: 'An order of operations for extra cash, with worked credit card and car loan examples.',
+    date: 'Oct 26, 2026',
+  },
+  {
+    slug: 'roth-vs-traditional-401k',
+    title: 'Roth vs. Traditional 401(k): How to Choose in 2026',
+    excerpt: 'Why the choice comes down to one question about your future tax rate, with a side-by-side example.',
+    date: 'Oct 26, 2026',
+  },
+  {
     slug: 'compound-interest-power',
     title: 'The Power of Compound Interest: Why Starting Early Matters',
     excerpt: 'Discover how compound interest can turn small regular contributions into substantial wealth over time.',
