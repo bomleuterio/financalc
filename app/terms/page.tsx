@@ -3,7 +3,7 @@ import StaticPage from '@/components/StaticPage';
 
 export const metadata: Metadata = {
   title: 'Terms of Use',
-  description: 'Terms of use for MoneyCalcs.AI, an independently operated financial calculator website.',
+  description: 'Terms of use for MoneyCalcs.AI, a financial calculator website operated by TriangleBLVD.',
   alternates: { canonical: '/terms' },
 };
 
@@ -13,7 +13,7 @@ export default function TermsPage() {
   return (
     <StaticPage title="Terms of Use" subtitle={`Last updated: ${LAST_UPDATED}`}>
       <p>
-        These terms govern your use of MoneyCalcs.AI (&quot;the site&quot;). By using the site, you agree to
+        These terms govern your use of MoneyCalcs.AI (&quot;the site&quot;), which is operated by TriangleBLVD. By using the site, you agree to
         the terms below. If you don&apos;t agree, please don&apos;t use the site.
       </p>
 

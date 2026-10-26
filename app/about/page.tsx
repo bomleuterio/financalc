@@ -9,12 +9,20 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <StaticPage title="About MoneyCalcs.AI" subtitle="Free, accurate financial calculators for everyday money decisions.">
+    <StaticPage title="About MoneyCalcs.AI" subtitle="Free, accurate financial calculators for everyday money decisions — a TriangleBLVD project.">
       <p>
-        MoneyCalcs.AI is an independently run collection of financial calculators covering loans, investing,
+        MoneyCalcs.AI is built and operated by TriangleBLVD. It is a collection of financial calculators covering loans, investing,
         savings, taxes, retirement, credit, and budgeting. The goal is simple: give people a fast, free, and
-        accurate way to run the numbers on a financial decision without wading through ads, sign-ups, or
-        pages of fine print.
+        accurate way to run the numbers on a financial decision without sign-ups, paywalls, or pages of
+        fine print.
+      </p>
+
+      <h2>Who runs MoneyCalcs.AI</h2>
+      <p>
+        MoneyCalcs.AI is a TriangleBLVD project. TriangleBLVD designs, builds, and maintains every calculator
+        and article on the site, and reviews the tax figures and worked examples whenever official limits
+        change. Questions, corrections, and calculator requests go directly to the team through the{' '}
+        <a href="/contact">Contact page</a>.
       </p>
 
       <h2>Why this site exists</h2>

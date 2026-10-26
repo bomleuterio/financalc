@@ -31,7 +31,7 @@ export default function CalculatorLayout({ title, description, category, categor
             inLanguage: 'en',
             publisher: {
               '@type': 'Organization',
-              name: 'MoneyCalcs.AI',
+              name: 'TriangleBLVD',
             },
           }),
         }}

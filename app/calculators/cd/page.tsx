@@ -145,7 +145,7 @@ export default function CDPage() {
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>CDs are FDIC-insured up to $250k—one of the safest investments.</li>
                 <li>5.25% on $10k for 1 year is $525 risk-free—better than stock market for short-term savings.</li>
-                <li>Compare rates across banks; some online banks offer 5.5%+ while traditional banks offer 0.1%.</li>
+                <li>Compare rates across banks; online banks and credit unions often pay several percentage points more than traditional banks.</li>
               </ul>
             </div>
           </CardContent>

@@ -111,7 +111,7 @@ export default function SavingsPage() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Where should I keep my savings?</p>
-                  <p className="text-muted-foreground text-sm">High-yield savings accounts (4–5% APY) or money market accounts. Avoid regular savings (0.01% APY)—the difference compounds to hundreds of dollars annually.</p>
+                  <p className="text-muted-foreground text-sm">High-yield savings accounts or money market accounts. Big-bank savings accounts often pay close to 0%—on a 0,000 balance, a rate gap of even 3 points is about 00 a year.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">What if I can only save $100/month?</p>

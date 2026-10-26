@@ -42,7 +42,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} MoneyCalcs.AI. All calculations are for educational purposes only.
+            © {new Date().getFullYear()} MoneyCalcs.AI, operated by TriangleBLVD. All calculations are for educational purposes only.
           </p>
           <nav className="flex items-center gap-4 text-sm text-muted-foreground">
             <Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link>

@@ -24,7 +24,7 @@ export default function ContactPage() {
 
       <h2>Response time</h2>
       <p>
-        This site is independently run, so replies may take a few days. We read every message, even if we
+        MoneyCalcs.AI is run by TriangleBLVD, a small team, so replies may take a few days. We read every message, even if we
         can&apos;t respond to all of them individually.
       </p>
 

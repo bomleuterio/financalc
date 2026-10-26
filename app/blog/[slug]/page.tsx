@@ -164,7 +164,7 @@ const posts: Record<string, { title: string; date: string; content: React.ReactN
 
         <h2 className="text-xl font-semibold mt-6">Where to Keep It</h2>
         <p>
-          Your emergency fund needs to be liquid (quickly accessible) and safe. High-yield savings accounts (4–5% APY) are ideal. You earn some interest while staying liquid. Avoid investing it in stocks—a market crash right when you need the money is a disaster.
+          Your emergency fund needs to be liquid (quickly accessible) and safe. High-yield savings accounts, which usually pay far more than a standard bank savings account, are ideal. You earn some interest while staying liquid. Avoid investing it in stocks—a market crash right when you need the money is a disaster.
         </p>
 
         <h2 className="text-xl font-semibold mt-6">Practical Takeaway</h2>

@@ -165,7 +165,7 @@ export default function EmergencyFundPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">Where should I keep it?</p>
-                  <p className="text-muted-foreground text-sm">High-yield savings account (4–5% APY) or money market fund. NOT investments—you need quick access, not growth.</p>
+                  <p className="text-muted-foreground text-sm">High-yield savings account or money market fund, which typically pay several times the national average savings rate. NOT investments—you need quick access, not growth.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">What counts as an emergency?</p>
