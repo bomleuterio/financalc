@@ -32,6 +32,7 @@ export default function CalculatorLayout({ title, description, category, categor
             publisher: {
               '@type': 'Organization',
               name: 'TriangleBLVD',
+              url: 'https://triangleblvd.com/',
             },
           }),
         }}

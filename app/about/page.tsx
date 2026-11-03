@@ -19,9 +19,27 @@ export default function AboutPage() {
 
       <h2>Who runs MoneyCalcs.AI</h2>
       <p>
-        MoneyCalcs.AI is a TriangleBLVD project. TriangleBLVD designs, builds, and maintains every calculator
-        and article on the site, and reviews the tax figures and worked examples whenever official limits
-        change. Questions, corrections, and calculator requests go directly to the team through the{' '}
+        MoneyCalcs.AI is built and maintained by{' '}
+        <a href="https://triangleblvd.com/" rel="noopener">TriangleBLVD</a>, a creative studio based in Raleigh,
+        North Carolina, that specializes in web design and development, video production, and photography.
+        MoneyCalcs.AI grew out of that web development work: a set of fast, clear tools for the everyday money
+        questions that are easy to get wrong with a spreadsheet.
+      </p>
+      <p>
+        TriangleBLVD is not a financial advisory, tax, or lending firm, and nothing on this site is personal
+        financial advice. That is why every calculator shows its formula and assumptions, and why the tax and
+        contribution figures come directly from official sources (listed below) rather than from opinion.
+      </p>
+
+      <h2>How the content is made and checked</h2>
+      <p>
+        Calculators and articles are written and edited by the TriangleBLVD team, with software tools used to
+        help draft and to run the math. Every worked example is recomputed from its stated inputs using the
+        same code that powers the calculators, and figures are reviewed whenever official limits change. Each
+        article shows when it was published and, if it has been revised, when it was last updated.
+      </p>
+      <p>
+        Questions, corrections, and calculator requests go directly to the team through the{' '}
         <a href="/contact">Contact page</a>.
       </p>
 

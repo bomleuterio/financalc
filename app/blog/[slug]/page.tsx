@@ -41,8 +41,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     description: meta?.excerpt,
     datePublished: published,
     dateModified: meta?.updated ? new Date(meta.updated).toISOString().slice(0, 10) : published,
-    author: { '@type': 'Organization', name: 'TriangleBLVD', url: 'https://moneycalcs.ai/about' },
-    publisher: { '@type': 'Organization', name: 'TriangleBLVD', url: 'https://moneycalcs.ai/about' },
+    author: { '@type': 'Organization', name: 'TriangleBLVD', url: 'https://triangleblvd.com/' },
+    publisher: { '@type': 'Organization', name: 'TriangleBLVD', url: 'https://triangleblvd.com/' },
     mainEntityOfPage: `https://moneycalcs.ai/blog/${slug}`,
   };
 
