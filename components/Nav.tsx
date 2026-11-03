@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, X, Calculator } from 'lucide-react';
+import { Menu, X, Calculator, BookOpen } from 'lucide-react';
 import { CATEGORIES, CALCULATORS } from '@/lib/constants';
 import logo from '@/lib/logo.jpg';
 
@@ -36,6 +36,12 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/blog"
+              className="px-3 py-2 text-sm font-medium text-foreground hover:text-foreground rounded-md hover:bg-muted transition-colors"
+            >
+              Guides
+            </Link>
           </nav>
 
           {/* Mobile toggle */}
@@ -53,6 +59,14 @@ export default function Nav() {
       {open && (
         <div className="md:hidden border-t border-border/60 bg-background">
           <div className="mx-auto max-w-7xl px-4 py-4 grid grid-cols-2 gap-2">
+            <Link
+              href="/blog"
+              onClick={() => setOpen(false)}
+              className="col-span-2 flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-muted transition-colors"
+            >
+              <BookOpen className="h-3.5 w-3.5 text-primary flex-shrink-0" />
+              Guides &amp; articles
+            </Link>
             {CALCULATORS.map((calc) => (
               <Link
                 key={calc.id}

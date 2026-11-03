@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { CATEGORIES, CALCULATORS } from '@/lib/constants';
+import { BLOG_POSTS } from '@/lib/blog';
 import { Search, ArrowRight, TrendingUp, Star } from 'lucide-react';
 
 export default function HomePage() {
@@ -134,6 +135,35 @@ export default function HomePage() {
                 <p>No. Every calculator is free and available without sign-up.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest guides */}
+      <section className="py-10 px-4 border-t border-border/30">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex items-end justify-between gap-4 mb-6">
+            <div>
+              <h2 className="text-xl font-semibold">Latest guides</h2>
+              <p className="text-sm text-muted-foreground">
+                In-depth articles with fully worked examples you can reproduce in the calculators.
+              </p>
+            </div>
+            <Link href="/blog" className="text-sm text-primary hover:underline whitespace-nowrap">
+              All guides →
+            </Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {BLOG_POSTS.slice(0, 4).map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`}>
+                <Card className="h-full hover:shadow-md transition-shadow">
+                  <CardHeader>
+                    <CardTitle className="text-base leading-snug">{post.title}</CardTitle>
+                    <CardDescription>{post.excerpt}</CardDescription>
+                  </CardHeader>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

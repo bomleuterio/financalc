@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://moneycalcs.ai'),
   title: {
-    default: 'MoneyCalcs.ai :: Free Money Calculator / Financial Calculator - accurate, free tools for every financial decision',
+    default: 'MoneyCalcs.AI — Free Financial Calculators and Guides',
     template: '%s | MoneyCalcs.AI',
   },
   description:
