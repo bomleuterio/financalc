@@ -3,9 +3,23 @@ export interface BlogPostMeta {
   title: string;
   excerpt: string;
   date: string;
+  updated?: string;
 }
 
+// Newest first. Posts merged into others are redirected in next.config.ts.
 export const BLOG_POSTS: BlogPostMeta[] = [
+  {
+    slug: 'how-compound-growth-builds-wealth',
+    title: 'How Compound Growth Builds Wealth: Time, Rate, Fees, and Savings Rate',
+    excerpt: 'The four levers you control, each with a worked number — including what a 1% fee costs over 30 years.',
+    date: 'Nov 3, 2026',
+  },
+  {
+    slug: 'credit-card-debt-payoff-guide',
+    title: 'How to Pay Off Credit Card Debt: Avalanche vs. Snowball, With the Math',
+    excerpt: 'The minimum-payment trap, both payoff methods run on the same three debts, and when a balance transfer helps.',
+    date: 'Nov 3, 2026',
+  },
   {
     slug: 'mortgage-15-vs-30-year',
     title: '15-Year vs. 30-Year Mortgage: What the Numbers Actually Say',
@@ -27,55 +41,29 @@ export const BLOG_POSTS: BlogPostMeta[] = [
   {
     slug: 'roth-vs-traditional-401k',
     title: 'Roth vs. Traditional 401(k): How to Choose in 2026',
-    excerpt: 'Why the choice comes down to one question about your future tax rate, with a side-by-side example.',
+    excerpt: 'Why the choice comes down to one question about your future tax rate, plus where IRAs fit in your savings order.',
     date: 'Oct 26, 2026',
-  },
-  {
-    slug: 'compound-interest-power',
-    title: 'The Power of Compound Interest: Why Starting Early Matters',
-    excerpt: 'Discover how compound interest can turn small regular contributions into substantial wealth over time.',
-    date: 'Oct 1, 2026',
-  },
-  {
-    slug: 'understanding-amortization',
-    title: 'Understanding Amortization: How Loans Really Work',
-    excerpt: 'Uncover the truth about how loan payments are calculated and where your money goes each month.',
-    date: 'Oct 2, 2026',
-  },
-  {
-    slug: 'debt-payoff-strategies',
-    title: 'Debt Payoff Strategies: Avalanche vs Snowball',
-    excerpt: 'Learn which debt repayment strategy saves the most money and which motivates you most.',
-    date: 'Oct 3, 2026',
-  },
-  {
-    slug: 'emergency-fund-guide',
-    title: 'Building an Emergency Fund: How Much Is Enough?',
-    excerpt: 'Understand why an emergency fund is critical and exactly how much you should save.',
-    date: 'Oct 4, 2026',
+    updated: 'Nov 3, 2026',
   },
   {
     slug: 'retirement-planning-101',
     title: 'Retirement Planning 101: How Much Do You Actually Need?',
-    excerpt: 'Calculate your retirement number using the 4% rule and plan accordingly.',
+    excerpt: 'The 4% rule, how Social Security changes your target, and the monthly savings needed when you start at 25, 35, or 45.',
     date: 'Oct 5, 2026',
+    updated: 'Nov 3, 2026',
   },
   {
-    slug: 'tax-advantaged-accounts',
-    title: 'Tax-Advantaged Accounts: 401k vs IRA vs Roth',
-    excerpt: 'Compare the three most important retirement accounts and choose the right strategy for you.',
-    date: 'Oct 6, 2026',
+    slug: 'emergency-fund-guide',
+    title: 'Building an Emergency Fund: How Much Is Enough?',
+    excerpt: 'Size your fund from essential expenses, see what it costs not to have one, and build it in stages.',
+    date: 'Oct 4, 2026',
+    updated: 'Nov 3, 2026',
   },
   {
-    slug: 'credit-card-debt-truth',
-    title: 'The True Cost of Credit Card Debt: Why You Should Avoid It',
-    excerpt: 'Explore how credit card debt compounds and why paying it off quickly saves thousands.',
-    date: 'Oct 7, 2026',
-  },
-  {
-    slug: 'wealth-building-boring-path',
-    title: 'How to Build Wealth: The Boring Path to a Million Dollars',
-    excerpt: 'Forget get-rich-quick schemes. Here is how ordinary people build extraordinary wealth.',
-    date: 'Oct 8, 2026',
+    slug: 'understanding-amortization',
+    title: 'Understanding Amortization: Where Every Loan Payment Goes',
+    excerpt: 'Month-by-month mortgage math, and why a $10,000 extra payment saves six times more in year 1 than in year 20.',
+    date: 'Oct 2, 2026',
+    updated: 'Nov 3, 2026',
   },
 ];
