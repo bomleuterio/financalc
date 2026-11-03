@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -213,6 +214,38 @@ export default function CompoundInterestPage() {
                 <li>Even small contributions add up over time. $200/month for 30 years at 6% returns ~$201,000.</li>
                 <li>A 1–2% difference in returns seems small but compounds into tens of thousands of dollars over decades — shop for better rates.</li>
                 <li>Consistent investing (dollar-cost averaging) removes emotion and leverages compound growth in volatile markets.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Does Compounding Frequency Matter?</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">Less than most people expect. Here is a single $10,000 deposit at a 5% annual rate for 10 years, compounded at different frequencies:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Compounding</th><th className="px-3 py-2 text-left font-semibold">Balance after 10 years</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Annually</td><td className="px-3 py-2 tabular-nums">$16,288.95</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Quarterly</td><td className="px-3 py-2 tabular-nums">$16,436.19</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Monthly</td><td className="px-3 py-2 tabular-nums">$16,470.09</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Daily</td><td className="px-3 py-2 tabular-nums">$16,486.65</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Moving from annual to daily compounding adds under $200 on $10,000 over a decade. When comparing savings accounts or CDs, compare the APY — which already includes compounding — rather than the compounding schedule.</p>
+            <Separator />
+            <h3 className="font-semibold">What Matters More</h3>
+            <p className="text-muted-foreground">Time, the rate of return, fees, and how much you add each month all have far larger effects. For example, $500 a month for 30 years at a 7% gross return ends at about $604,000 with a 0.05% annual fee, but about $502,000 with a 1% fee.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/how-compound-growth-builds-wealth" className="text-primary underline">How compound growth builds wealth: time, rate, fees, and savings rate</Link></li>
+                <li><Link href="/calculators/investment-growth" className="text-primary underline">Investment growth calculator</Link></li>
               </ul>
             </div>
           </CardContent>

@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -181,7 +182,7 @@ export default function CreditCardPayoffPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">Can I negotiate a lower rate?</p>
-                  <p className="text-muted-foreground text-sm">Call your issuer and ask. If you have good credit and payment history, you can often get 2–5% knocked off.</p>
+                  <p className="text-muted-foreground text-sm">Call your issuer and ask. A long, on-time payment history gives you the best chance of a lower rate, and the call costs nothing.</p>
                 </div>
               </div>
             </div>
@@ -192,8 +193,41 @@ export default function CreditCardPayoffPage() {
               <h3 className="font-semibold mb-2">Key Takeaways</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Credit card debt is expensive (15–25% APR)—prioritize paying it off over investing.</li>
-                <li>Paying $50 extra per month can cut years off your payoff timeline and save thousands in interest.</li>
+                <li>Even $50 extra per month cuts months off your payoff and saves hundreds in interest; on larger balances the savings run into thousands.</li>
                 <li>Once cleared, avoid rebuilding debt—use cards for rewards, pay in full monthly.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>What Your Payment Choice Costs</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">The same $5,000 balance at 20% APR, paid off at four different fixed monthly payments:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Monthly payment</th><th className="px-3 py-2 text-left font-semibold">Time to pay off</th><th className="px-3 py-2 text-left font-semibold">Total interest</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$100</td><td className="px-3 py-2 tabular-nums">109 months</td><td className="px-3 py-2 tabular-nums">$5,840</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$150</td><td className="px-3 py-2 tabular-nums">50 months</td><td className="px-3 py-2 tabular-nums">$2,359</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$200</td><td className="px-3 py-2 tabular-nums">33 months</td><td className="px-3 py-2 tabular-nums">$1,522</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$300</td><td className="px-3 py-2 tabular-nums">20 months</td><td className="px-3 py-2 tabular-nums">$907</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Doubling the payment from $100 to $200 cuts the interest by about three-quarters. Paying only the card’s shrinking minimum is slower still: with a typical 1%-plus-interest minimum, this balance would take almost 19 years to clear.</p>
+            <Separator />
+            <h3 className="font-semibold">If You Have More Than One Card</h3>
+            <p className="text-muted-foreground">Pay the minimum on every card and send extra money to one target. The avalanche method (highest APR first) saves the most interest; the snowball method (smallest balance first) clears a debt sooner. The debt payoff calculator compares both with your real balances.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/credit-card-debt-payoff-guide" className="text-primary underline">How to pay off credit card debt: avalanche vs. snowball</Link></li>
+                <li><Link href="/blog/pay-off-debt-or-invest" className="text-primary underline">Pay off debt or invest?</Link></li>
+                <li><Link href="/calculators/debt-payoff" className="text-primary underline">Debt payoff calculator</Link></li>
               </ul>
             </div>
           </CardContent>

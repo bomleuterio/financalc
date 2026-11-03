@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -79,7 +80,7 @@ export default function RetirementPage() {
               <div>
                 <Label>Desired Monthly Income in Retirement ($)</Label>
                 <Input type="number" value={desiredMonthlyIncome} onChange={(e) => setDesiredMonthlyIncome(e.target.value)} min="0" />
-                <p className="text-xs text-muted-foreground mt-1">In today's dollars</p>
+                <p className="text-xs text-muted-foreground mt-1">In today&apos;s dollars</p>
               </div>
             </CardContent>
           </Card>
@@ -191,7 +192,7 @@ export default function RetirementPage() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">Should I factor in Social Security?</p>
-                  <p className="text-muted-foreground text-sm">Yes, but it's uncertain. The average retired-worker benefit is about $2,070/month (2026). Use this calculator for the gap between your goal and Social Security.</p>
+                  <p className="text-muted-foreground text-sm">Yes, but it&apos;s uncertain. The average retired-worker benefit is about $2,070/month (2026). Use this calculator for the gap between your goal and Social Security.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">What if I can&apos;t save $1M?</p>
@@ -208,6 +209,36 @@ export default function RetirementPage() {
                 <li>The earlier you start, the less you need to save monthly due to compound growth.</li>
                 <li>Use the 4% rule as a rough guide for withdrawal rates in retirement.</li>
                 <li>Account for inflation; $80k needed today might be $194k in 30 years at 3% inflation.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Today’s Dollars vs. Future Dollars</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">The most common retirement-planning mistake is mixing a spending goal in today’s dollars with a return that includes inflation. With 3% inflation, $80,000 of spending today becomes about $194,000 a year in 30 years. Either inflate your goal or use a real return (your expected return minus inflation) — a 7% return with 3% inflation is about a 3.9% real return.</p>
+            <p className="text-muted-foreground">On a consistent, today’s-dollars basis, reaching a $1,375,000 target by 65 (enough for a $55,000-a-year gap under the 4% rule) takes:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Start saving at</th><th className="px-3 py-2 text-left font-semibold">Monthly savings (today’s dollars)</th><th className="px-3 py-2 text-left font-semibold">Total contributed</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">25</td><td className="px-3 py-2 tabular-nums">$1,198</td><td className="px-3 py-2 tabular-nums">$574,843</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">35</td><td className="px-3 py-2 tabular-nums">$2,023</td><td className="px-3 py-2 tabular-nums">$728,138</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">45</td><td className="px-3 py-2 tabular-nums">$3,798</td><td className="px-3 py-2 tabular-nums">$911,573</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">These amounts rise with inflation each year and include any employer match. Waiting ten years raises the monthly amount by about 70%.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/retirement-planning-101" className="text-primary underline">Retirement planning 101: how much do you actually need?</Link></li>
+                <li><Link href="/blog/roth-vs-traditional-401k" className="text-primary underline">Roth vs. traditional 401(k)</Link></li>
+                <li><Link href="/blog/how-compound-growth-builds-wealth" className="text-primary underline">How compound growth builds wealth</Link></li>
               </ul>
             </div>
           </CardContent>

@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -172,7 +173,7 @@ export default function IncomeTaxPage() {
             <div>
               <h3 className="font-semibold mb-2">Formula</h3>
               <p className="text-muted-foreground">Uses 2026 federal tax brackets to calculate tax owed based on filing status and income.</p>
-              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = Σ (Income in each bracket × that bracket's rate)</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = Σ (Income in each bracket × that bracket&apos;s rate)</p>
             </div>
 
             <Separator />
@@ -196,7 +197,7 @@ export default function IncomeTaxPage() {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the difference between marginal and effective tax rate?</p>
-                  <p className="text-muted-foreground text-sm">Marginal rate is your tax bracket rate (24%, 22%, etc.). Effective rate is total tax ÷ income. Always think in terms of effective rate when planning.</p>
+                  <p className="text-muted-foreground text-sm">Marginal rate is your tax bracket rate (24%, 22%, etc.). Effective rate is total tax ÷ income. Use your effective rate for budgeting and your marginal rate for decisions — it is the rate on your next dollar of income or deduction.</p>
                 </div>
                 <div>
                   <p className="font-medium text-sm">Should I itemize or take the standard deduction?</p>
@@ -217,6 +218,41 @@ export default function IncomeTaxPage() {
                 <li>Your effective tax rate is lower than your marginal rate—the US uses progressive taxation.</li>
                 <li>Maximize pre-tax contributions (401k, HSA) to reduce taxable income and your tax bill.</li>
                 <li>This calculator provides an estimate; consult a tax professional for deductions and special situations.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Take-Home Pay at Three Incomes (Single, 2026)</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">Federal income tax is only part of what comes out of a paycheck. These single-filer examples use the standard deduction and include Social Security and Medicare (FICA), but not state or local tax:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Salary</th><th className="px-3 py-2 text-left font-semibold">Federal income tax</th><th className="px-3 py-2 text-left font-semibold">FICA</th><th className="px-3 py-2 text-left font-semibold">Take-home</th><th className="px-3 py-2 text-left font-semibold">Effective / marginal</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$40,000</td><td className="px-3 py-2 tabular-nums">$2,620</td><td className="px-3 py-2 tabular-nums">$3,060</td><td className="px-3 py-2 tabular-nums">$34,320</td><td className="px-3 py-2 tabular-nums">6.6% / 12%</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$75,000</td><td className="px-3 py-2 tabular-nums">$7,670</td><td className="px-3 py-2 tabular-nums">$5,738</td><td className="px-3 py-2 tabular-nums">$61,593</td><td className="px-3 py-2 tabular-nums">10.2% / 22%</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$120,000</td><td className="px-3 py-2 tabular-nums">$17,570</td><td className="px-3 py-2 tabular-nums">$9,180</td><td className="px-3 py-2 tabular-nums">$93,250</td><td className="px-3 py-2 tabular-nums">14.6% / 22%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">FICA is a flat 7.65% on wages up to the 2026 Social Security wage base of $184,500 (6.2% Social Security plus 1.45% Medicare), with Medicare continuing above that and an extra 0.9% on wages over $200,000 for single filers. For lower earners, FICA can be larger than federal income tax.</p>
+            <Separator />
+            <h3 className="font-semibold">Ways to Lower Your Federal Tax</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+              <li>Pre-tax 401(k), 403(b), and HSA contributions reduce taxable income at your marginal rate — $1,000 saves $220 in the 22% bracket.</li>
+              <li>Itemize only when your deductions exceed the standard deduction ($16,100 single, $32,200 married filing jointly, $24,150 head of household).</li>
+              <li>Credits, such as the child tax credit, reduce tax dollar for dollar and are worth more than a deduction of the same size.</li>
+            </ul>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/how-tax-brackets-work-2026" className="text-primary underline">How tax brackets really work in 2026, with examples</Link></li>
+                <li><Link href="/blog/roth-vs-traditional-401k" className="text-primary underline">Roth vs. traditional 401(k): which tax break to take</Link></li>
               </ul>
             </div>
           </CardContent>

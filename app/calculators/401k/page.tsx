@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -189,7 +190,7 @@ export default function Page401k() {
                 </div>
                 <div>
                   <p className="font-medium text-sm">Can I withdraw before retirement?</p>
-                  <p className="text-muted-foreground text-sm">Withdrawals before 59½ incur a 10% penalty plus income tax (exceptions: hardship, SEPP). It&apos;s worth leaving 401k alone for retirement.</p>
+                  <p className="text-muted-foreground text-sm">Withdrawals before 59½ incur a 10% penalty plus income tax (exceptions include leaving your job in or after the year you turn 55, disability, and substantially equal periodic payments). It&apos;s worth leaving 401k alone for retirement.</p>
                 </div>
               </div>
             </div>
@@ -202,6 +203,43 @@ export default function Page401k() {
                 <li>Always capture the full employer match—it&apos;s free money and a guaranteed return.</li>
                 <li>Starting early (age 25 vs. 35) more than doubles your retirement savings due to compound growth.</li>
                 <li>A 1% increase in returns adds $100k+ to your final balance—fee shopping matters.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>How Much the Employer Match Is Worth</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">A match is the closest thing to a guaranteed high return in personal finance. Here is a $60,000 salary contributing 6% ($300 a month), with a 50% match on that 6% ($150 a month), from age 30 to 65 at a 7% average annual return:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold"></th><th className="px-3 py-2 text-left font-semibold">Your contributions only</th><th className="px-3 py-2 text-left font-semibold">With the 50% match</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Total you contribute</td><td className="px-3 py-2 tabular-nums">$126,000</td><td className="px-3 py-2 tabular-nums">$126,000</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Total employer contributions</td><td className="px-3 py-2 tabular-nums">—</td><td className="px-3 py-2 tabular-nums">$63,000</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Balance at 65</td><td className="px-3 py-2 tabular-nums">$540,316</td><td className="px-3 py-2 tabular-nums">$810,475</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">The $63,000 of matching money grows into about $270,000 by retirement — half again as much as contributing alone. Leaving any match unclaimed is the most expensive 401(k) mistake.</p>
+            <Separator />
+            <h3 className="font-semibold">2026 Contribution Limits</h3>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+              <li>Employee contributions (traditional and Roth combined): $24,500</li>
+              <li>Catch-up contributions at age 50+: an extra $8,000</li>
+              <li>Higher catch-up at ages 60–63: an extra $11,250</li>
+              <li>Total including employer contributions: $72,000</li>
+            </ul>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/roth-vs-traditional-401k" className="text-primary underline">Roth vs. traditional 401(k): how to choose</Link></li>
+                <li><Link href="/blog/how-compound-growth-builds-wealth" className="text-primary underline">How compound growth builds wealth</Link></li>
+                <li><Link href="/blog/pay-off-debt-or-invest" className="text-primary underline">Pay off debt or invest? The order of operations</Link></li>
               </ul>
             </div>
           </CardContent>
