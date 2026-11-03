@@ -280,20 +280,14 @@ export function calculateCapitalGainsTax(
     return { tax, rate: gains > 0 ? (tax / gains) * 100 : 0 };
   }
 
+  // Long-term gains stack on top of taxable ordinary income (after the standard deduction),
+  // so part of a gain can fall in the 0% band and the rest in the 15% or 20% bands.
   const [zeroMax, fifteenMax] = LTCG_THRESHOLDS[filingStatus];
-  const ltcgThresholds = [{ max: zeroMax, rate: 0 }, { max: fifteenMax, rate: 0.15 }, { max: Infinity, rate: 0.20 }];
-
-  const totalIncome = ordinaryIncome + gains;
-  let ltcgRate = 0.20;
-  for (const tier of ltcgThresholds) {
-    if (totalIncome <= tier.max) {
-      ltcgRate = tier.rate;
-      break;
-    }
-  }
-
-  const tax = gains * ltcgRate;
-  return { tax, rate: ltcgRate * 100 };
+  const taxableOrdinary = Math.max(0, ordinaryIncome - STANDARD_DEDUCTIONS[filingStatus]);
+  const inBand = (lo: number, hi: number) =>
+    Math.max(0, Math.min(taxableOrdinary + gains, hi) - Math.max(taxableOrdinary, lo));
+  const tax = inBand(zeroMax, fifteenMax) * 0.15 + inBand(fifteenMax, Infinity) * 0.2;
+  return { tax, rate: gains > 0 ? (tax / gains) * 100 : 0 };
 }
 
 export function calculateCreditCardPayoff(
