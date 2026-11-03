@@ -25,6 +25,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     title: '15-Year vs. 30-Year Mortgage: What the Numbers Actually Say',
     excerpt: 'A full worked example comparing payments, interest, and the invest-the-difference strategy at three rates of return.',
     date: 'Oct 26, 2026',
+    updated: 'Nov 4, 2026',
   },
   {
     slug: 'how-tax-brackets-work-2026',
@@ -37,6 +38,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     title: 'Pay Off Debt or Invest? A Decision Framework With Real Numbers',
     excerpt: 'An order of operations for extra cash, with worked credit card and car loan examples.',
     date: 'Oct 26, 2026',
+    updated: 'Nov 4, 2026',
   },
   {
     slug: 'roth-vs-traditional-401k',

@@ -32,6 +32,16 @@ const h2 = 'text-xl font-semibold mt-8';
 const list = 'list-disc list-inside space-y-1 ml-2';
 const link = 'text-primary underline';
 
+// First-hand notes from the TriangleBLVD team. Keep these to what the team has actually told us.
+function TeamNote({ children }: { children: React.ReactNode }) {
+  return (
+    <aside className="rounded-lg border-l-4 border-primary bg-muted/40 px-4 py-3">
+      <p className="text-xs font-semibold uppercase tracking-wide text-primary mb-1">From the TriangleBLVD team</p>
+      <p>{children}</p>
+    </aside>
+  );
+}
+
 export const IN_DEPTH_POSTS: Record<string, { title: string; date: string; content: React.ReactNode }> = {
   'mortgage-15-vs-30-year': {
     title: '15-Year vs. 30-Year Mortgage: What the Numbers Actually Say',
@@ -44,6 +54,10 @@ export const IN_DEPTH_POSTS: Record<string, { title: string; date: string; conte
           the lower payment and come out ahead. Both are right under some assumptions and wrong under others. This
           article walks through one realistic example in full so you can see exactly where the answer flips.
         </p>
+        <TeamNote>
+          We faced this choice ourselves and went with a 15-year mortgage. The comparison below is the math behind
+          that kind of decision, laid out so you can test it against your own rates and budget.
+        </TeamNote>
 
         <h2 className={h2}>The example</h2>
         <p>
@@ -258,6 +272,10 @@ export const IN_DEPTH_POSTS: Record<string, { title: string; date: string; conte
           &quot;it depends on the interest rate&quot; — but that is only useful if you know how to compare a debt&apos;s
           rate with an investment&apos;s return. This article gives you an order of operations and the math behind it.
         </p>
+        <TeamNote>
+          We&apos;ve worked through this with our own credit card balance and car loan, both now paid off. The two
+          worked examples below use those same two kinds of debt.
+        </TeamNote>
 
         <h2 className={h2}>Paying off debt is a guaranteed return</h2>
         <p>
@@ -598,6 +616,10 @@ export const IN_DEPTH_POSTS: Record<string, { title: string; date: string; conte
           minimum payments makes it easy to stay in debt for decades. This guide shows what that costs, compares
           the two most popular payoff methods on the same set of debts, and covers when a balance transfer helps.
         </p>
+        <TeamNote>
+          We&apos;ve paid off credit card debt and a car loan ourselves. This guide is the side-by-side math for the
+          choices that come up along the way.
+        </TeamNote>
 
         <h2 className={h2}>The minimum-payment trap</h2>
         <p>
