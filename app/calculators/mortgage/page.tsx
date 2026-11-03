@@ -260,10 +260,10 @@ export default function MortgagePage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Mortgage Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Mortgage Payment Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Payment Formula</h3>
               <p className="text-muted-foreground">
                 The calculator uses the standard amortization formula to determine your monthly payment:
               </p>
@@ -278,7 +278,7 @@ export default function MortgagePage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: A $400,000 Home</h3>
               <p className="text-muted-foreground">
                 Suppose you buy a $400,000 home with a 20% down payment ($80,000) at 7% interest over 30 years:
               </p>
@@ -296,7 +296,7 @@ export default function MortgagePage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Mortgage Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What is PMI?</p>
@@ -320,7 +320,7 @@ export default function MortgagePage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">The Bottom Line</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>A larger down payment (20%+) eliminates PMI and lowers your monthly payment.</li>
                 <li>Even a 0.5% difference in interest rate significantly changes your total interest paid — shop around with multiple lenders.</li>
@@ -332,7 +332,7 @@ export default function MortgagePage() {
         </Card>
 
         <Card>
-          <CardHeader><CardTitle>When to Use This Calculator</CardTitle></CardHeader>
+          <CardHeader><CardTitle>When to Run the Numbers</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <p className="text-muted-foreground">
               Use this calculator when: you're shopping for a home and want to understand your monthly costs before applying for a loan, you're refinancing and want to compare new rates, you're considering a larger down payment and want to see the impact, or you want to understand how different loan terms (15 vs 30 years) affect your payment.
@@ -344,7 +344,7 @@ export default function MortgagePage() {
         </Card>
 
         <Card>
-          <CardHeader><CardTitle>Common Mistakes to Avoid</CardTitle></CardHeader>
+          <CardHeader><CardTitle>Mortgage Mistakes to Avoid</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li><strong>Forgetting property tax and insurance:</strong> Your monthly payment isn't just principal and interest. Property tax, insurance, and HOA often add 20–30% to your base payment. Budget for the total.</li>
@@ -356,7 +356,7 @@ export default function MortgagePage() {
         </Card>
 
         <Card>
-          <CardHeader><CardTitle>Pro Tips</CardTitle></CardHeader>
+          <CardHeader><CardTitle>Ways to Pay Less Interest</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li><strong>Shop rates across 3-5 lenders:</strong> A 0.5% difference in rates costs you ~$38,000 in total interest on a $320k loan over 30 years. It's worth spending a day comparing offers.</li>

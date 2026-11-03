@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -168,10 +169,10 @@ export default function BudgetPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Budget Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How the 50/30/20 Budget Works</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Three Buckets</h3>
               <p className="text-muted-foreground">Uses the 50/30/20 budgeting rule to allocate income:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>50% — Needs (housing, food, insurance, utilities)</li>
@@ -183,7 +184,7 @@ export default function BudgetPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $4,000 a Month Take-Home</h3>
               <p className="text-muted-foreground">Monthly income: $4,000</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Needs (50%): $2,000 (rent, groceries, insurance)</li>
@@ -195,7 +196,7 @@ export default function BudgetPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Budgeting Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What if my needs exceed 50%?</p>
@@ -215,11 +216,40 @@ export default function BudgetPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Making a Budget Stick</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>A simple 50/30/20 budget is easier to follow than tracking every expense.</li>
                 <li>The goal: save 20%+ of income. Even 10% beats zero and compounds over time.</li>
                 <li>Review quarterly; adjust categories as needed (marriage, kids, job change affect budgets).</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>The 50/30/20 Split at Three Incomes</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">The rule splits monthly take-home pay — after taxes and payroll deductions — into needs, wants, and savings or extra debt payments:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Take-home pay</th><th className="px-3 py-2 text-left font-semibold">Needs (50%)</th><th className="px-3 py-2 text-left font-semibold">Wants (30%)</th><th className="px-3 py-2 text-left font-semibold">Savings & debt (20%)</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$3,000</td><td className="px-3 py-2 tabular-nums">$1,500</td><td className="px-3 py-2 tabular-nums">$900</td><td className="px-3 py-2 tabular-nums">$600</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$5,000</td><td className="px-3 py-2 tabular-nums">$2,500</td><td className="px-3 py-2 tabular-nums">$1,500</td><td className="px-3 py-2 tabular-nums">$1,000</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$8,000</td><td className="px-3 py-2 tabular-nums">$4,000</td><td className="px-3 py-2 tabular-nums">$2,400</td><td className="px-3 py-2 tabular-nums">$1,600</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground"><strong>Needs</strong> are the bills you couldn’t skip for a month: housing, utilities, groceries, insurance, transportation to work, and minimum debt payments. <strong>Wants</strong> are everything else you choose to spend on. <strong>Savings</strong> covers your emergency fund, retirement contributions, and any payment above a debt’s minimum.</p>
+            <p className="text-muted-foreground">In high-cost areas, needs often take 60% or more. That isn’t a failure — adjust to something like 60/20/20 and protect the savings share first, since it is the part that compounds.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/emergency-fund-guide" className="text-primary underline">Building an emergency fund: how much is enough?</Link></li>
+                <li><Link href="/blog/pay-off-debt-or-invest" className="text-primary underline">Pay off debt or invest?</Link></li>
               </ul>
             </div>
           </CardContent>

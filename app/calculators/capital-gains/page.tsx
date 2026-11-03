@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -51,7 +52,7 @@ export default function CapitalGainsPage() {
                 </Select>
               </div>
               <Separator />
-              <div><Label>Other Ordinary Income ($)</Label><Input type="number" value={ordinaryIncome} onChange={(e) => setOrdinaryIncome(e.target.value)} min="0" /></div>
+              <div><Label>Other Income Before Deductions ($)</Label><Input type="number" value={ordinaryIncome} onChange={(e) => setOrdinaryIncome(e.target.value)} min="0" /></div>
               <div>
                 <Label>Filing Status</Label>
                 <Select value={filingStatus} onValueChange={(v) => v != null && setFilingStatus(v as FilingStatus)}>
@@ -88,8 +89,8 @@ export default function CapitalGainsPage() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Tax Rate</p>
-                    <p className="text-2xl font-bold">{formatPercent(results.rate, 0)}</p>
+                    <p className="text-xs text-muted-foreground uppercase tracking-wide">Effective Rate</p>
+                    <p className="text-2xl font-bold">{formatPercent(results.rate, 1)}</p>
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground uppercase tracking-wide">Tax Owed</p>
@@ -104,7 +105,7 @@ export default function CapitalGainsPage() {
                 <Separator className="my-4" />
 
                 <div className="text-sm space-y-2">
-                  <p className="font-medium">2026 Long-term Capital Gains Rates (Single):</p>
+                  <p className="font-medium">2026 Long-term Capital Gains Rates (Single, by taxable income):</p>
                   <div className="space-y-1 text-muted-foreground">
                     <div className="flex justify-between"><span>0%</span><span>Income up to $49,450</span></div>
                     <div className="flex justify-between"><span>15%</span><span>$49,450 – $545,500</span></div>
@@ -127,18 +128,18 @@ export default function CapitalGainsPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Capital Gains Tax Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Capital Gains Tax Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">Short-Term vs. Long-Term</h3>
               <p className="text-muted-foreground">Calculates capital gains tax on investment profits using short-term (ordinary income rates) or long-term (preferential rates) rates.</p>
-              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = Capital Gain × Tax Rate (0%, 15% or 20% for long-term)</p>
+              <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Long-term: the gain is stacked on top of your taxable income and taxed at 0%, 15%, or 20% depending on which brackets it falls in</p>
             </div>
 
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: Selling Stock After Two Years</h3>
               <p className="text-muted-foreground">You sell stock bought for $50,000 and held 2+ years for $75,000, long-term rate 15%:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Sale price: $75,000</li>
@@ -152,7 +153,7 @@ export default function CapitalGainsPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Capital Gains Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the difference between short and long-term gains?</p>
@@ -172,11 +173,40 @@ export default function CapitalGainsPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Tax-Smart Selling</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Hold investments 1+ year for long-term rates (15% vs. 37% short-term)—massive tax savings.</li>
                 <li>Tax-loss harvesting (selling losers to offset winners) can save thousands annually.</li>
                 <li>In tax-advantaged accounts (401k, IRA), gains aren&apos;t taxed until withdrawal—keep long-term winners there.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Why Holding Longer and Your Income Both Matter</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">A single filer with a $60,000 salary sells an investment for a $20,000 profit. Using 2026 brackets and the standard deduction:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold"></th><th className="px-3 py-2 text-left font-semibold">Held 1 year or less</th><th className="px-3 py-2 text-left font-semibold">Held more than 1 year</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">How it is taxed</td><td className="px-3 py-2 tabular-nums">As ordinary income</td><td className="px-3 py-2 tabular-nums">Long-term capital gains rates</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Federal tax on the gain</td><td className="px-3 py-2 tabular-nums">$3,750</td><td className="px-3 py-2 tabular-nums">$2,167.50</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Effective rate on the gain</td><td className="px-3 py-2 tabular-nums">18.8%</td><td className="px-3 py-2 tabular-nums">10.8%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Their taxable salary is $43,900 after the $16,100 standard deduction. The 0% long-term bracket for single filers runs to $49,450 of taxable income, so the first $5,550 of the gain is taxed at 0% and the remaining $14,450 at 15%. Waiting past the one-year mark saves $1,582.50 here.</p>
+            <p className="text-muted-foreground">This is also why the same gain can cost very different amounts in different years: realizing gains in a lower-income year, such as early retirement or a career break, can push more of them into the 0% band. Higher earners may also owe the 3.8% net investment income tax, which this calculator does not include.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/how-tax-brackets-work-2026" className="text-primary underline">How tax brackets really work in 2026</Link></li>
+                <li><Link href="/blog/how-compound-growth-builds-wealth" className="text-primary underline">How compound growth builds wealth</Link></li>
               </ul>
             </div>
           </CardContent>

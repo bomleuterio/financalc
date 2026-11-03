@@ -227,10 +227,10 @@ export default function AutoLoanPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Auto Loan Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Car Payment Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Payment Formula</h3>
               <p className="text-muted-foreground">
                 The calculator uses the standard amortization formula to determine your monthly payment:
               </p>
@@ -245,7 +245,7 @@ export default function AutoLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: Financing a $27,000 Loan</h3>
               <p className="text-muted-foreground">
                 You purchase a $30,000 car with a 10% down payment ($3,000) at 6.5% interest over 60 months (5 years):
               </p>
@@ -261,7 +261,7 @@ export default function AutoLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Car Loan Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">How does my credit score affect my rate?</p>
@@ -285,7 +285,7 @@ export default function AutoLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">The Bottom Line</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>APR, not just interest rate, reflects the true cost — always compare APRs, not just rates.</li>
                 <li>A 0.5% lower rate on a $25,000 loan saves ~$350 over 5 years — it&apos;s worth negotiating.</li>
@@ -297,7 +297,7 @@ export default function AutoLoanPage() {
         </Card>
 
         <Card>
-          <CardHeader><CardTitle>When to Use This Calculator</CardTitle></CardHeader>
+          <CardHeader><CardTitle>When to Run the Numbers</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <p className="text-muted-foreground">
               Use this calculator when: you're shopping for a vehicle and want to understand monthly payments, you want to compare different loan terms (36, 48, 60, or 72 months), you're pre-approved and want to see different interest rate scenarios, or you want to calculate total interest cost before signing loan paperwork.
@@ -306,7 +306,7 @@ export default function AutoLoanPage() {
         </Card>
 
         <Card>
-          <CardHeader><CardTitle>Common Mistakes</CardTitle></CardHeader>
+          <CardHeader><CardTitle>Car-Buying Mistakes That Cost the Most</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li><strong>Focusing only on the monthly payment:</strong> A 72-month loan has a lower payment but costs ~$2,000 more in interest than a 48-month loan. Consider total cost, not just the payment.</li>
@@ -318,7 +318,7 @@ export default function AutoLoanPage() {
         </Card>
 
         <Card>
-          <CardHeader><CardTitle>Pro Tips</CardTitle></CardHeader>
+          <CardHeader><CardTitle>Ways to Pay Less for the Same Car</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li><strong>Get pre-approved before shopping:</strong> Pre-approval shows dealers you're serious and gives you leverage to negotiate.</li>

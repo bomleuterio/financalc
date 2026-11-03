@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -144,10 +145,10 @@ export default function StudentLoanPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Student Loan Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Student Loan Payment Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Payment Formula</h3>
               <p className="text-muted-foreground">Calculates monthly payment using the standard amortization formula, then compares 10-year standard and 25-year extended repayment plans.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">M = P × [r(1+r)^n] / [(1+r)^n - 1]</p>
             </div>
@@ -155,7 +156,7 @@ export default function StudentLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $30,000 at 5.5%</h3>
               <p className="text-muted-foreground">You graduate with $30,000 in federal loans at 5.5% APR:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Standard 10-year plan: $326/month, $9,069 total interest</li>
@@ -167,7 +168,7 @@ export default function StudentLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Student Loan Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Should I choose 10-year or 25-year repayment?</p>
@@ -187,11 +188,41 @@ export default function StudentLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Paying It Off</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>10-year standard repayment saves thousands compared to 25-year extended—pay as much as you can afford in the first 10 years.</li>
                 <li>Income-driven plans can be valuable if you expect significant income growth or face temporary hardship.</li>
                 <li>Public Service Loan Forgiveness (PSLF) forgives remaining balance after 10 years if you work in qualifying public sector jobs—worth exploring if eligible.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>What Extra Payments Save</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">The same $30,000 loan at 5.5% on a 10-year plan ($326 a month), with a fixed extra amount each month:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Extra per month</th><th className="px-3 py-2 text-left font-semibold">Paid off in</th><th className="px-3 py-2 text-left font-semibold">Total interest</th><th className="px-3 py-2 text-left font-semibold">Interest saved</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$0</td><td className="px-3 py-2 tabular-nums">120 months</td><td className="px-3 py-2 tabular-nums">$9,069</td><td className="px-3 py-2 tabular-nums">—</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$50</td><td className="px-3 py-2 tabular-nums">100 months</td><td className="px-3 py-2 tabular-nums">$7,441</td><td className="px-3 py-2 tabular-nums">$1,628</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$100</td><td className="px-3 py-2 tabular-nums">86 months</td><td className="px-3 py-2 tabular-nums">$6,316</td><td className="px-3 py-2 tabular-nums">$2,753</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$200</td><td className="px-3 py-2 tabular-nums">67 months</td><td className="px-3 py-2 tabular-nums">$4,859</td><td className="px-3 py-2 tabular-nums">$4,211</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Ask your servicer to apply extra payments to principal — and to the highest-rate loan if you have several — rather than advancing your next due date.</p>
+            <p className="text-muted-foreground">Before prepaying federal loans, consider what you would give up. Income-driven repayment and forgiveness programs can make prepaying the wrong choice for some borrowers, and the plan options changed under 2025 legislation. Check studentaid.gov for the plans available to you.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/pay-off-debt-or-invest" className="text-primary underline">Pay off debt or invest?</Link></li>
+                <li><Link href="/blog/understanding-amortization" className="text-primary underline">Understanding amortization</Link></li>
               </ul>
             </div>
           </CardContent>

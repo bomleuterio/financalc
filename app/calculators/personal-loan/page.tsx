@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -124,10 +125,10 @@ export default function PersonalLoanPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Personal Loan Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Personal Loan Payment Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Payment Formula</h3>
               <p className="text-muted-foreground">Uses the standard amortization formula to calculate monthly payment based on principal, interest rate, and term.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">M = P × [r(1+r)^n] / [(1+r)^n - 1]</p>
             </div>
@@ -135,7 +136,7 @@ export default function PersonalLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $15,000 Over 3 Years</h3>
               <p className="text-muted-foreground">You borrow $15,000 at 11.5% APR for 36 months:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Loan amount: $15,000</li>
@@ -149,7 +150,7 @@ export default function PersonalLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Personal Loan Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the difference between a personal and auto loan?</p>
@@ -169,11 +170,42 @@ export default function PersonalLoanPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Before You Borrow</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Shorter loan terms (24–36 months) save thousands in interest vs. longer terms (60+ months).</li>
                 <li>A personal loan at 11.5% should be a last resort—explore credit cards (if you can pay off quickly) or credit unions first.</li>
                 <li>Making extra payments cuts the term and interest significantly.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>How Origination Fees Change the Real Cost</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">Many personal loans charge an origination fee that is taken out of the money you receive. Take the example above — $15,000 at 11.5% APR for 36 months — with a 5% fee:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold"></th><th className="px-3 py-2 text-left font-semibold">Amount</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Monthly payment</td><td className="px-3 py-2 tabular-nums">$494.64</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Cash you actually receive</td><td className="px-3 py-2 tabular-nums">$14,250</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Total paid over 36 months</td><td className="px-3 py-2 tabular-nums">$17,807</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Total cost of borrowing</td><td className="px-3 py-2 tabular-nums">$3,557</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Effective rate on the cash received</td><td className="px-3 py-2 tabular-nums">15.09%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">The fee raises the true cost from 11.5% to about 15.1% a year. Lenders are required to quote an APR that includes most fees, so when comparing offers, compare APRs — not interest rates — and check whether a fee will be deducted from the funds you receive.</p>
+            <p className="text-muted-foreground">If you need a specific amount in hand, borrow enough to cover the fee, and run the numbers here with that larger amount.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/pay-off-debt-or-invest" className="text-primary underline">Pay off debt or invest?</Link></li>
+                <li><Link href="/blog/credit-card-debt-payoff-guide" className="text-primary underline">Using a personal loan to pay off credit cards</Link></li>
               </ul>
             </div>
           </CardContent>

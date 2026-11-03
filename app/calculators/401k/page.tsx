@@ -154,10 +154,10 @@ export default function Page401k() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This 401k Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your 401(k) Projection Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Growth Math</h3>
               <p className="text-muted-foreground">Projects future 401k balance using compound interest, accounting for your contributions, employer match, and investment returns.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^n + (Annual Contribution + Employer Match) × [((1 + r)^n - 1) / r]</p>
             </div>
@@ -165,7 +165,7 @@ export default function Page401k() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: Starting at 30 With $500 a Month</h3>
               <p className="text-muted-foreground">Age 30, contribute $500/month, employer matches 100% up to 3%, expect 7% annual return until age 65:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Your annual contribution: $6,000</li>
@@ -178,7 +178,7 @@ export default function Page401k() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">401(k) Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Should I max out my 401k?</p>
@@ -198,7 +198,7 @@ export default function Page401k() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">What Matters Most</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Always capture the full employer match—it&apos;s free money and a guaranteed return.</li>
                 <li>Starting early (age 25 vs. 35) more than doubles your retirement savings due to compound growth.</li>

@@ -145,10 +145,10 @@ export default function CreditCardPayoffPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Credit Card Payoff Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Payoff Date Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Payoff Formula</h3>
               <p className="text-muted-foreground">Calculates payoff timeline based on balance, interest rate (APR), and monthly payment. Higher payments reduce interest paid.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Months to Payoff = -log(1 - (Balance × Monthly Rate / Payment)) / log(1 + Monthly Rate)</p>
             </div>
@@ -156,7 +156,7 @@ export default function CreditCardPayoffPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $5,000 at 18% APR</h3>
               <p className="text-muted-foreground">$5,000 balance at 18% APR, paying $150/month:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Balance: $5,000</li>
@@ -170,7 +170,7 @@ export default function CreditCardPayoffPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Payoff Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">How much should I pay monthly?</p>
@@ -190,7 +190,7 @@ export default function CreditCardPayoffPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Staying Out of Debt</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Credit card debt is expensive (15–25% APR)—prioritize paying it off over investing.</li>
                 <li>Even $50 extra per month cuts months off your payoff and saves hundreds in interest; on larger balances the savings run into thousands.</li>

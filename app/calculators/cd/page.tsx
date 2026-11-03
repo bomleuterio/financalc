@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -96,10 +97,10 @@ export default function CDPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This CD Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How CD Interest Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">APY and Compounding</h3>
               <p className="text-muted-foreground">Calculates final CD balance using compound interest over the term.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r/n)^(nt)</p>
               <p className="text-muted-foreground mt-2 text-xs">Where n = compounding periods per year, typically 12 for monthly.</p>
@@ -108,7 +109,7 @@ export default function CDPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: A 1-Year CD</h3>
               <p className="text-muted-foreground">You deposit $10,000 in a 1-year CD at 5.25% APY, compounded daily:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Principal: $10,000</li>
@@ -122,7 +123,7 @@ export default function CDPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">CD Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the difference between a CD and a savings account?</p>
@@ -142,11 +143,41 @@ export default function CDPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Before You Lock In</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>CDs are FDIC-insured up to $250k—one of the safest investments.</li>
                 <li>5.25% on $10k for 1 year is $525 risk-free—better than stock market for short-term savings.</li>
                 <li>Compare rates across banks; online banks and credit unions often pay several percentage points more than traditional banks.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>How Term Length Changes What You Earn</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">CD rates change constantly, so this table holds the rate fixed at 4.00% APY to show how term length alone affects a $10,000 deposit:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Term</th><th className="px-3 py-2 text-left font-semibold">Interest earned at 4.00% APY</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">6 months</td><td className="px-3 py-2 tabular-nums">$198.04</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">12 months</td><td className="px-3 py-2 tabular-nums">$400.00</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">24 months</td><td className="px-3 py-2 tabular-nums">$816.00</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">60 months</td><td className="px-3 py-2 tabular-nums">$2,166.53</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Longer terms earn more and lock in today’s rate, which helps if rates fall — but your money is tied up, and an early withdrawal usually costs several months of interest. Penalties vary by bank and term, so check the disclosure before you open the account.</p>
+            <p className="text-muted-foreground">A <strong>CD ladder</strong> splits the money across several terms — for example, a fifth each into 1-, 2-, 3-, 4-, and 5-year CDs — then reinvests each one as it matures. Part of your money becomes available every year while most of it earns longer-term rates.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/emergency-fund-guide" className="text-primary underline">Where to keep an emergency fund</Link></li>
+                <li><Link href="/calculators/savings" className="text-primary underline">Savings calculator</Link></li>
               </ul>
             </div>
           </CardContent>

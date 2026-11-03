@@ -168,10 +168,10 @@ export default function IncomeTaxPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Income Tax Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Federal Income Tax Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">Tax by Bracket</h3>
               <p className="text-muted-foreground">Uses 2026 federal tax brackets to calculate tax owed based on filing status and income.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Tax = Σ (Income in each bracket × that bracket&apos;s rate)</p>
             </div>
@@ -179,7 +179,7 @@ export default function IncomeTaxPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: Single Filer Earning $75,000</h3>
               <p className="text-muted-foreground">Single filer with $75,000 income, standard deduction:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Gross income: $75,000</li>
@@ -193,7 +193,7 @@ export default function IncomeTaxPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Income Tax Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the difference between marginal and effective tax rate?</p>
@@ -213,7 +213,7 @@ export default function IncomeTaxPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">What to Remember</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Your effective tax rate is lower than your marginal rate—the US uses progressive taxation.</li>
                 <li>Maximize pre-tax contributions (401k, HSA) to reduce taxable income and your tax bill.</li>

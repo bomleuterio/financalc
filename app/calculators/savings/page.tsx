@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -82,10 +83,10 @@ export default function SavingsPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Savings Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Savings Growth Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Formula</h3>
               <p className="text-muted-foreground">Calculates how much your savings will grow with regular deposits and compound interest.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^t + PMT × [((1 + r)^t - 1) / r]</p>
             </div>
@@ -93,7 +94,7 @@ export default function SavingsPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $5,000 Plus $300 a Month</h3>
               <p className="text-muted-foreground">Starting with $5,000, save $300/month at 4% APY for 5 years:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Starting balance: $5,000</li>
@@ -107,7 +108,7 @@ export default function SavingsPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Savings Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Where should I keep my savings?</p>
@@ -127,11 +128,41 @@ export default function SavingsPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Saving Faster</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Compound interest works in your favor—your money earns interest, then interest earns more interest.</li>
                 <li>Move savings to high-yield accounts; 4% vs. 0.01% adds hundreds to your final balance over years.</li>
                 <li>Automate and stay consistent—small regular deposits outperform sporadic large ones.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>How Much to Save Each Month for a Goal</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">To reach $10,000, assuming the account pays 4% interest:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Time frame</th><th className="px-3 py-2 text-left font-semibold">Monthly deposit</th><th className="px-3 py-2 text-left font-semibold">Interest earned</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">1 year</td><td className="px-3 py-2 tabular-nums">$818.17</td><td className="px-3 py-2 tabular-nums">$182</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">2 years</td><td className="px-3 py-2 tabular-nums">$400.92</td><td className="px-3 py-2 tabular-nums">$378</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">3 years</td><td className="px-3 py-2 tabular-nums">$261.91</td><td className="px-3 py-2 tabular-nums">$571</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">5 years</td><td className="px-3 py-2 tabular-nums">$150.83</td><td className="px-3 py-2 tabular-nums">$950</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Over short time frames, the monthly deposit does almost all the work — interest supplies under 10% of the goal even over five years. Choosing a realistic deadline and automating the deposit on payday matter more than chasing the last fraction of a percent.</p>
+            <p className="text-muted-foreground">For goals more than about five years away, such as retirement, investing usually beats a savings account; for money you need sooner, a savings account’s stability is the point.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/emergency-fund-guide" className="text-primary underline">Building an emergency fund</Link></li>
+                <li><Link href="/calculators/cd" className="text-primary underline">CD calculator</Link></li>
               </ul>
             </div>
           </CardContent>

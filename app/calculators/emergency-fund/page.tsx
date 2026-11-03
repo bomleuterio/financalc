@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -133,10 +134,10 @@ export default function EmergencyFundPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Emergency Fund Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Emergency Fund Target Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Calculation</h3>
               <p className="text-muted-foreground">Calculates the recommended emergency fund size based on your monthly expenses and desired safety margin.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Emergency Fund = Monthly Expenses × Number of Months (3–6)</p>
             </div>
@@ -144,7 +145,7 @@ export default function EmergencyFundPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $4,000 of Monthly Expenses</h3>
               <p className="text-muted-foreground">Your monthly expenses are $4,000:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Conservative (3 months): $12,000</li>
@@ -157,7 +158,7 @@ export default function EmergencyFundPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Emergency Fund Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">How many months should I save?</p>
@@ -177,11 +178,48 @@ export default function EmergencyFundPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Building It Up</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>An emergency fund prevents high-interest debt during hardship—it&apos;s not optional.</li>
                 <li>Start small (1 month), then build to 3–6 months. Don&apos;t max retirement accounts until you have this cushion.</li>
                 <li>Keep it liquid and accessible; high-yield savings accounts earn 4%+ with zero risk.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Targets at a Glance</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">Find the row closest to your essential monthly expenses:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Essential expenses / month</th><th className="px-3 py-2 text-left font-semibold">3 months</th><th className="px-3 py-2 text-left font-semibold">6 months</th><th className="px-3 py-2 text-left font-semibold">9 months</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$3,000</td><td className="px-3 py-2 tabular-nums">$9,000</td><td className="px-3 py-2 tabular-nums">$18,000</td><td className="px-3 py-2 tabular-nums">$27,000</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$4,000</td><td className="px-3 py-2 tabular-nums">$12,000</td><td className="px-3 py-2 tabular-nums">$24,000</td><td className="px-3 py-2 tabular-nums">$36,000</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$5,000</td><td className="px-3 py-2 tabular-nums">$15,000</td><td className="px-3 py-2 tabular-nums">$30,000</td><td className="px-3 py-2 tabular-nums">$45,000</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Count only what you would still have to pay if your income stopped:</p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+              <li>Rent or mortgage, property tax, and insurance</li>
+              <li>Utilities, phone, and internet</li>
+              <li>Groceries (not dining out)</li>
+              <li>Car payment, insurance, fuel, or transit</li>
+              <li>Health insurance premiums and regular prescriptions</li>
+              <li>Minimum payments on every debt</li>
+              <li>Childcare and other fixed obligations</li>
+            </ul>
+            <p className="text-muted-foreground">Aim for the higher columns with a single income, dependents, variable pay, or a field where job searches take longer.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/emergency-fund-guide" className="text-primary underline">Building an emergency fund: how much is enough?</Link></li>
               </ul>
             </div>
           </CardContent>

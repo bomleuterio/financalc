@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -143,10 +144,10 @@ export default function NetWorthPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Net Worth Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Net Worth Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">Assets Minus Liabilities</h3>
               <p className="text-muted-foreground">Net worth measures your financial health—the difference between what you own and what you owe.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Net Worth = Total Assets - Total Liabilities</p>
             </div>
@@ -154,7 +155,7 @@ export default function NetWorthPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: A Household Snapshot</h3>
               <p className="text-muted-foreground">Your financial snapshot:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Home: $400,000</li>
@@ -170,7 +171,7 @@ export default function NetWorthPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Net Worth Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Should I include my car in net worth?</p>
@@ -190,11 +191,32 @@ export default function NetWorthPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Using Your Number</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Net worth = financial freedom metric; track it annually to see your progress.</li>
                 <li>Don&apos;t obsess over it—focus on controllables: earn, save, invest consistently.</li>
                 <li>Millionaires typically build wealth slowly through discipline, not overnight success.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Making Your Net Worth Number Useful</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">A single number is less useful than how it changes. Recalculate on the same date each year — or each quarter — using the same method, and watch the trend.</p>
+            <p className="text-muted-foreground">Two refinements make it more informative:</p>
+            <ul className="list-disc list-inside text-muted-foreground space-y-1">
+              <li><strong>Liquid net worth</strong>: leave out your home and car. What remains is what you could actually draw on in an emergency or an early retirement.</li>
+              <li><strong>Use realistic values</strong>: value a car at its private-sale price and a home at a recent comparable sale minus the agent fees and closing costs you would pay to sell, not its purchase price.</li>
+            </ul>
+            <p className="text-muted-foreground">Paying down debt raises net worth exactly as much as adding to savings, so a falling mortgage balance counts as progress even when your bank balance stays flat.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/how-compound-growth-builds-wealth" className="text-primary underline">How compound growth builds wealth</Link></li>
+                <li><Link href="/blog/pay-off-debt-or-invest" className="text-primary underline">Pay off debt or invest?</Link></li>
               </ul>
             </div>
           </CardContent>

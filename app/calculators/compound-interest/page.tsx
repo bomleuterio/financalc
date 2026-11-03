@@ -148,10 +148,10 @@ export default function CompoundInterestPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Compound Interest Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Compound Interest Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Formula</h3>
               <p className="text-muted-foreground">
                 The calculator uses the compound interest formula to project your investment growth:
               </p>
@@ -166,7 +166,7 @@ export default function CompoundInterestPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $10,000 Plus $200 a Month</h3>
               <p className="text-muted-foreground">
                 You invest $10,000 in a savings account earning 4% APY, compounded monthly, and add $200 each month for 10 years:
               </p>
@@ -184,7 +184,7 @@ export default function CompoundInterestPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Compounding Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the power of compound interest?</p>
@@ -208,7 +208,7 @@ export default function CompoundInterestPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">The Big Levers</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Time is your greatest asset — starting early gives compounding decades to work, dramatically increasing your final wealth.</li>
                 <li>Even small contributions add up over time. $200/month for 30 years at 6% returns ~$201,000.</li>

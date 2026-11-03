@@ -160,10 +160,10 @@ export default function RetirementPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Retirement Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Retirement Target Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Target Formula</h3>
               <p className="text-muted-foreground">Projects how much you need to save for retirement using a retirement income goal and life expectancy.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Needed = Annual Goal × [1 − (1 + r)^−Years] / r</p>
             </div>
@@ -171,7 +171,7 @@ export default function RetirementPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $80,000 a Year for 30 Years</h3>
               <p className="text-muted-foreground">You want $80,000/year in retirement from age 65 to 95 (30 years) with 6% investment returns:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Annual need: $80,000</li>
@@ -184,7 +184,7 @@ export default function RetirementPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Retirement Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the 4% rule?</p>
@@ -204,7 +204,7 @@ export default function RetirementPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">What to Remember</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>The earlier you start, the less you need to save monthly due to compound growth.</li>
                 <li>Use the 4% rule as a rough guide for withdrawal rates in retirement.</li>

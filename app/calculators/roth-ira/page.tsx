@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -101,10 +102,10 @@ export default function RothIRAPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Roth IRA Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Your Roth IRA Projection Works</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Growth Math</h3>
               <p className="text-muted-foreground">Projects Roth IRA growth using compound interest with annual contributions ($7,500 limit in 2026) and investment returns.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^n + Annual Contribution × [((1 + r)^n - 1) / r]</p>
             </div>
@@ -112,7 +113,7 @@ export default function RothIRAPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: Starting at 30</h3>
               <p className="text-muted-foreground">Age 30, contribute $7,000/year, 7% annual return until age 67:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Annual contribution: $7,000</li>
@@ -126,7 +127,7 @@ export default function RothIRAPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Roth IRA Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s the difference between Roth and Traditional IRA?</p>
@@ -146,11 +147,40 @@ export default function RothIRAPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Making the Most of a Roth</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Roth IRAs offer tax-free growth for 30+ years—some of the best wealth-building vehicles available.</li>
                 <li>Max out your Roth ($7,500/year) before investing elsewhere if eligible; tax-free growth is invaluable.</li>
                 <li>No required minimum distributions (RMDs) in retirement; you control when to withdraw.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Where a Roth’s Value Comes From</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">Contributing the 2026 maximum of $7,500 at the start of each year from 30 to 65, at a 7% average annual return:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold"></th><th className="px-3 py-2 text-left font-semibold">Amount</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Total contributed</td><td className="px-3 py-2 tabular-nums">$262,500</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Balance at 65</td><td className="px-3 py-2 tabular-nums">$1,109,351</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">Tax-free growth</td><td className="px-3 py-2 tabular-nums">$846,851 (76%)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Starting at 40 instead produces about $507,574 — less than half — from $187,500 of contributions. Because qualified withdrawals are tax-free, all of that growth is yours to spend in retirement.</p>
+            <p className="text-muted-foreground">Two rules to know: contributions (not earnings) can be withdrawn at any time without tax or penalty, and earnings are tax- and penalty-free once you are 59½ and the account has been open at least five years. The ability to contribute phases out at higher incomes, so check the IRS limits for your filing status.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/roth-vs-traditional-401k" className="text-primary underline">Roth vs. traditional: how to choose</Link></li>
+                <li><Link href="/calculators/401k" className="text-primary underline">401(k) calculator</Link></li>
               </ul>
             </div>
           </CardContent>

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -202,10 +203,10 @@ export default function DebtPayoffPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Debt Payoff Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How the Avalanche and Snowball Comparison Works</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">How Each Method Works</h3>
               <p className="text-muted-foreground">Compares two payoff strategies: Avalanche (highest rate first) and Snowball (smallest balance first).</p>
               <p className="text-muted-foreground mt-2">Both use: Months to Payoff = -log(1 - (Balance × Monthly Rate / Payment)) / log(1 + Monthly Rate)</p>
             </div>
@@ -213,7 +214,7 @@ export default function DebtPayoffPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: Two Debts, $400 a Month</h3>
               <p className="text-muted-foreground">Two debts: Credit card $7k @ 20% APR (min $150), Personal loan $3k @ 8% APR (min $100), $400/month total:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Avalanche (20% first): 31 months, $2,300 total interest</li>
@@ -225,7 +226,7 @@ export default function DebtPayoffPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Debt Payoff Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Avalanche vs. Snowball—which is better?</p>
@@ -245,11 +246,40 @@ export default function DebtPayoffPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Choosing Your Method</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Avalanche (highest rate first) saves the most money and time—use it if you can stay motivated.</li>
                 <li>Snowball (smallest balance first) provides quick wins and momentum—use it if you need psychological boosts.</li>
                 <li>The most important thing: pick a strategy and stick to it. Consistency beats perfection.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>What an Extra Payment Is Worth</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">Three debts — a $2,500 personal loan at 9%, a $6,000 store card at 26%, and a $9,000 Visa at 19% — have $550 a month in combined minimums. Using the avalanche method, here is what each extra amount on top of the minimums does:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Extra per month</th><th className="px-3 py-2 text-left font-semibold">Debt-free in</th><th className="px-3 py-2 text-left font-semibold">Total interest</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$0 (minimums only)</td><td className="px-3 py-2 tabular-nums">47 months</td><td className="px-3 py-2 tabular-nums">$8,189</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$100</td><td className="px-3 py-2 tabular-nums">36 months</td><td className="px-3 py-2 tabular-nums">$5,888</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$350</td><td className="px-3 py-2 tabular-nums">24 months</td><td className="px-3 py-2 tabular-nums">$3,552</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$600</td><td className="px-3 py-2 tabular-nums">18 months</td><td className="px-3 py-2 tabular-nums">$2,590</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">The first $100 a month saves about $2,300 and nearly a year. The method you choose matters far less than the total you put toward debt each month — and keeping that total fixed as each debt is paid off, so its payment rolls into the next.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/credit-card-debt-payoff-guide" className="text-primary underline">How to pay off credit card debt: avalanche vs. snowball</Link></li>
+                <li><Link href="/blog/pay-off-debt-or-invest" className="text-primary underline">Pay off debt or invest?</Link></li>
               </ul>
             </div>
           </CardContent>

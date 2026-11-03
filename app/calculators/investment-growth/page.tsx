@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -128,10 +129,10 @@ export default function InvestmentGrowthPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Investment Growth Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How the Growth Projection Works</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Formula</h3>
               <p className="text-muted-foreground">Projects portfolio growth with regular contributions and compounding returns.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">A = P(1 + r)^n + PMT × [((1 + r)^n - 1) / r]</p>
             </div>
@@ -139,7 +140,7 @@ export default function InvestmentGrowthPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $10,000 Plus $500 a Month</h3>
               <p className="text-muted-foreground">$10,000 starting, $500/month contributions, 8% annual return over 20 years:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Starting balance: $10,000</li>
@@ -152,7 +153,7 @@ export default function InvestmentGrowthPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Investing Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What return should I assume?</p>
@@ -172,11 +173,41 @@ export default function InvestmentGrowthPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">What Drives Growth</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Consistency trumps timing—investing $500 every month automatically keeps you in the market instead of waiting for the "right" moment.</li>
                 <li>A 2% difference in returns (8% vs. 10%) saves/costs $50k+ over 20 years—choose low-cost index funds.</li>
                 <li>Start early; the first 10 years of contributions matter more than the second 10 due to compounding.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>How Growth Takes Over With Time</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">Investing $500 a month at a 7% average annual return (monthly compounding). Watch the share of the balance that comes from growth rather than deposits:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Years</th><th className="px-3 py-2 text-left font-semibold">Balance</th><th className="px-3 py-2 text-left font-semibold">Total deposited</th><th className="px-3 py-2 text-left font-semibold">Share from growth</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">10</td><td className="px-3 py-2 tabular-nums">$86,542</td><td className="px-3 py-2 tabular-nums">$60,000</td><td className="px-3 py-2 tabular-nums">31%</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">20</td><td className="px-3 py-2 tabular-nums">$260,463</td><td className="px-3 py-2 tabular-nums">$120,000</td><td className="px-3 py-2 tabular-nums">54%</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">30</td><td className="px-3 py-2 tabular-nums">$609,985</td><td className="px-3 py-2 tabular-nums">$180,000</td><td className="px-3 py-2 tabular-nums">70%</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">40</td><td className="px-3 py-2 tabular-nums">$1,312,407</td><td className="px-3 py-2 tabular-nums">$240,000</td><td className="px-3 py-2 tabular-nums">82%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">In the first decade, your deposits do most of the work. By year 30, growth is more than twice what you put in. The extra ten years from 30 to 40 add $60,000 of deposits but more than $700,000 of balance — the strongest argument for starting early.</p>
+            <p className="text-muted-foreground">Markets don’t deliver a steady 7%; real returns vary widely year to year. Treat a projection like this as a planning estimate, and revisit it as your actual balance grows.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/how-compound-growth-builds-wealth" className="text-primary underline">How compound growth builds wealth: time, rate, fees, and savings rate</Link></li>
+                <li><Link href="/calculators/compound-interest" className="text-primary underline">Compound interest calculator</Link></li>
               </ul>
             </div>
           </CardContent>

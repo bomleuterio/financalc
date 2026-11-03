@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -107,10 +108,10 @@ export default function SalesTaxPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Sales Tax Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Sales Tax Is Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Formula</h3>
               <p className="text-muted-foreground">Calculates sales tax based on the item price and applicable tax rate.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Sales Tax = Price × Tax Rate (%)</p>
               <p className="text-muted-foreground mt-2 text-xs">Total = Price + Sales Tax</p>
@@ -119,7 +120,7 @@ export default function SalesTaxPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: A $1,000 Laptop</h3>
               <p className="text-muted-foreground">You buy a laptop for $1,000 in a state with 7% sales tax:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Item price: $1,000</li>
@@ -131,7 +132,7 @@ export default function SalesTaxPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Sales Tax Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">Do all items have sales tax?</p>
@@ -151,11 +152,40 @@ export default function SalesTaxPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Good to Know</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Sales tax varies widely by state—combined state and local rates range from 0% in Oregon to over 9% in Louisiana and Tennessee.</li>
                 <li>Budget for sales tax on major purchases; it adds up quickly on expensive items.</li>
                 <li>Some items (groceries, medicine) are exempt in most states—always ask at checkout.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Working Backward From a Total</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">To find the pre-tax price when you only know the total, divide by one plus the tax rate:</p>
+            <p className="font-mono text-xs bg-muted p-3 rounded overflow-x-auto">Pre-tax price = Total ÷ (1 + tax rate)</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Total paid</th><th className="px-3 py-2 text-left font-semibold">Tax rate</th><th className="px-3 py-2 text-left font-semibold">Pre-tax price</th><th className="px-3 py-2 text-left font-semibold">Tax</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$108.25</td><td className="px-3 py-2 tabular-nums">8.25%</td><td className="px-3 py-2 tabular-nums">$100.00</td><td className="px-3 py-2 tabular-nums">$8.25</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$53.50</td><td className="px-3 py-2 tabular-nums">7.00%</td><td className="px-3 py-2 tabular-nums">$50.00</td><td className="px-3 py-2 tabular-nums">$3.50</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">$1,072.50</td><td className="px-3 py-2 tabular-nums">7.25%</td><td className="px-3 py-2 tabular-nums">$1,000.00</td><td className="px-3 py-2 tabular-nums">$72.50</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Subtracting the tax rate from the total — taking 8.25% off $108.25 — gives the wrong answer, because the tax was calculated on the smaller pre-tax price.</p>
+            <p className="text-muted-foreground">Remember that the rate you pay usually combines your state rate with county and city rates, so your local rate can be well above the state figure in the table. Your receipt or your state revenue department’s website lists the combined rate for your address.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/calculators/budget" className="text-primary underline">Budget calculator</Link></li>
               </ul>
             </div>
           </CardContent>

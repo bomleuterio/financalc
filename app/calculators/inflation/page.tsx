@@ -1,5 +1,6 @@
 ﻿'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -119,10 +120,10 @@ export default function InflationPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This Inflation Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How Inflation Changes Purchasing Power</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Formula</h3>
               <p className="text-muted-foreground">Calculates how inflation erodes purchasing power over time using the Consumer Price Index (CPI).</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">Future Cost = Present Cost × (1 + Inflation Rate)^Years</p>
             </div>
@@ -130,7 +131,7 @@ export default function InflationPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: A $10 Sandwich in 15 Years</h3>
               <p className="text-muted-foreground">A sandwich costs $10 today. At 3% inflation over 15 years:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Today cost: $10</li>
@@ -143,7 +144,7 @@ export default function InflationPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">Inflation Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s average inflation?</p>
@@ -163,11 +164,39 @@ export default function InflationPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Protecting Your Money</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Inflation erodes cash savings—$10k under a mattress loses 45% buying power in 20 years at 3% inflation.</li>
                 <li>Invest your long-term savings (3+ years); stocks historically beat inflation, cash doesn&apos;t.</li>
                 <li>In retirement planning, don&apos;t forget to account for inflation on your spending needs.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>What $100 Will Buy in the Future</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">The purchasing power of $100 kept as cash, at three steady inflation rates:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Inflation rate</th><th className="px-3 py-2 text-left font-semibold">In 10 years</th><th className="px-3 py-2 text-left font-semibold">In 20 years</th><th className="px-3 py-2 text-left font-semibold">In 30 years</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">2%</td><td className="px-3 py-2 tabular-nums">$82.03</td><td className="px-3 py-2 tabular-nums">$67.30</td><td className="px-3 py-2 tabular-nums">$55.21</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">3%</td><td className="px-3 py-2 tabular-nums">$74.41</td><td className="px-3 py-2 tabular-nums">$55.37</td><td className="px-3 py-2 tabular-nums">$41.20</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">4%</td><td className="px-3 py-2 tabular-nums">$67.56</td><td className="px-3 py-2 tabular-nums">$45.64</td><td className="px-3 py-2 tabular-nums">$30.83</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">At 3% inflation, money loses about half its buying power in 23 years. That is why long-term savings need to earn more than inflation, and why retirement targets should be set in today’s dollars and compared with a <em>real</em> return (your return minus inflation).</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/retirement-planning-101" className="text-primary underline">Retirement planning 101: keeping your target in today’s dollars</Link></li>
+                <li><Link href="/blog/how-compound-growth-builds-wealth" className="text-primary underline">How compound growth builds wealth</Link></li>
               </ul>
             </div>
           </CardContent>

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import CalculatorLayout from '@/components/CalculatorLayout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -133,10 +134,10 @@ export default function ROIPage() {
 
       <div className="mt-12 space-y-6">
         <Card>
-          <CardHeader><CardTitle>How This ROI Calculator Works</CardTitle></CardHeader>
+          <CardHeader><CardTitle>How ROI and Annualized Return Are Calculated</CardTitle></CardHeader>
           <CardContent className="space-y-4 text-sm">
             <div>
-              <h3 className="font-semibold mb-2">Formula</h3>
+              <h3 className="font-semibold mb-2">The Formulas</h3>
               <p className="text-muted-foreground">ROI measures the profit or loss from an investment as a percentage of the amount invested.</p>
               <p className="font-mono text-xs bg-muted p-3 rounded mt-2 overflow-x-auto">ROI (%) = (Final Value - Initial Investment) / Initial Investment × 100</p>
               <p className="text-muted-foreground mt-2 text-xs">Annualized ROI accounts for the holding period and expresses annual returns.</p>
@@ -145,7 +146,7 @@ export default function ROIPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Worked Example</h3>
+              <h3 className="font-semibold mb-2">Example: $10,000 Grows to $14,000</h3>
               <p className="text-muted-foreground">You invest $10,000 in a stock that grows to $14,000 over 3 years:</p>
               <ul className="list-disc list-inside text-muted-foreground mt-2 space-y-1">
                 <li>Initial investment: $10,000</li>
@@ -159,7 +160,7 @@ export default function ROIPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Common Questions</h3>
+              <h3 className="font-semibold mb-2">ROI Questions</h3>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-sm">What&apos;s a good ROI?</p>
@@ -179,11 +180,41 @@ export default function ROIPage() {
             <Separator />
 
             <div>
-              <h3 className="font-semibold mb-2">Key Takeaways</h3>
+              <h3 className="font-semibold mb-2">Judging a Return</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 <li>Always annualize ROI to compare investments held for different periods.</li>
                 <li>Account for fees and taxes—they can reduce your net return by 2–5% annually.</li>
                 <li>Use ROI to evaluate stock picks, real estate, or any investment against market benchmarks.</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader><CardTitle>Why Annualized Return Matters</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-sm">
+            <p className="text-muted-foreground">A 50% total return sounds the same no matter how long it took — but it isn’t. Here is the same 50% gain spread over different holding periods:</p>
+              <div className="overflow-x-auto rounded-lg border border-border/60">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/40">
+                    <tr><th className="px-3 py-2 text-left font-semibold">Years held</th><th className="px-3 py-2 text-left font-semibold">Annualized return</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">1</td><td className="px-3 py-2 tabular-nums">50.0%</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">2</td><td className="px-3 py-2 tabular-nums">22.5%</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">5</td><td className="px-3 py-2 tabular-nums">8.4%</td></tr>
+                    <tr className="border-t border-border/60"><td className="px-3 py-2 tabular-nums">10</td><td className="px-3 py-2 tabular-nums">4.1%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            <p className="text-muted-foreground">Over ten years, a 50% gain works out to about 4.1% a year — well below long-run stock market averages. Always compare investments on an annualized basis, over the same period, and after fees and taxes.</p>
+            <p className="text-muted-foreground">Include every cost in the calculation: commissions, fund fees, closing costs on property, and repairs or improvements. Leaving them out is the most common way ROI gets overstated.</p>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Related Guides</h3>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1">
+                <li><Link href="/blog/how-compound-growth-builds-wealth" className="text-primary underline">How compound growth builds wealth</Link></li>
+                <li><Link href="/calculators/investment-growth" className="text-primary underline">Investment growth calculator</Link></li>
               </ul>
             </div>
           </CardContent>
