@@ -25,7 +25,8 @@ export default function CDPage() {
     const balance = p * Math.pow(1 + r / n, n * t);
     const interest = balance - p;
     const apy = (Math.pow(1 + r / n, n) - 1) * 100;
-    const earlyWithdrawalPenalty = interest * 0.5;
+    // Typical penalty: 6 months of interest, capped at the interest the full term would earn.
+    const earlyWithdrawalPenalty = Math.min(interest, p * (Math.pow(1 + r / n, n * 0.5) - 1));
 
     return { balance, interest, apy, earlyWithdrawalPenalty, p };
   }, [principal, rate, term, compounds]);

@@ -391,11 +391,28 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
+  const meta = BLOG_POSTS.find((p) => p.slug === slug);
+  const published = new Date(post.date).toISOString().slice(0, 10);
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: meta?.excerpt,
+    datePublished: published,
+    dateModified: published,
+    author: { '@type': 'Organization', name: 'TriangleBLVD', url: 'https://moneycalcs.ai/about' },
+    publisher: { '@type': 'Organization', name: 'TriangleBLVD', url: 'https://moneycalcs.ai/about' },
+    mainEntityOfPage: `https://moneycalcs.ai/blog/${slug}`,
+  };
+
   return (
     <div className="space-y-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <div>
         <h1 className="text-3xl font-bold tracking-tight">{post.title}</h1>
-        <p className="mt-2 text-muted-foreground">{post.date}</p>
+        <p className="mt-2 text-muted-foreground">
+          By <Link href="/about" className="underline underline-offset-2">TriangleBLVD</Link> · {post.date}
+        </p>
       </div>
       <div className="prose-like">{post.content}</div>
       <div className="pt-6 border-t border-border/50">
