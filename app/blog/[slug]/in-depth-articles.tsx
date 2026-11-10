@@ -1004,4 +1004,140 @@ export const IN_DEPTH_POSTS: Record<string, { title: string; date: string; conte
       </div>
     ),
   },
+
+  'how-much-house-can-you-afford': {
+    title: 'How Much House Can You Afford? The 28/36 Rule, Worked Through',
+    date: 'Nov 10, 2026',
+    content: (
+      <div className="space-y-4 text-sm leading-relaxed">
+        <aside className="rounded-lg border border-border/60 bg-muted/40 px-4 py-3">
+          <p className="font-semibold mb-1">The short answer</p>
+          <p>
+            Under the common 28/36 guideline, total housing costs should stay under 28% of your gross monthly
+            income, and all debt payments under 36%. With 20% down and a 6.5% rate, that works out to a home price
+            of roughly <strong>3.6 to 3.7 times your annual income</strong> — if you carry little other debt.
+          </p>
+        </aside>
+        <p>
+          A lender&apos;s pre-approval tells you the most you can borrow. It doesn&apos;t tell you what you can
+          comfortably pay every month for the next 30 years. This guide walks through the affordability math step
+          by step, shows how much the answer moves with your other debts and the interest rate, and covers the
+          costs that a payment estimate leaves out.
+        </p>
+
+        <h2 className={h2}>Step 1: Know the two limits</h2>
+        <ul className={list}>
+          <li>
+            <strong>Front-end ratio (28%):</strong> your monthly housing cost — principal, interest, property tax,
+            and homeowners insurance, plus any mortgage insurance or HOA dues — divided by gross monthly income.
+          </li>
+          <li>
+            <strong>Back-end ratio (36%):</strong> housing cost <em>plus</em> every other monthly debt payment — car
+            loans, student loans, credit card minimums — divided by gross monthly income.
+          </li>
+        </ul>
+        <p>
+          Your housing budget is whichever limit is lower. Many lenders and loan programs will approve higher
+          ratios than 28/36, so treat these as a comfortable target, not the maximum a lender might allow.
+        </p>
+
+        <h2 className={h2}>Step 2: Turn the budget into a home price</h2>
+        <p>
+          The examples below assume a 30-year fixed loan at 6.5%, a 20% down payment (so no mortgage insurance),
+          property tax of 1.1% of the home&apos;s value per year, $150 a month for homeowners insurance, and $500 a
+          month of other debt payments. These are illustrative — your rate, tax rate, and insurance cost will differ.
+        </p>
+        <DataTable
+          head={['Gross income', 'Housing budget', 'Home price', 'Down payment (20%)', 'Principal & interest']}
+          rows={[
+            ['$75,000', '$1,750', '$267,863', '$53,573', '$1,354'],
+            ['$100,000', '$2,333', '$365,521', '$73,104', '$1,848'],
+            ['$150,000', '$3,500', '$560,837', '$112,167', '$2,836'],
+          ]}
+        />
+        <p>
+          At $100,000, the 28% front-end limit is $2,333 a month. After $335 of property tax and $150 of insurance,
+          $1,848 is left for principal and interest, which supports a loan of about $292,000 — a $365,521 home with
+          20% down. At $75,000, the $500 of other debt makes both limits land on the same $1,750.
+        </p>
+
+        <h2 className={h2}>Step 3: See what moves the answer</h2>
+        <p><strong>Other debt.</strong> On a $100,000 income, here is the price range as other monthly debt grows:</p>
+        <DataTable
+          head={['Other monthly debt', 'Housing budget', 'Home price']}
+          rows={[
+            ['$0', '$2,333', '$365,521'],
+            ['$500', '$2,333', '$365,521'],
+            ['$1,000', '$2,000', '$309,716'],
+            ['$1,500', '$1,500', '$226,009'],
+          ]}
+        />
+        <p>
+          Up to about $667 a month, other debt doesn&apos;t change the answer, because the 28% limit binds first.
+          Beyond that, every extra $100 of monthly debt payments cuts the affordable price by roughly $17,000. Paying
+          off a car loan before you buy can raise your budget more than months of extra saving.
+        </p>
+        <p><strong>The interest rate.</strong> The same $2,333 housing budget at three rates:</p>
+        <DataTable
+          head={['Mortgage rate', 'Home price']}
+          rows={[
+            ['5.5%', '$399,953'],
+            ['6.5%', '$365,521'],
+            ['7.5%', '$335,362'],
+          ]}
+        />
+        <p>
+          Each percentage point moves the price by roughly $30,000–$34,000 here. A better credit score, a larger
+          down payment, or comparing several lenders can be worth as much as a raise.
+        </p>
+        <p>
+          <strong>A smaller down payment.</strong> Putting 10% down instead of 20% usually means paying private
+          mortgage insurance. Assuming PMI costs 0.5% of the loan per year — actual rates vary with your credit and
+          down payment — the same $2,333 budget supports a home of about $312,785: $31,279 down, with about $117 a
+          month going to PMI. You need less cash up front, but the affordable price falls by about $53,000.
+        </p>
+
+        <h2 className={h2}>Step 4: Check it against take-home pay</h2>
+        <p>
+          The 28/36 rule uses gross income, but you pay the mortgage from take-home pay. A single filer earning
+          $100,000 keeps about $6,598 a month after 2026 federal income tax and FICA — before state tax, health
+          insurance, and retirement contributions. A $2,333 housing payment is about 35% of that. If you also want
+          to save 15% for retirement and keep building an emergency fund, run your full budget before deciding the
+          ratio is comfortable. The <Link href="/calculators/income-tax" className={link}>income tax calculator</Link>{' '}
+          shows your own take-home pay, and the <Link href="/calculators/budget" className={link}>budget calculator</Link>{' '}
+          shows where it goes.
+        </p>
+
+        <h2 className={h2}>The cash you need on top of the down payment</h2>
+        <ul className={list}>
+          <li>
+            <strong>Closing costs</strong>, commonly cited as 2% to 5% of the purchase price. On a $365,521 home,
+            that is about $7,300 to $18,300, so the total cash needed with 20% down is roughly $80,000 to $91,000.
+          </li>
+          <li>
+            <strong>An emergency fund that survives the purchase.</strong> Don&apos;t empty your savings for the down
+            payment; new homeowners face repairs no landlord will cover. See the{' '}
+            <Link href="/blog/emergency-fund-guide" className={link}>emergency fund guide</Link>.
+          </li>
+          <li>
+            <strong>Ongoing maintenance</strong>, utilities, and HOA dues, which can be higher than in a rental.
+          </li>
+        </ul>
+
+        <h2 className={h2}>Putting it together</h2>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Take the lower of 28% of gross monthly income and 36% minus your other debt payments.</li>
+          <li>Subtract property tax, insurance, HOA dues, and any PMI to find what&apos;s left for principal and interest.</li>
+          <li>Convert that into a price with the <Link href="/calculators/mortgage" className={link}>mortgage calculator</Link>, using a real rate quote.</li>
+          <li>Check the payment against your take-home budget and savings goals.</li>
+          <li>Make sure you can cover closing costs and still keep an emergency fund.</li>
+        </ol>
+        <p>
+          Then decide on the loan term: the{' '}
+          <Link href="/blog/mortgage-15-vs-30-year" className={link}>15-year vs. 30-year comparison</Link> shows how
+          the choice changes your payment and total interest.
+        </p>
+      </div>
+    ),
+  },
 };
