@@ -9,6 +9,12 @@ export interface BlogPostMeta {
 // Newest first. Posts merged into others are redirected in next.config.ts.
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'how-much-house-can-you-afford',
+    title: 'How Much House Can You Afford? The 28/36 Rule, Worked Through',
+    excerpt: 'Turn your income and debts into a home price step by step, and see how rates, other debt, and down payment change the answer.',
+    date: 'Nov 10, 2026',
+  },
+  {
     slug: 'how-compound-growth-builds-wealth',
     title: 'How Compound Growth Builds Wealth: Time, Rate, Fees, and Savings Rate',
     excerpt: 'The four levers you control, each with a worked number — including what a 1% fee costs over 30 years.',
