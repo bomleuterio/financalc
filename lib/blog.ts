@@ -9,6 +9,12 @@ export interface BlogPostMeta {
 // Newest first. Posts merged into others are redirected in next.config.ts.
 export const BLOG_POSTS: BlogPostMeta[] = [
   {
+    slug: 'how-long-should-a-car-loan-be',
+    title: 'How Long Should a Car Loan Be? 36 to 84 Months Compared',
+    excerpt: 'The same $30,000 loan over five terms: what a lower payment costs in interest, and how long each term leaves you owing more than the car is worth.',
+    date: 'Nov 16, 2026',
+  },
+  {
     slug: 'how-much-house-can-you-afford',
     title: 'How Much House Can You Afford? The 28/36 Rule, Worked Through',
     excerpt: 'Turn your income and debts into a home price step by step, and see how rates, other debt, and down payment change the answer.',

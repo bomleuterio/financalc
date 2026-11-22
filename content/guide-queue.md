@@ -5,7 +5,7 @@ and checks it off in the same PR. Reorder, edit, or add topics freely. Each topi
 calculator it should link to and anything that must be sourced rather than assumed.
 
 - [x] How much house can you afford? Payment-to-income rules (28/36) with worked examples — links: mortgage
-- [ ] How long should a car loan be? 36 vs. 48 vs. 60 vs. 72 months, total cost and negative equity — links: auto-loan
+- [x] How long should a car loan be? 36 vs. 48 vs. 60 vs. 72 months, total cost and negative equity — links: auto-loan
 - [ ] Student loans: pay off early or invest? — links: student-loan; check current federal repayment plans on studentaid.gov
 - [ ] Capital gains basics: holding periods, the 0% bracket, and tax-loss harvesting — links: capital-gains; 2026 thresholds from IRS Rev. Proc. 2025-32
 - [ ] Budgeting methods compared: 50/30/20, zero-based, and pay-yourself-first — links: budget

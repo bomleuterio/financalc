@@ -1140,4 +1140,137 @@ export const IN_DEPTH_POSTS: Record<string, { title: string; date: string; conte
       </div>
     ),
   },
+
+  'how-long-should-a-car-loan-be': {
+    title: 'How Long Should a Car Loan Be? 36 to 84 Months Compared',
+    date: 'Nov 16, 2026',
+    content: (
+      <div className="space-y-4 text-sm leading-relaxed">
+        <p>
+          Dealers usually lead with one question: &quot;What monthly payment are you comfortable with?&quot; A
+          longer loan can make almost any car fit that number. This guide compares the same $30,000 car loan over
+          five terms to show what a lower payment really costs — in interest, and in the risk of owing more than the
+          car is worth.
+        </p>
+
+        <h2 className={h2}>Scenario 1: same car, same rate, different terms</h2>
+        <p>
+          First, isolate the effect of the term alone. Here is a $30,000 loan at an example rate of 7%:
+        </p>
+        <DataTable
+          head={['Term', 'Monthly payment', 'Total interest']}
+          rows={[
+            ['36 months', '$926', '$3,347'],
+            ['48 months', '$718', '$4,483'],
+            ['60 months', '$594', '$5,642'],
+            ['72 months', '$511', '$6,826'],
+            ['84 months', '$453', '$8,034'],
+          ]}
+        />
+        <p>
+          Stretching from 36 to 84 months cuts the payment by about half but more than doubles the interest. Notice
+          that the savings shrink as the term grows: going from 36 to 48 months lowers the payment by $208, but going
+          from 72 to 84 months lowers it by only $58 — while adding another $1,208 of interest.
+        </p>
+
+        <h2 className={h2}>Scenario 2: longer terms usually cost a higher rate</h2>
+        <p>
+          In practice, lenders often charge higher rates on longer loans, because they carry more risk. Using
+          illustrative rates that rise with the term (your own quotes will differ):
+        </p>
+        <DataTable
+          head={['Term', 'Example rate', 'Monthly payment', 'Total interest']}
+          rows={[
+            ['36 months', '6.50%', '$919', '$3,101'],
+            ['48 months', '6.75%', '$715', '$4,316'],
+            ['60 months', '7.00%', '$594', '$5,642'],
+            ['72 months', '7.75%', '$522', '$7,609'],
+            ['84 months', '8.50%', '$475', '$9,908'],
+          ]}
+        />
+        <p>
+          Now the 84-month loan costs more than three times as much interest as the 36-month loan — $9,908 versus
+          $3,101 — to save $444 a month.
+        </p>
+
+        <h2 className={h2}>Scenario 3: the hidden cost — negative equity</h2>
+        <p>
+          A car loses value fastest in its first few years, while a long loan pays down its balance slowly. When the
+          balance is larger than the car&apos;s value, you have <strong>negative equity</strong>, or are
+          &quot;underwater.&quot; That matters if the car is totaled, stolen, or traded in early.
+        </p>
+        <p>
+          This example assumes a $30,000 car that loses 20% of its value in the first year and 15% a year after that
+          (an illustrative path — actual depreciation varies a lot by model), with $2,000 of sales tax and fees
+          rolled into a $0-down loan, for a $32,000 balance on day one:
+        </p>
+        <DataTable
+          head={['Term (example rate)', 'Monthly payment', 'Underwater until about']}
+          rows={[
+            ['36 months (6.50%)', '$981', 'Month 6'],
+            ['48 months (6.75%)', '$763', 'Month 14'],
+            ['60 months (7.00%)', '$634', 'Month 24'],
+            ['72 months (7.75%)', '$557', 'Month 38'],
+            ['84 months (8.50%)', '$507', 'Month 54'],
+          ]}
+        />
+        <p>
+          Suppose you want to trade the car in after three years, when it is worth about $17,340 on this path. On the
+          72-month loan you&apos;d still owe $17,846 — $506 more than the car is worth, which typically gets rolled
+          into your next loan. On the 48-month loan you&apos;d owe $8,825, leaving about $8,515 of equity toward the
+          next car. Same car, same three years: a difference of about $9,000.
+        </p>
+        <p>
+          A down payment fixes most of this. With $6,000 down (20% of the price), the same loans finance $26,000,
+          and none of the five terms is ever underwater on this depreciation path.
+        </p>
+
+        <h2 className={h2}>What a shorter loan gives you after it ends</h2>
+        <p>
+          The 48-month loan costs $193 a month more than the 72-month loan in Scenario 2. But it ends two years
+          sooner. If both buyers spend $715 a month for six years — the 72-month buyer saving the $193 difference,
+          the 48-month buyer saving the whole $715 once the loan is paid off — and both earn 5% on their savings, the
+          48-month buyer has about $18,006 saved at the end of year six, versus $16,130 for the 72-month buyer, and
+          has paid $3,293 less interest.
+        </p>
+
+        <h2 className={h2}>Common mistakes</h2>
+        <ul className={list}>
+          <li>
+            <strong>Negotiating the payment instead of the price.</strong> Settle the car&apos;s price first, then
+            discuss financing. A target payment is easy to hit by quietly extending the term.
+          </li>
+          <li>
+            <strong>Rolling old negative equity into a new loan.</strong> It starts you deeper underwater on the
+            next car and makes a long term almost unavoidable.
+          </li>
+          <li>
+            <strong>Skipping outside quotes.</strong> Get a pre-approval from a bank or credit union before visiting
+            the dealer, so you can compare the dealer&apos;s financing with a real offer.
+          </li>
+          <li>
+            <strong>Ignoring the cost of ownership.</strong> Insurance, fuel, maintenance, and registration come on
+            top of the loan payment.
+          </li>
+        </ul>
+
+        <h2 className={h2}>A quick checklist before you sign</h2>
+        <ol className="list-decimal list-inside space-y-2 ml-2">
+          <li>Can you afford the payment on a 48-month term or shorter? If not, consider a less expensive car.</li>
+          <li>Are you putting enough down to avoid owing more than the car is worth — often around 20%?</li>
+          <li>Is the total cost of the car — payment, insurance, and fuel — a comfortable share of your income? A common rule of thumb keeps it under about 10% of gross pay.</li>
+          <li>Have you compared total interest, not just the monthly payment, across terms?</li>
+          <li>If you must choose a long term, does the loan allow extra payments without a penalty, so you can pay it off early?</li>
+        </ol>
+        <p>
+          Compare terms with your own price, down payment, and rate quote in the{' '}
+          <Link href="/calculators/auto-loan" className={link}>auto loan calculator</Link>, which also shows the
+          full amortization schedule. For how a loan balance falls month by month, see{' '}
+          <Link href="/blog/understanding-amortization" className={link}>understanding amortization</Link>; for
+          whether to pay a car loan off early, see{' '}
+          <Link href="/blog/pay-off-debt-or-invest" className={link}>pay off debt or invest?</Link>
+        </p>
+      </div>
+    ),
+  },
 };
